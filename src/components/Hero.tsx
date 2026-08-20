@@ -79,10 +79,14 @@ export default function Hero() {
           const heading = document.querySelector("[data-services-heading]");
           if (list && heading) {
             const line = heading.getBoundingClientRect().bottom + 8;
-            list.querySelectorAll("li").forEach((item) => {
-              const rect = item.getBoundingClientRect();
-              const p = gsap.utils.clamp(0, 1, (line - rect.top) / rect.height);
-              gsap.set(item, { opacity: 1 - p });
+            list.querySelectorAll("[data-fade]").forEach((el) => {
+              const rect = el.getBoundingClientRect();
+              const p = gsap.utils.clamp(
+                0,
+                1,
+                (line - rect.top) / (rect.height * 0.35)
+              );
+              gsap.set(el, { opacity: 1 - p });
             });
           }
         },

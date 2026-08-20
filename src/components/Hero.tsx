@@ -110,6 +110,23 @@ export default function Hero() {
             );
             const list = document.querySelector("[data-services-list]");
             if (heading && list) {
+              const column = heading.parentElement;
+              if (column) {
+                const stickyTop = -64;
+                const applied = Number(gsap.getProperty(heading, "y") || 0);
+                const rect = heading.getBoundingClientRect();
+                const naturalTop = rect.top - applied;
+                const maxY =
+                  column.getBoundingClientRect().bottom -
+                  rect.height -
+                  stickyTop;
+                const y = gsap.utils.clamp(
+                  0,
+                  Math.max(0, maxY),
+                  stickyTop - naturalTop
+                );
+                gsap.set(heading, { y });
+              }
               const line = heading.getBoundingClientRect().bottom + 8;
               list.querySelectorAll("[data-fade]").forEach((el) => {
                 const rect = el.getBoundingClientRect();

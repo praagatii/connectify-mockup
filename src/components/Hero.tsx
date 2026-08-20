@@ -100,7 +100,6 @@ export default function Hero() {
             },
           }
         );
-        let headingPinY = 0;
         ScrollTrigger.create({
           trigger: overlayEl,
           start: "top bottom",
@@ -114,18 +113,18 @@ export default function Hero() {
               const column = heading.parentElement;
               if (column) {
                 const stickyTop = 96;
+                const applied = Number(gsap.getProperty(heading, "y") || 0);
                 const rect = heading.getBoundingClientRect();
-                const naturalTop = rect.top - headingPinY;
+                const naturalTop = rect.top - applied;
                 const maxY =
                   column.getBoundingClientRect().bottom -
                   rect.height -
-                  naturalTop;
+                  stickyTop;
                 const y = gsap.utils.clamp(
                   0,
                   Math.max(0, maxY),
                   stickyTop - naturalTop
                 );
-                headingPinY = y;
                 gsap.set(heading, { y });
               }
               const line = heading.getBoundingClientRect().bottom + 8;

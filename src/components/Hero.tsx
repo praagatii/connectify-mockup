@@ -75,20 +75,6 @@ export default function Hero() {
               opacity: 1 - cp,
             });
           }
-          const list = document.querySelector("[data-services-list]");
-          const heading = document.querySelector("[data-services-heading]");
-          if (list && heading) {
-            const line = heading.getBoundingClientRect().bottom + 8;
-            list.querySelectorAll("[data-fade]").forEach((el) => {
-              const rect = el.getBoundingClientRect();
-              const p = gsap.utils.clamp(
-                0,
-                1,
-                (line - rect.top) / (rect.height * 0.35)
-              );
-              gsap.set(el, { opacity: 1 - p });
-            });
-          }
         },
       });
 
@@ -114,6 +100,29 @@ export default function Hero() {
             },
           }
         );
+        ScrollTrigger.create({
+          trigger: overlayEl,
+          start: "top bottom",
+          end: "bottom top",
+          onUpdate: () => {
+            const heading = document.querySelector(
+              "[data-services-heading]"
+            );
+            const list = document.querySelector("[data-services-list]");
+            if (heading && list) {
+              const line = heading.getBoundingClientRect().bottom + 8;
+              list.querySelectorAll("[data-fade]").forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                const p = gsap.utils.clamp(
+                  0,
+                  1,
+                  (line - rect.top) / (rect.height * 0.35)
+                );
+                gsap.set(el, { opacity: 1 - p });
+              });
+            }
+          },
+        });
       }
     };
 

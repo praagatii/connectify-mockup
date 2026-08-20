@@ -48,7 +48,15 @@ export default function WhatWeBuild() {
             <h2 className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:-top-16 lg:z-10 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
               Our <span className="text-brand">Services</span>
             </h2>
-            <ol className="divide-y divide-black/10 border-y border-black/10 [mask-image:linear-gradient(to_bottom,transparent,black_6rem)] [mask-size:100%_100%]">
+            <ol
+              className="divide-y divide-black/10 border-y border-black/10"
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, transparent 0, black 4rem)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, transparent 0, black 4rem)",
+              }}
+            >
               {capabilities.map((item) => (
                 <li key={item.title}>
                   <Link

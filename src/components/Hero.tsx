@@ -30,6 +30,7 @@ export default function Hero() {
 
     const video = videoRef.current;
     let scrub: ScrollTrigger | null = null;
+    let overlayAnim: gsap.core.Tween | null = null;
 
     const startScrub = () => {
       if (!video || !(video.duration > 0)) return;
@@ -76,6 +77,35 @@ export default function Hero() {
           }
         },
       });
+
+      const overlayEl = document.querySelector(
+        "[data-services-overlay]"
+      ) as HTMLElement | null;
+      const textEl = rootRef.current?.querySelector(
+        "[data-hero-content]"
+      ) as HTMLElement | null;
+      if (overlayEl && textEl) {
+        const heroH = rootRef.current?.offsetHeight ?? window.innerHeight;
+        const rangePx = (contentEnd - contentStart) * scrollPercent * 0.01 * heroH;
+        const textTravel = textEl.offsetHeight * 1.4;
+        const fromY = Math.max(rangePx - textTravel, 0);
+        const startVh = contentStart * scrollPercent;
+        const endVh = contentEnd * scrollPercent;
+        overlayAnim = gsap.fromTo(
+          overlayEl,
+          { y: fromY },
+          {
+            y: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: rootRef.current,
+              start: () => `+=${startVh}%`,
+              end: () => `+=${endVh}%`,
+              scrub: true,
+            },
+          }
+        );
+      }
     };
 
     if (video && video.readyState >= 2) {
@@ -89,6 +119,8 @@ export default function Hero() {
       ctx.revert();
       if (video) video.removeEventListener("loadeddata", startScrub);
       scrub?.kill();
+      overlayAnim?.scrollTrigger?.kill();
+      overlayAnim?.kill();
     };
   }, []);
 

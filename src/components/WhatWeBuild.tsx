@@ -37,7 +37,7 @@ const capabilities = [
 
 export default function WhatWeBuild() {
   return (
-    <section id="services-suite" className="relative py-16">
+    <section id="services-suite" data-services-overlay className="relative py-16">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">
           <div className="hidden lg:col-span-5 lg:block">

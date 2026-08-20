@@ -4,34 +4,32 @@ const capabilities = [
   {
     number: "01",
     title: "Digital Solutions",
-    description:
-      "Full-stack digital product engineering â€” from web and mobile to SaaS and commerce platforms.",
-    offerings: "04 offerings",
     href: "/services#digital-solutions",
   },
   {
     number: "02",
     title: "Technology Services",
-    description:
-      "Cloud, AI and managed technology services that keep platforms reliable and future-ready.",
-    offerings: "03 offerings",
     href: "/services#technology-services",
   },
   {
     number: "03",
     title: "Business Advisory",
-    description:
-      "Strategy and advisory add-ons that turn technology into markets, revenue and enterprise value.",
-    offerings: "06 offerings",
     href: "/services#business-advisory",
   },
   {
     number: "04",
     title: "Investment Consulting",
-    description:
-      "Capital advisory across strategy, debt, equity fundraising and post-raise support.",
-    offerings: "04 offerings",
     href: "/services#investment-consulting",
+  },
+  {
+    number: "05",
+    title: "Brand Experience",
+    href: "/services#brand-experience",
+  },
+  {
+    number: "06",
+    title: "Data & AI",
+    href: "/services#data-ai",
   },
 ];
 
@@ -48,7 +46,7 @@ export default function WhatWeBuild() {
           <div className="lg:col-span-7">
             <h2
               data-services-heading
-              className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:top-8 lg:z-10 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]"
+              className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:top-4 lg:z-10 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]"
             >
               Our <span className="text-brand">Services</span>
             </h2>
@@ -66,16 +64,8 @@ export default function WhatWeBuild() {
                       <span data-fade className="font-mono text-xs text-black/60">
                         {item.number}
                       </span>
-                      <span>
-                        <span data-fade className="block font-inter text-xl font-semibold text-black transition-colors group-hover:text-brand">
-                          {item.title}
-                        </span>
-                        <span data-fade className="mt-1 block max-w-sm text-sm leading-relaxed text-black/70">
-                          {item.description}
-                        </span>
-                        <span data-fade className="mt-2 block text-xs uppercase tracking-[0.15em] text-black/60">
-                          {item.offerings}
-                        </span>
+                      <span data-fade className="font-inter text-xl font-semibold text-black transition-colors group-hover:text-brand">
+                        {item.title}
                       </span>
                     </span>
                     <svg

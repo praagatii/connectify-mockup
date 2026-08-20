@@ -111,7 +111,7 @@ export default function Hero() {
             const list = document.querySelector("[data-services-list]");
             if (heading && list) {
               const line = heading.getBoundingClientRect().bottom + 8;
-              list.querySelectorAll("[data-fade]").forEach((el) => {
+              list.querySelectorAll("li").forEach((el) => {
                 const rect = el.getBoundingClientRect();
                 const p = gsap.utils.clamp(
                   0,

@@ -37,7 +37,7 @@ const capabilities = [
 
 export default function WhatWeBuild() {
   return (
-    <section id="services-suite" data-services-overlay className="relative py-16">
+    <section id="services-suite" data-services-overlay className="relative py-16 pb-40">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">
           <div className="hidden lg:col-span-5 lg:block">
@@ -45,10 +45,10 @@ export default function WhatWeBuild() {
           </div>
 
           <div className="lg:col-span-7">
-            <h2 className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:-top-4 lg:z-10 lg:bg-white lg:py-2 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+            <h2 className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:-top-16 lg:z-10 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
               Our <span className="text-brand">Services</span>
             </h2>
-            <ol className="divide-y divide-black/10 border-y border-black/10">
+            <ol className="divide-y divide-black/10 border-y border-black/10 [mask-image:linear-gradient(to_bottom,transparent,black_6rem)] [mask-size:100%_100%]">
               {capabilities.map((item) => (
                 <li key={item.title}>
                   <Link

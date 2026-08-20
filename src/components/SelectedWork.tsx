@@ -55,7 +55,7 @@ const projects = [
 
 export default function SelectedWork() {
   return (
-    <section id="work" className="relative bg-white py-24">
+    <section id="work" className="relative z-10 bg-white py-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>

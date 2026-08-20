@@ -140,6 +140,28 @@ export default function Hero() {
             }
           },
         });
+
+        const sectionEl = document.getElementById("services-suite");
+        const listEl = document.querySelector("[data-services-list]");
+        const headingEl = document.querySelector("[data-services-heading]");
+        if (sectionEl && listEl && headingEl) {
+          const li3 = listEl.querySelectorAll("li")[2];
+          const headingH = headingEl.getBoundingClientRect().height;
+          const line = 96 + headingH + 8;
+          const wrapperY = Number(gsap.getProperty(overlayEl, "y")) || 0;
+          const item3Offset =
+            li3.getBoundingClientRect().top -
+            sectionEl.getBoundingClientRect().top -
+            wrapperY;
+          ScrollTrigger.create({
+            trigger: sectionEl,
+            start: () => `top ${line - item3Offset}px`,
+            end: () => `+=${Math.ceil(window.innerHeight)}`,
+            pin: sectionEl,
+            pinSpacing: true,
+            anticipatePin: 1,
+          });
+        }
       }
     };
 

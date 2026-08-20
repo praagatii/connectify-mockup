@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FinalCta() {
   return (
-    <section id="start" className="relative overflow-hidden bg-white py-32">
+    <section id="start" className="relative z-10 overflow-hidden bg-white py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"

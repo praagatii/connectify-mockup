@@ -63,17 +63,17 @@ export default function WhatWeBuild() {
                     className="group flex items-center justify-between gap-6 py-6 transition-colors"
                   >
                     <span className="flex items-baseline gap-5">
-                      <span data-fade className="font-mono text-xs text-black/40">
+                      <span data-fade className="font-mono text-xs text-black/60">
                         {item.number}
                       </span>
                       <span>
                         <span data-fade className="block font-inter text-xl font-semibold text-black transition-colors group-hover:text-brand">
                           {item.title}
                         </span>
-                        <span data-fade className="mt-1 block max-w-sm text-sm leading-relaxed text-muted">
+                        <span data-fade className="mt-1 block max-w-sm text-sm leading-relaxed text-black/70">
                           {item.description}
                         </span>
-                        <span data-fade className="mt-2 block text-xs uppercase tracking-[0.15em] text-black/40">
+                        <span data-fade className="mt-2 block text-xs uppercase tracking-[0.15em] text-black/60">
                           {item.offerings}
                         </span>
                       </span>

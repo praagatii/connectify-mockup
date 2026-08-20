@@ -123,6 +123,27 @@ export default function Hero() {
             }
           },
         });
+
+        const sectionEl = document.getElementById("services-suite");
+        const exploreEl = document.querySelector(
+          "[data-services-explore]"
+        ) as HTMLElement | null;
+        const headingEl = document.querySelector("[data-services-heading]");
+        if (sectionEl && exploreEl && headingEl) {
+          const headingH = headingEl.getBoundingClientRect().height;
+          const headingStickTop = -16;
+          const line = headingStickTop + headingH + 40;
+          const exploreOffset = exploreEl.offsetTop;
+          const startTop = line - exploreOffset;
+          ScrollTrigger.create({
+            trigger: sectionEl,
+            start: () => `top ${startTop}px`,
+            end: () => `+=${Math.ceil(window.innerHeight)}`,
+            pin: sectionEl,
+            pinSpacing: true,
+            anticipatePin: 1,
+          });
+        }
       }
     };
 

@@ -30,7 +30,6 @@ export default function Hero() {
 
     const video = videoRef.current;
     let scrub: ScrollTrigger | null = null;
-    let videoScrub: ScrollTrigger | null = null;
 
     const startScrub = () => {
       if (!video || !(video.duration > 0)) return;
@@ -45,7 +44,6 @@ export default function Hero() {
             ? video.seekable.end(video.seekable.length - 1)
             : 6;
       const scrollPercent = Math.round(Math.min(duration, 25) * 24);
-      const videoScrollPercent = Math.round(scrollPercent * 0.6);
       const contentStart = 20 / scrollPercent;
       const contentEnd = 0.6;
       scrub = ScrollTrigger.create({
@@ -57,6 +55,11 @@ export default function Hero() {
         pinSpacing: false,
         anticipatePin: 1,
         onUpdate: (self) => {
+          const target =
+            self.progress * Math.max(duration - 0.05, 0.05);
+          if (Math.abs(target - video.currentTime) > 0.02) {
+            video.currentTime = target;
+          }
           const cp = gsap.utils.clamp(
             0,
             1,
@@ -73,19 +76,6 @@ export default function Hero() {
           }
         },
       });
-      videoScrub = ScrollTrigger.create({
-        trigger: rootRef.current,
-        start: "top top",
-        end: () => `+=${videoScrollPercent}%`,
-        scrub: true,
-        onUpdate: (self) => {
-          const target =
-            self.progress * Math.max(duration - 0.05, 0.05);
-          if (Math.abs(target - video.currentTime) > 0.02) {
-            video.currentTime = target;
-          }
-        },
-      });
     };
 
     if (video && video.readyState >= 2) {
@@ -99,7 +89,6 @@ export default function Hero() {
       ctx.revert();
       if (video) video.removeEventListener("loadeddata", startScrub);
       scrub?.kill();
-      videoScrub?.kill();
     };
   }, []);
 

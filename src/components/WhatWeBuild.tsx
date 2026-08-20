@@ -45,7 +45,7 @@ export default function WhatWeBuild() {
           </div>
 
           <div className="lg:col-span-7">
-            <h2 className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:top-0 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+            <h2 className="mb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:-top-4 lg:z-10 lg:bg-white lg:py-2 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
               Our <span className="text-brand">Services</span>
             </h2>
             <ol className="divide-y divide-black/10 border-y border-black/10">

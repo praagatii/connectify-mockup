@@ -1,213 +1,196 @@
+﻿import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 
-const storyStats = [
-  { value: "2019", label: "Founded" },
-  { value: "50+", label: "Engineers" },
-  { value: "80+", label: "Clients" },
-  { value: "2", label: "Offices" },
-];
-
-const founders = [
+const differentiators = [
   {
-    initials: "BK",
-    name: "Bhuvan Koulagi",
-    role: "Business Development and Marketing",
-    bio: "Co-Founder, Connectify. Former Business Development Officer, Director at Excellent Neet Academy, and CBO at The Ticketing.",
+    title: "Specialisation",
+    description:
+      "Our focus on the Fintech, Banking & BFSI space means we understand the unique challenges and opportunities facing your industry.",
   },
   {
-    initials: "AD",
-    name: "Abhay Desai",
-    role: "Tech Development",
-    bio: "Co-Founder, Connectify. Former CTO at The Ticketing, VP Product at StackIntel, and Technical Specialist.",
+    title: "Innovation",
+    description:
+      "We thrive on innovation, harnessing the latest technologies, trends, and strategies to deliver forward-thinking solutions that drive real results.",
   },
   {
-    initials: "CS",
-    name: "Chiragsovi SV",
-    role: "Chief Product Officer",
-    bio: "Co-Founder, Connectify. Former CPTO at Unicred, Product Lead at Novopay (Trustt), Infra.market, and ex-Deloitte.",
+    title: "Collaboration",
+    description:
+      "We believe in the power of partnership, working closely with clients to co-create solutions that are tailor-made for their needs and objectives.",
+  },
+  {
+    title: "Results",
+    description:
+      "Our track record speaks for itself. From boosting profitability to enhancing customer experiences, we're dedicated to delivering measurable outcomes that propel our clients to new heights of success.",
   },
 ];
 
-const advisors = [
-  { initials: "KM", name: "Kiran Mahuli", role: "Director at Wells Fargo" },
-  { initials: "GR", name: "Gokul Rangababu", role: "IT Executive Leader" },
+const reasons = [
   {
-    initials: "PK",
-    name: "Pankaj Kumar",
-    role: "Fintech Entrepreneur · Angel Investor",
-    bio: "Among the Top 50 most influential payment professionals. Startup advisor.",
+    title: "Expertise",
+    description:
+      "Our team comprises seasoned professionals with a proven track record of success in growth strategy and investment consulting.",
   },
   {
-    initials: "DA",
-    name: "Devkant Aggarwal",
-    role: "Leader, Growth Initiatives",
-    bio: "Career Education, I/SA at IBM India Pvt Ltd.",
+    title: "Customised Solutions",
+    description:
+      "We understand that every client is unique, and we tailor our services to meet their specific needs and objectives.",
+  },
+  {
+    title: "Results-Oriented",
+    description:
+      "We are committed to delivering tangible results that drive sustainable growth and maximise investment returns.",
+  },
+  {
+    title: "Collaborative Approach",
+    description:
+      "We partner closely with clients, acting as an extension of their team, to ensure alignment and success.",
+  },
+  {
+    title: "Integrity and Trust",
+    description:
+      "We operate with the highest standards of integrity, transparency, and professionalism, earning the trust and confidence of our clients.",
   },
 ];
 
 export const metadata = {
-  title: "About — Connectify Tech",
+  title: "About â€” Connectify",
   description:
-    "Building possibilities since 2019. Meet the team behind Connectify Tech and learn how we turn ideas into powerful digital solutions.",
+    "Your strategic partner in the Banking & Fintech revolution â€” a boutique consultancy with strategy, investment, and technology expertise.",
 };
 
 export default function AboutPage() {
   return (
     <>
       <PageIntro
-        eyebrow="About Us"
-        title="Building Possibilities Since 2019"
-        description="We're not just building tech — we're building possibilities. Helping businesses turn ideas into powerful digital solutions."
+        eyebrow="About Connectify"
+        title="Who we are â€” and why clients choose us."
+        description="Your strategic partner in the Banking & Fintech revolution â€” a boutique consultancy with strategy, investment, and technology expertise."
       />
 
-      <div className="px-6 py-16 sm:py-20">
+      <div className="px-6 py-16">
         <div className="mx-auto w-full max-w-6xl space-y-20">
           <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-              Our Story
+            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              Who We Are
             </h2>
-            <h3 className="mt-4 font-inter text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
-              Engineering the Future
+            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+              Your strategic partner
             </h3>
-            <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
-              Since 2019, we&apos;ve blended innovation with rigorous execution
-              to deliver amazing digital products. What began as a small,
-              passionate team of developers has evolved into a global
-              powerhouse of digital innovation. We realized early on that
-              businesses don&apos;t just need code — they need partners who
-              understand their vision and can execute with outstanding
-              precision.
-            </p>
+            <div className="mt-8 max-w-3xl space-y-6">
+              <p className="text-base leading-relaxed text-muted sm:text-lg">
+                Connectify is a new-age boutique consultancy firm comprised of
+                strategy and investment consulting. Our team brings together
+                diverse backgrounds and expertise from various industries,
+                including Banking &amp; Financial Services, Technology,
+                Healthcare, and beyond. With a deep understanding of market
+                dynamics, emerging trends, and investment opportunities, we
+                offer strategic insights and actionable recommendations that
+                drive long-term value for our clients.
+              </p>
+              <p className="text-base leading-relaxed text-muted">
+                At Connectify, we believe in taking a holistic approach to
+                growth and investment consulting. We work closely with clients
+                to understand their unique challenges, goals, and opportunities,
+                allowing us to develop tailored strategies that align with their
+                vision and drive sustainable results. Whether it&apos;s
+                identifying new market opportunities, optimising investment
+                portfolios, or executing growth initiatives, we leverage our
+                expertise and industry insights to deliver measurable impact.
+              </p>
+              <p className="text-base leading-relaxed text-muted">
+                We take a holistic approach to consulting, blending deep
+                industry expertise with a passion for innovation and a
+                commitment to excellence. From disruptive startups to
+                established financial institutions, we partner with clients
+                across the BFSI spectrum to unlock opportunities, drive growth,
+                and shape the future of finance.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              Our Approach
+            </h2>
+            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+              What sets us apart
+            </h3>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              {differentiators.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-black/10 bg-surface p-8"
+                >
+                  <h4 className="font-inter text-xl font-semibold text-black">
+                    {item.title}
+                  </h4>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              Why Choose Us
+            </h2>
+            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+              Why choose Connectify?
+            </h3>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
-              Our approach is simple but rigorous: we listen closely, build
-              meticulously, and deploy seamlessly. Whether we&apos;re architecting
-              scalable cloud infrastructure, designing intuitive mobile
-              experiences, or training complex AI models, our commitment to
-              engineering excellence remains the same.
+              In the rapidly evolving world of finance, staying ahead requires
+              more than just keeping pace â€” it demands vision, agility, and
+              strategic acumen. With a finger on the pulse of the Fintech
+              revolution, we offer cutting-edge solutions, tailored strategies,
+              and actionable insights to help you navigate the complexities of
+              today&apos;s digital-first economy.
             </p>
-
-            <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {storyStats.map((stat) => (
+            <div className="mt-8 space-y-0">
+              {reasons.map((item, i) => (
                 <div
-                  key={stat.label}
-                  className="rounded-2xl border border-white/10 bg-surface p-6"
+                  key={item.title}
+                  className="flex gap-6 border-t border-black/10 py-6 last:border-b"
                 >
-                  <p className="font-inter text-4xl font-black text-brand">
-                    {stat.value}
-                  </p>
-                  <p className="mt-2 text-sm text-muted">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
-                Our Mission
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                To empower businesses with transformative technology solutions
-                that drive growth, efficiency, and innovation — making
-                enterprise-grade software accessible to companies of all sizes.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
-                Our Vision
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                To be the go-to technology partner for ambitious companies
-                worldwide, known for delivering exceptional digital products
-                that shape industries and create lasting impact.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-              Leadership
-            </h2>
-            <h3 className="mt-4 font-inter text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
-              Meet our team
-            </h3>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {founders.map((person) => (
-                <div
-                  key={person.name}
-                  className="rounded-2xl border border-white/10 bg-surface p-8"
-                >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-electric to-brand font-inter text-sm font-bold text-white">
-                    {person.initials}
+                  <span className="font-mono text-sm text-brand">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h4 className="mt-5 font-inter text-lg font-semibold text-white">
-                    {person.name}
-                  </h4>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-white/40">
-                    {person.role}
-                  </p>
-                  <p className="mt-4 text-sm leading-relaxed text-muted">
-                    {person.bio}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-              Chief Advisories
-            </h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {advisors.map((person) => (
-                <div
-                  key={person.name}
-                  className="rounded-2xl border border-white/10 bg-surface p-8"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 font-inter text-xs font-bold text-white">
-                    {person.initials}
-                  </span>
-                  <h4 className="mt-4 font-inter text-base font-semibold text-white">
-                    {person.name}
-                  </h4>
-                  <p className="mt-1 text-xs leading-relaxed text-white/40">
-                    {person.role}
-                  </p>
-                  {person.bio ? (
-                    <p className="mt-3 text-xs leading-relaxed text-white/40">
-                      {person.bio}
+                  <div>
+                    <h4 className="font-inter text-xl font-semibold text-black">
+                      {item.title}
+                    </h4>
+                    <p className="mt-1 text-sm leading-relaxed text-muted">
+                      {item.description}
                     </p>
-                  ) : null}
+                  </div>
                 </div>
               ))}
             </div>
           </section>
 
-          <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-              Locations
-            </h2>
-            <h3 className="mt-4 font-inter text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
-              Our offices
-            </h3>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-surface p-8">
-                <h4 className="font-inter text-xl font-bold text-white">Bengaluru</h4>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  Avalahalli Main Road, JP Nagar 9th Phase, 3rd Block,
-                  Bengaluru — 560076
-                </p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-surface p-8">
-                <h4 className="font-inter text-xl font-bold text-white">Pune</h4>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi,
-                  Pimpri-Chinchwad, Maharashtra
-                </p>
-              </div>
-            </div>
-          </section>
+          <div className="flex justify-center">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-electric to-brand px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Work with us
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
 

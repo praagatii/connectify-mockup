@@ -1,12 +1,12 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 import { projects, industries } from "@/lib/projects";
 
 export const metadata = {
-  title: "Case Studies — Connectify Tech",
+  title: "Case Studies â€” Connectify",
   description:
-    "Explore how Connectify Tech has helped startups and enterprises scale with real impact and proven results.",
+    "A detailed look at platforms we've engineered and taken to market across fintech, healthtech, govtech, mobility, edtech, enterprise, and more.",
 };
 
 export default async function CaseStudiesPage({
@@ -23,20 +23,20 @@ export default async function CaseStudiesPage({
   return (
     <>
       <PageIntro
-        eyebrow="Our Work"
-        title="Real Impact. Proven Results."
-        description="Explore how we've helped startups and enterprises alike scale and innovate."
+        eyebrow="Case Studies"
+        title="Real impact. Proven results."
+        description="A detailed look at platforms we've engineered and taken to market across fintech, healthtech, govtech, mobility, edtech, enterprise, and more."
       />
 
-      <div className="px-6 py-16 sm:py-20">
+      <div className="px-6 py-16 py-20">
         <div className="mx-auto w-full max-w-6xl">
           <div className="flex flex-wrap items-center gap-2">
             <Link
               href="/case-studies"
               className={`rounded-full border px-4 py-2 text-sm transition-colors ${
                 !active
-                  ? "border-brand bg-brand/10 text-white"
-                  : "border-white/15 text-muted hover:border-white/40 hover:text-white"
+                  ? "border-brand bg-brand text-white"
+                  : "border-black/15 text-muted hover:border-black/40 hover:text-black"
               }`}
             >
               All
@@ -50,8 +50,8 @@ export default async function CaseStudiesPage({
                   href={href}
                   className={`rounded-full border px-4 py-2 text-sm transition-colors ${
                     isActive
-                      ? "border-brand bg-brand/10 text-white"
-                      : "border-white/15 text-muted hover:border-white/40 hover:text-white"
+                      ? "border-brand bg-brand text-white"
+                      : "border-black/15 text-muted hover:border-black/40 hover:text-black"
                   }`}
                 >
                   {industry.name}
@@ -63,31 +63,36 @@ export default async function CaseStudiesPage({
           {filtered.length === 0 ? (
             <p className="mt-12 text-sm text-muted">
               No case studies in this category yet.{" "}
-              <Link href="/case-studies" className="text-white underline underline-offset-4">
+              <Link href="/case-studies" className="text-black underline underline-offset-4">
                 View all projects
               </Link>
               .
             </p>
           ) : (
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {filtered.map((project) => (
                 <Link
                   key={project.slug}
                   href={`/case-studies/${project.slug}`}
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-surface p-8 transition-colors hover:border-white/25"
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 bg-surface transition-colors hover:border-white/25"
                 >
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -right-6 -top-10 select-none font-inter text-[10rem] font-black leading-none text-white/[0.03] transition-colors group-hover:text-brand/10"
-                  >
-                    {project.initial}
-                  </span>
+                  <div className="relative aspect-[16/10] overflow-hidden border-b border-black/10">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-between p-8 pt-6">
                   <div className="relative flex items-center justify-between">
                     <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                       {project.category}
                     </span>
                     <svg
-                      className="h-5 w-5 text-white/30 transition-all group-hover:translate-x-1 group-hover:text-white"
+                      className="h-5 w-5 text-black/30 transition-all group-hover:translate-x-1 group-hover:text-black"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -100,8 +105,8 @@ export default async function CaseStudiesPage({
                       />
                     </svg>
                   </div>
-                  <div className="relative mt-16">
-                    <h2 className="font-inter text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  <div className="relative mt-6">
+                    <h2 className="font-inter text-xl font-bold tracking-tight text-black">
                       {project.name}
                     </h2>
                     <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
@@ -112,11 +117,12 @@ export default async function CaseStudiesPage({
                     {project.tech.slice(0, 4).map((t) => (
                       <span
                         key={t}
-                        className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted"
+                        className="rounded-full border border-black/10 px-3 py-1 text-xs text-muted"
                       >
                         {t}
                       </span>
                     ))}
+                  </div>
                   </div>
                 </Link>
               ))}

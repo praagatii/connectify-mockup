@@ -1,44 +1,34 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Lenis from "lenis";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll() {
-  const pathname = usePathname();
-  const smootherRef = useRef<ScrollSmoother | null>(null);
-
-  useLayoutEffect(() => {
-    const smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.2,
-      effects: true,
-      smoothTouch: 0.1,
-      normalizeScroll: true,
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.08,
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.4,
     });
-    smootherRef.current = smoother;
-    ScrollTrigger.refresh();
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    const raf = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(raf);
+    gsap.ticker.lagSmoothing(0);
+    gsap.ticker.fps(120);
 
     return () => {
-      smoother.kill();
-      smootherRef.current = null;
+      gsap.ticker.remove(raf);
+      gsap.ticker.lagSmoothing(1);
+      lenis.destroy();
     };
   }, []);
-
-  useLayoutEffect(() => {
-    if (!smootherRef.current) return;
-    ScrollTrigger.refresh();
-    if (window.location.hash) {
-      const target = document.querySelector(window.location.hash);
-      if (target) smootherRef.current.scrollTo(target, true, "top 80px");
-    }
-  }, [pathname]);
 
   return null;
 }

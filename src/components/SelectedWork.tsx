@@ -1,19 +1,31 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const projects = [
   {
+    initial: "K",
+    name: "Karnataka Statewide Survey Platform",
+    image: "/clients/The-Karnataka-Government-Kannada-Logo-Vector.svg-.png",
+    category: "GovTech Â· Karnataka Socio-Educational Survey",
+    description:
+      "Enterprise-grade digital platform powering the Government of Karnataka's statewide socio-educational survey covering millions of households.",
+    tech: ["Flutter", "Node.js", "PostgreSQL"],
+    href: "/case-studies/karnataka-statewide-survey-platform",
+  },
+  {
     initial: "T",
     name: "Taurus Career AI",
-    category: "AI Platform · Career",
+    image: "/case-studies/taurus-career-ai.jpg",
+    category: "AI Platform Â· Career",
     description:
-      "AI-driven, mobile-first career platform combining job discovery, résumé optimization, and community collaboration.",
-    tech: ["React Native", "Node.js", "Python", "AWS"],
+      "AI-driven, mobile-first career platform combining job discovery, rÃ©sumÃ© optimization, and community collaboration.",
+    tech: ["React Native", "Node.js", "Python"],
     href: "/case-studies/taurus-career-ai",
   },
   {
     initial: "F",
     name: "Flycure Health",
-    category: "Healthcare",
+    image: "/case-studies/flycure-health.jpg",
+    category: "Healthcare Â· Medical Tourism",
     description:
       "Cross-platform medical tourism application connecting international patients with accredited hospitals in India.",
     tech: ["Flutter", "Node.js", "Firebase"],
@@ -22,62 +34,69 @@ const projects = [
   {
     initial: "C",
     name: "Cloud Kitchen POS",
-    category: "Enterprise",
+    image: "/case-studies/cloud-kitchen-pos.jpg",
+    category: "Enterprise Â· FoodTech",
     description:
       "Scalable POS system for a top cloud kitchen brand, managing 5 sub-brands and close to 100 kitchens.",
     tech: ["React", "Node.js", "MongoDB"],
     href: "/case-studies/cloud-kitchen-pos",
   },
   {
-    initial: "T",
-    name: "Trackway",
-    category: "IoT / Mobility",
+    initial: "C",
+    name: "Contractor Loyalty App",
+    image: "/case-studies/contractor-loyalty-app.jpg",
+    category: "Enterprise Â· ConstructionTech",
     description:
-      "Smart vehicle tracking platform with real-time monitoring, ride data analytics, and support integration.",
-    tech: ["React", "Node.js", "MongoDB"],
-    href: "/case-studies/vehicle-tracking",
+      "Digital loyalty application fostering stronger contractor relationships through a points-based rewards system.",
+    tech: ["React Native", "Node.js", "PostgreSQL"],
+    href: "/case-studies/contractor-loyalty-app",
   },
 ];
 
 export default function SelectedWork() {
   return (
-    <section id="work" className="relative py-24 sm:py-32">
+    <section id="work" className="relative bg-white py-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.35em] text-muted">
-              03 / Selected Work
+              03 / Portfolio
             </p>
-            <h2 className="mt-6 font-inter text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-6 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
               Real impact. Proven results.
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            A selection of platforms we&apos;ve designed, built, and scaled for
-            startups and enterprises alike.
+            Platforms we&apos;ve engineered across fintech, govtech, healthtech,
+            mobility and enterprise.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {projects.map((project) => (
-<Link
+            <Link
               key={project.name}
               href={project.href}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-surface p-8 transition-colors hover:border-white/25"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 bg-surface transition-colors hover:border-white/25"
             >
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-6 -top-10 select-none font-inter text-[10rem] font-black leading-none text-white/[0.03] transition-colors group-hover:text-brand/10"
-              >
-                {project.initial}
-              </span>
+              <div className="relative aspect-[16/10] overflow-hidden border-b border-black/10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
+              </div>
 
+              <div className="flex flex-1 flex-col justify-between p-8 pt-6">
               <div className="relative flex items-center justify-between">
                 <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                   {project.category}
                 </span>
                 <svg
-                  className="h-5 w-5 text-white/30 transition-all group-hover:translate-x-1 group-hover:text-white"
+                  className="h-5 w-5 text-black/30 transition-all group-hover:translate-x-1 group-hover:text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -91,8 +110,8 @@ export default function SelectedWork() {
                 </svg>
               </div>
 
-              <div className="relative mt-16">
-                <h3 className="font-inter text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              <div className="relative mt-6">
+                <h3 className="font-inter text-xl font-bold tracking-tight text-black">
                   {project.name}
                 </h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
@@ -104,12 +123,13 @@ export default function SelectedWork() {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted"
+                    className="rounded-full border border-black/10 px-3 py-1 text-xs text-muted"
                   >
                     {t}
                   </span>
                 ))}
-</div>
+              </div>
+              </div>
             </Link>
           ))}
         </div>
@@ -117,9 +137,9 @@ export default function SelectedWork() {
         <div className="mt-12 flex justify-center">
           <Link
             href="/case-studies"
-            className="group inline-flex items-center gap-2 rounded-lg border border-white/20 px-8 py-3.5 font-inter text-sm font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5"
+            className="group inline-flex items-center gap-2 rounded-lg border border-black/20 px-8 py-3.5 font-inter text-sm font-semibold text-black transition-colors hover:border-black/40 hover:bg-black/5"
           >
-            View all work
+            See all case studies
             <svg
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               fill="none"

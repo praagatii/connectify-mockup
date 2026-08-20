@@ -14,31 +14,28 @@ const clients = [
   { src: "/clients/mego_pay.png", alt: "Mego Pay" },
   { src: "/clients/Namma_metro.svg.png", alt: "Namma Metro" },
   { src: "/clients/The-Karnataka-Government-Kannada-Logo-Vector.svg-.png", alt: "Karnataka Government" },
-  { src: "/clients/images.jpeg", alt: "Trusted partner" },
 ];
 
 export default function TrustedBy() {
   const logos = [...clients, ...clients];
   return (
-    <section className="relative py-24 sm:py-32">
-      <div className="mx-auto w-full max-w-6xl px-6">
-        <p className="text-center text-xs font-medium uppercase tracking-[0.35em] text-muted">
-          05 / Trusted By
+    <section className="relative bg-white py-16">
+      <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.35em] text-brand">
+          Trusted by innovative brands
         </p>
-        <h2 className="mt-4 text-center font-inter text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
-          Trusted by innovators worldwide
-        </h2>
       </div>
 
       <div className="marquee-paused mt-12 overflow-hidden">
         <div className="flex w-max animate-marquee items-center">
           {logos.map((client, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               key={`${client.alt}-${i}`}
               src={client.src}
               alt={client.alt}
               loading="lazy"
-              className="mr-14 h-9 w-auto max-w-40 object-contain opacity-60 grayscale contrast-125 transition duration-500 hover:opacity-100 hover:grayscale-0 sm:mr-20 sm:h-10"
+              className="mx-10 h-9 w-auto max-w-40 object-contain opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0"
             />
           ))}
         </div>

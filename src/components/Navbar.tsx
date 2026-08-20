@@ -4,29 +4,30 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { label: "What We Build", href: "/services" },
-  { label: "Industries", href: "/case-studies" },
   { label: "Work", href: "/case-studies" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
+  { label: "Insights", href: "/case-studies" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-md">
-      <nav className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center" aria-label="Connectify Tech">
+    <header className="fixed inset-x-0 top-0 z-50">
+      <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:h-20 lg:px-12">
+        <Link href="/" className="flex items-center" aria-label="ConnectifyTech">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/connectifylogo.png" alt="Connectify Tech" className="h-16 w-auto" />
+          <img src="/connectifylogo.png" alt="ConnectifyTech" className="h-10 w-auto sm:h-12" />
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-10 md:flex">
           {links.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="font-inter text-sm font-medium text-muted transition-colors hover:text-white"
+              className="font-inter text-sm font-medium text-gray-500 transition-colors hover:text-black"
             >
               {link.label}
             </Link>
@@ -36,16 +37,29 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className="hidden rounded-lg bg-gradient-to-r from-electric to-brand px-5 py-2.5 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
+            className="hidden rounded-full bg-brand px-6 py-2.5 font-inter text-sm font-semibold text-white transition-colors hover:bg-brand-deep md:inline-flex"
           >
-            Get in touch
+            Let&apos;s Talk
+            <svg
+              className="ml-2 h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </Link>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 text-white md:hidden"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 text-black md:hidden"
           >
             <span
               className={`h-0.5 w-6 bg-current transition-transform ${
@@ -62,14 +76,14 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-black/80 backdrop-blur-md md:hidden">
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-6 py-4">
+        <div className="border-t border-black/10 bg-white/90 backdrop-blur-md md:hidden">
+          <div className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
             {links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 font-inter text-sm font-medium text-muted transition-colors hover:text-white"
+                className="rounded-lg px-3 py-3 font-inter text-sm font-medium text-gray-500 transition-colors hover:text-black"
               >
                 {link.label}
               </Link>
@@ -77,9 +91,9 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-lg bg-gradient-to-r from-electric to-brand px-3 py-3 text-center font-inter text-sm font-semibold text-white"
+              className="mt-2 rounded-full bg-brand px-3 py-3 text-center font-inter text-sm font-semibold text-white"
             >
-              Get in touch
+              Let&apos;s Talk
             </Link>
           </div>
         </div>

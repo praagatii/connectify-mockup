@@ -1,84 +1,114 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
-const industries = [
+const platforms = [
   {
-    name: "Fintech",
-    count: "10+ projects",
-    description:
-      "Payment platforms, digital banking, and secure financial infrastructure.",
-    href: "/case-studies?category=Fintech",
-  },
-  {
-    name: "Edtech",
-    count: "3+ projects",
-    description: "Learning platforms and assessment systems for modern education.",
-    href: "/case-studies?category=Edtech",
-  },
-  {
+    number: "P.01",
     name: "Healthtech",
-    count: "2+ projects",
     description:
-      "Patient platforms and hospital systems that connect care to people.",
-    href: "/case-studies?category=Healthtech",
+      "Clinical, hospital and patient platforms for modern healthcare delivery.",
+    count: "04 platforms",
+    href: "/products#healthtech",
   },
   {
-    name: "Mobility",
-    count: "3+ projects",
+    number: "P.02",
+    name: "Accounting",
     description:
-      "Vehicle tracking, fleet intelligence, and real-time logistics.",
-    href: "/case-studies?category=Mobility",
+      "Finance and spend platforms for clearer books, smarter automation and controlled expenses.",
+    count: "04 platforms",
+    href: "/products#accounting",
   },
   {
-    name: "Enterprise",
-    count: "5+ projects",
+    number: "P.03",
+    name: "SaaS Platforms",
     description:
-      "Operations platforms and POS systems built for scale and uptime.",
-    href: "/case-studies?category=Enterprise",
+      "Operational SaaS products for retail, sales, loyalty and public-sector discovery.",
+    count: "05 platforms",
+    href: "/products#saas-platforms",
   },
   {
-    name: "Retail & E-Commerce",
-    count: "4+ projects",
-    description: "Commerce platforms, loyalty systems, and store operations.",
-    href: "/case-studies?category=Retail%20%26%20E-Com",
+    number: "P.04",
+    name: "HRtech",
+    description:
+      "Hiring, learning and secure collaboration platforms for modern workforce teams.",
+    count: "03 platforms",
+    href: "/products#hrtech",
+  },
+  {
+    number: "P.05",
+    name: "Fintech",
+    description:
+      "Banking and payments infrastructure â€” BaaS, gateways, settlement and card processing.",
+    count: "04 platforms",
+    href: "/products#fintech",
   },
 ];
 
-export default function Industries() {
+export default function EnterprisePlatforms() {
   return (
-    <section id="industries" className="relative py-24 sm:py-32">
+    <section id="platforms" className="relative bg-white py-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.35em] text-muted">
-              02 / Industries
+              02 / Enterprise Platforms
             </p>
-            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
-              Where we apply it
+            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+              Industry platforms we build and ship.
             </h3>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Deep expertise across sectors — building tailored platforms for the
-            unique problems each industry faces.
-          </p>
+          <div className="flex flex-col items-start gap-6 sm:items-end">
+            <p className="max-w-sm text-sm leading-relaxed text-muted">
+              Healthtech, accounting, SaaS, HRtech and fintech products
+              engineered for production scale.
+            </p>
+            <Link
+              href="/products"
+              className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-black transition-opacity hover:opacity-80"
+            >
+              <span className="bg-gradient-to-r from-electric to-brand bg-clip-text text-transparent">
+                View all categories
+              </span>
+              <svg
+                className="h-4 w-4 text-brand transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
 
-        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.map((industry) => (
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10 sm:grid-cols-2 lg:grid-cols-3">
+          {platforms.map((platform) => (
             <Link
-              key={industry.name}
-              href={industry.href}
-              className="group flex flex-col justify-between gap-10 bg-surface p-8 transition-colors hover:bg-[#101b30]"
+              key={platform.name}
+              href={platform.href}
+              className="group flex flex-col justify-between gap-10 bg-surface p-8 transition-colors hover:bg-black/5"
             >
-              <span className="text-sm text-muted">{industry.count}</span>
+              <span className="flex items-center justify-between">
+                <span className="font-mono text-xs text-brand">
+                  {platform.number}
+                </span>
+                <span className="text-xs uppercase tracking-[0.15em] text-muted">
+                  {platform.count}
+                </span>
+              </span>
               <span className="flex flex-col gap-4">
-                <span className="font-inter text-xl font-bold uppercase tracking-tight text-white sm:text-2xl">
-                  {industry.name}
+                <span className="font-inter text-xl font-bold uppercase tracking-tight text-black">
+                  {platform.name}
                 </span>
                 <span className="text-sm leading-relaxed text-muted">
-                  {industry.description}
+                  {platform.description}
                 </span>
                 <svg
-                  className="h-5 w-5 text-white/30 transition-all group-hover:translate-x-1 group-hover:text-brand"
+                  className="h-5 w-5 text-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

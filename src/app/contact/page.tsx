@@ -1,68 +1,86 @@
-import PageIntro from "@/components/PageIntro";
+﻿import PageIntro from "@/components/PageIntro";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact — Connectify Tech",
+  title: "Contact â€” Connectify",
   description:
-    "Tell us about your project. Connectify Tech — sales@connectify.global, +91 63611 22739.",
+    "Questions or a new engagement? Send a message or reach us directly â€” business@connectify.global, +91 98348 43396.",
 };
+
+const openingHours = [
+  { days: "Monday - Friday", hours: "9:00 - 18:00" },
+  { days: "Saturday", hours: "9:00 - 16:00" },
+  { days: "Sunday", hours: "Closed" },
+];
 
 export default function ContactPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Contact Us"
-        title="Let's Build Something Great Together"
-        description="Tell us about your project. We'd love to hear from you."
+        eyebrow="Contact"
+        title="Get in touch"
+        description="Questions or a new engagement? Send a message or reach us directly."
       />
 
-      <div className="px-6 py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-5">
-          <div className="space-y-6 lg:col-span-2">
+      <div className="px-6 py-16">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 sm:grid-cols-5">
+          <div className="space-y-6 sm:col-span-2">
             <a
-              href="mailto:sales@connectify.global"
-              className="block rounded-2xl border border-white/10 bg-surface p-8 transition-colors hover:border-white/25"
+              href="tel:+919834843396"
+              className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-white/25"
             >
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-                Chat to us
+              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+                Phone
               </h2>
-              <p className="mt-3 text-sm text-muted">Our team is here to help.</p>
-              <p className="mt-2 font-medium text-white">sales@connectify.global</p>
+              <p className="mt-3 text-sm text-muted">Call us directly.</p>
+              <p className="mt-2 font-medium text-black">+91 98348 43396</p>
             </a>
 
             <a
-              href="tel:+916361122739"
-              className="block rounded-2xl border border-white/10 bg-surface p-8 transition-colors hover:border-white/25"
+              href="mailto:business@connectify.global"
+              className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-white/25"
             >
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-                Call us
+              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+                Email
               </h2>
-              <p className="mt-3 text-sm text-muted">Mon–Fri, 8am to 10pm</p>
-              <p className="mt-2 font-medium text-white">+91 63611 22739</p>
+              <p className="mt-3 text-sm text-muted">Drop us a message.</p>
+              <p className="mt-2 font-medium text-black">
+                business@connectify.global
+              </p>
             </a>
 
-            <div className="rounded-2xl border border-white/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
-                Visit us
+            <div className="rounded-2xl border border-black/10 bg-surface p-8">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+                Address
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                <span className="block font-medium text-white">Bengaluru</span>
-                JP Nagar 9th Phase, Bengaluru — 560076
+                8, Avalahalli Main Road, JP Nagar 9th Phase 3rd Block,
+                Bengaluru &mdash; 560076
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                <span className="block font-medium text-white">Pune</span>
-                Hinjawadi Infotech Park, Maharashtra
-              </p>
+            </div>
+
+            <div className="rounded-2xl border border-black/10 bg-surface p-8">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+                Opening hours
+              </h2>
+              <ul className="mt-3 space-y-2 text-sm text-muted">
+                {openingHours.map((row) => (
+                  <li key={row.days} className="flex justify-between gap-4">
+                    <span>{row.days}</span>
+                    <span className="text-black">{row.hours}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <div className="lg:col-span-3">
-            <div className="rounded-2xl border border-white/10 bg-surface p-8 sm:p-10">
-              <h2 className="font-inter text-xl font-bold uppercase tracking-tight text-white sm:text-2xl">
-                How can we help?
+          <div className="sm:col-span-3">
+            <div className="rounded-2xl border border-black/10 bg-surface p-8 sm:p-10">
+              <h2 className="font-inter text-xl font-bold uppercase tracking-tight text-black sm:text-2xl">
+                Send us a message
               </h2>
               <p className="mt-2 text-sm text-muted">
-                Fill out the form and we&apos;ll get back within 24 hours.
+                Fill out the form and we&apos;ll get back to you.
               </p>
               <div className="mt-8">
                 <ContactForm />

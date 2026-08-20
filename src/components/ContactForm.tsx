@@ -1,18 +1,18 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
 const serviceOptions = [
-  "Web Application Development",
-  "Mobile App Development",
+  "Digital Solutions",
+  "Web Development",
+  "Mobile Apps",
   "SaaS Solutions",
-  "E-Commerce Support",
+  "E-commerce",
   "Cloud Computing",
-  "AWS Consulting",
-  "AI / ML Solutions",
-  "Blockchain",
-  "Project Outsourcing",
-  "Product Consulting",
+  "AI/ML and Blockchain",
+  "Managed Services",
+  "Business Advisory",
+  "Investment Consulting",
   "Other",
 ];
 
@@ -38,7 +38,7 @@ export default function ContactForm() {
       ].join("\n")
     );
 
-    window.location.href = `mailto:sales@connectify.global?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:business@connectify.global?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -53,7 +53,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             required
-            className="mt-2 w-full rounded-lg border border-white/15 bg-surface px-4 py-2.5 text-sm text-white placeholder-white/30 focus:border-brand focus:outline-none"
+            className="mt-2 w-full rounded-lg border border-black/15 bg-surface px-4 py-2.5 text-sm text-black placeholder-black/30 focus:border-brand focus:outline-none"
             placeholder="Your name"
           />
         </div>
@@ -66,7 +66,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
-            className="mt-2 w-full rounded-lg border border-white/15 bg-surface px-4 py-2.5 text-sm text-white placeholder-white/30 focus:border-brand focus:outline-none"
+            className="mt-2 w-full rounded-lg border border-black/15 bg-surface px-4 py-2.5 text-sm text-black placeholder-black/30 focus:border-brand focus:outline-none"
             placeholder="you@example.com"
           />
         </div>
@@ -81,7 +81,7 @@ export default function ContactForm() {
             id="company"
             name="company"
             type="text"
-            className="mt-2 w-full rounded-lg border border-white/15 bg-surface px-4 py-2.5 text-sm text-white placeholder-white/30 focus:border-brand focus:outline-none"
+            className="mt-2 w-full rounded-lg border border-black/15 bg-surface px-4 py-2.5 text-sm text-black placeholder-black/30 focus:border-brand focus:outline-none"
             placeholder="Your company"
           />
         </div>
@@ -92,7 +92,7 @@ export default function ContactForm() {
           <select
             id="service"
             name="service"
-            className="mt-2 w-full rounded-lg border border-white/15 bg-surface px-4 py-2.5 text-sm text-white focus:border-brand focus:outline-none"
+            className="mt-2 w-full rounded-lg border border-black/15 bg-surface px-4 py-2.5 text-sm text-black focus:border-brand focus:outline-none"
           >
             <option value="">Select a service</option>
             {serviceOptions.map((option) => (
@@ -113,7 +113,7 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
-          className="mt-2 w-full rounded-lg border border-white/15 bg-surface px-4 py-2.5 text-sm text-white placeholder-white/30 focus:border-brand focus:outline-none"
+          className="mt-2 w-full rounded-lg border border-black/15 bg-surface px-4 py-2.5 text-sm text-black placeholder-black/30 focus:border-brand focus:outline-none"
           placeholder="Tell us about your project..."
         />
       </div>
@@ -123,7 +123,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-electric to-brand px-8 py-3.5 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        {status === "sending" ? "Opening your email…" : "Send Message"}
+        {status === "sending" ? "Opening your emailÃ¢â‚¬Â¦" : "Send Message"}
       </button>
     </form>
   );

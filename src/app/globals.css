@@ -16,15 +16,15 @@
 }
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --surface: #0d1526;
+  --background: #ffffff;
+  --foreground: #0b0b10;
+  --surface: #f6f6f9;
   --brand: #5228b9;
-  --brand-deep: #27004e;
+  --brand-deep: #3b1a8a;
   --electric: #8f00ff;
-  --navy: #0f172a;
-  --slate: #334155;
-  --muted: #64748b;
+  --navy: #f4f2fa;
+  --slate: #475569;
+  --muted: #6b7280;
 }
 
 ::-webkit-scrollbar {
@@ -34,29 +34,35 @@
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  height: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
 }
 
-#smooth-wrapper {
-  height: 100%;
-  overflow: hidden;
-}
-
-#smooth-content {
-  height: auto;
-}
-
 ::selection {
-  background: rgba(82, 40, 185, 0.4);
+  background: rgba(82, 40, 185, 0.2);
   color: #fff;
 }
 

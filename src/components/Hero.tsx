@@ -81,16 +81,11 @@ export default function Hero() {
       const overlayEl = document.querySelector(
         "[data-services-overlay]"
       ) as HTMLElement | null;
-      const textEl = rootRef.current?.querySelector(
-        "[data-hero-content]"
-      ) as HTMLElement | null;
-      if (overlayEl && textEl) {
+      if (overlayEl) {
         const heroH = rootRef.current?.offsetHeight ?? window.innerHeight;
-        const rangePx = (contentEnd - contentStart) * scrollPercent * 0.01 * heroH;
-        const textTravel = textEl.offsetHeight * 1.4;
-        const fromY = Math.max(rangePx - textTravel, 0);
         const startVh = contentStart * scrollPercent;
         const endVh = contentEnd * scrollPercent;
+        const fromY = (startVh * 0.01 * heroH) + 8;
         overlayAnim = gsap.fromTo(
           overlayEl,
           { y: fromY },

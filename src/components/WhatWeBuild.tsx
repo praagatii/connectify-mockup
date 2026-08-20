@@ -88,7 +88,6 @@ export default function WhatWeBuild() {
             <div className="mt-10">
               <Link
                 href="/services"
-                data-services-explore
                 className="group inline-flex items-center gap-2 font-inter text-sm font-semibold transition-opacity hover:opacity-80"
               >
                 <span className="bg-gradient-to-r from-electric to-brand bg-clip-text text-transparent">

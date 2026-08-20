@@ -52,9 +52,9 @@ export default function WhatWeBuild() {
               className="divide-y divide-black/10 border-y border-black/10"
               style={{
                 maskImage:
-                  "linear-gradient(to bottom, transparent 0, black 4rem)",
+                  "linear-gradient(to bottom, transparent 0, black 1rem)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, transparent 0, black 4rem)",
+                  "linear-gradient(to bottom, transparent 0, black 1rem)",
               }}
             >
               {capabilities.map((item) => (

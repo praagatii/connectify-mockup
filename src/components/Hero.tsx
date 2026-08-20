@@ -75,6 +75,16 @@ export default function Hero() {
               opacity: 1 - cp,
             });
           }
+          const list = document.querySelector("[data-services-list]");
+          const heading = document.querySelector("[data-services-heading]");
+          if (list && heading) {
+            const line = heading.getBoundingClientRect().bottom + 8;
+            list.querySelectorAll("li").forEach((item) => {
+              const rect = item.getBoundingClientRect();
+              const p = gsap.utils.clamp(0, 1, (line - rect.top) / rect.height);
+              gsap.set(item, { opacity: 1 - p });
+            });
+          }
         },
       });
 

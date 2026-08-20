@@ -112,7 +112,7 @@ export default function Hero() {
             if (heading && list) {
               const column = heading.parentElement;
               if (column) {
-                const stickyTop = -64;
+                const stickyTop = 96;
                 const applied = Number(gsap.getProperty(heading, "y") || 0);
                 const rect = heading.getBoundingClientRect();
                 const naturalTop = rect.top - applied;

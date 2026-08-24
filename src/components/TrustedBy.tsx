@@ -77,23 +77,35 @@ export default function TrustedBy() {
   return (
     <section ref={rootRef} className="relative z-10 bg-white pt-8 pb-16">
       <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
-        <p className="text-center font-inter text-2xl font-semibold tracking-tight text-brand">
-          Trusted by innovative brands
+        <p className="text-left font-inter text-2xl font-semibold tracking-tight text-brand">
+          Trusted by
         </p>
       </div>
 
-      <div data-trusted-content className="marquee-paused mt-12 overflow-hidden">
-        <div className="flex w-max animate-marquee items-center">
-          {logos.map((client, i) => (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              key={`${client.alt}-${i}`}
-              src={client.src}
-              alt={client.alt}
-              loading="lazy"
-              className="mx-10 h-9 w-auto max-w-40 object-contain opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0"
-            />
-          ))}
+      <div data-trusted-content className="mt-12">
+        <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-12">
+          <div className="overflow-hidden">
+            <div className="flex w-max animate-marquee items-center">
+              {logos.map((client, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={`${client.alt}-${i}`}
+                  src={client.src}
+                  alt={client.alt}
+                  loading="lazy"
+                  className="mx-10 h-9 w-auto max-w-40 object-contain opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0"
+                />
+              ))}
+            </div>
+          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent lg:w-24"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent lg:w-24"
+          />
         </div>
       </div>
     </section>

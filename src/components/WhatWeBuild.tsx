@@ -80,7 +80,7 @@ export default function WhatWeBuild() {
   }, []);
 
   return (
-    <section id="services-suite" ref={rootRef} className="relative py-16 pb-32">
+    <section id="services-suite" ref={rootRef} className="relative pt-10 pb-32">
       <div data-services-overlay>
         <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">

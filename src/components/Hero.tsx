@@ -42,7 +42,7 @@ export default function Hero() {
             ? video.seekable.end(video.seekable.length - 1)
             : 6;
       const startOffset = 0.4;
-      const playDuration = Math.max(duration - startOffset - 1, 0.05);
+      const playDuration = Math.max(duration - startOffset - 1.25, 0.05);
       video.currentTime = startOffset;
       const scrollPercent = Math.round(Math.min(playDuration, 25) * 30);
       const vh = window.innerHeight;

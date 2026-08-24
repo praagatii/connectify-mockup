@@ -21,6 +21,10 @@ export default function TrustedBy() {
 
   return (
     <section className="relative z-10 bg-white pt-28 pb-16">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 -top-40 z-10 h-40 bg-gradient-to-b from-transparent to-white"
+      />
       <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
         <p className="text-center font-inter text-2xl font-semibold tracking-tight text-brand">
           Trusted by innovative brands

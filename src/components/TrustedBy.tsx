@@ -20,11 +20,7 @@ export default function TrustedBy() {
   const logos = [...clients, ...clients];
 
   return (
-    <section className="relative z-10 bg-white pt-28 pb-16">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 -top-40 z-10 h-40 bg-gradient-to-b from-transparent to-white"
-      />
+    <section className="relative z-10 bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0px,#ffffff_160px)] pt-28 pb-16">
       <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
         <p className="text-center font-inter text-2xl font-semibold tracking-tight text-brand">
           Trusted by innovative brands

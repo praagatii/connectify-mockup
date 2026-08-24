@@ -72,7 +72,7 @@ export default function SelectedWork() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Link
               key={project.name}
@@ -90,7 +90,7 @@ export default function SelectedWork() {
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
               </div>
 
-              <div className="flex flex-1 flex-col justify-between p-8 pt-6">
+              <div className="flex flex-1 flex-col justify-between p-6 pt-5">
               <div className="relative flex items-center justify-between">
                 <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                   {project.category}

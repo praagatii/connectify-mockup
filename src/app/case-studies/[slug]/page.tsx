@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 
@@ -108,7 +108,7 @@ export default async function CaseStudyPage({
           <div className="border-t border-black/10 pt-10">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand/60 to-brand-deep/60 backdrop-blur-md px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Build something like this
             </Link>

@@ -66,6 +66,26 @@ body {
   color: #fff;
 }
 
+.btn-glow {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) padding-box,
+    linear-gradient(120deg, #8f00ff, #5228b9 45%, #c084fc) border-box;
+  color: var(--brand-deep);
+  box-shadow:
+    0 0 16px rgba(143, 0, 255, 0.25),
+    0 0 42px rgba(82, 40, 185, 0.18),
+    inset 0 0 14px rgba(143, 0, 255, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow:
+    0 0 22px rgba(143, 0, 255, 0.4),
+    0 0 60px rgba(82, 40, 185, 0.28),
+    inset 0 0 18px rgba(143, 0, 255, 0.12);
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);

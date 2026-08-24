@@ -89,7 +89,7 @@ export default function SelectedWork() {
   }, []);
 
   return (
-    <section id="work" ref={rootRef} className="relative z-10 -mt-6 bg-white pt-4 pb-24">
+    <section id="work" ref={rootRef} className="relative z-10 bg-white pt-0 pb-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <h2 className="font-inter text-xs font-medium uppercase tracking-[0.2em] text-muted">
           Projects
@@ -138,7 +138,7 @@ export default function SelectedWork() {
         <div className="mt-12 flex justify-center">
           <Link
             href="/case-studies"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
           >
             See all case studies
             <svg

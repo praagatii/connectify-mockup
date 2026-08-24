@@ -54,6 +54,9 @@ export default function Hero() {
         (videoEnd - contentStart) * (totalPercent / 100) * contentH;
       let smoothTime = startOffset;
       let latestTarget = startOffset;
+      const videoFadeEl = rootRef.current?.querySelector(
+        "[data-video-fade]"
+      );
       let spacer = document.getElementById(
         "hero-scroll-spacer"
       ) as HTMLDivElement | null;
@@ -93,11 +96,11 @@ export default function Hero() {
               opacity: 1 - cp,
             });
           }
-          const featherP = gsap.utils.clamp(0, 1, (self.progress - 0.75) / 0.2);
-          gsap.set(video, {
-            "--feather": `${Math.round(featherP * 400)}px`,
-            opacity: 1 - gsap.utils.clamp(0, 1, (self.progress - 0.94) / 0.06),
-          });
+          if (videoFadeEl) {
+            gsap.set(videoFadeEl, {
+              opacity: gsap.utils.clamp(0, 1, (self.progress - 0.92) / 0.08),
+            });
+          }
         },
       });
 
@@ -139,8 +142,13 @@ export default function Hero() {
         playsInline
         preload="auto"
         poster="/hero-poster.jpg"
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center [-webkit-mask-image:linear-gradient(to_bottom,#000_calc(100%_-_var(--feather,0px)),transparent)] [mask-image:linear-gradient(to_bottom,#000_calc(100%_-_var(--feather,0px)),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/newhero.mp4"
+      />
+      <div
+        data-video-fade
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-b from-transparent to-white opacity-0"
       />
 
       <div
@@ -169,7 +177,7 @@ export default function Hero() {
           >
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
             >
               What We Build
               <svg

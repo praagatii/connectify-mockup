@@ -108,7 +108,7 @@ export default async function CaseStudyPage({
           <div className="border-t border-black/10 pt-10">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
             >
               Build something like this
             </Link>

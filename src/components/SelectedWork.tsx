@@ -9,37 +9,37 @@ const featured = [
     slug: "karnataka-statewide-survey-platform",
     name: "Karnataka Statewide Survey Platform",
     image: "/clients/The-Karnataka-Government-Kannada-Logo-Vector.svg-.png",
-    context: "#01 · GovTech",
+    context: "GovTech",
   },
   {
     slug: "taurus-career-ai",
     name: "Taurus Career AI",
     image: "/case-studies/taurus-career-ai.jpg",
-    context: "#02 · AI Platform",
+    context: "AI Platform",
   },
   {
     slug: "flycure-health",
     name: "Flycure Health",
     image: "/case-studies/flycure-health.jpg",
-    context: "#03 · Healthcare",
+    context: "Healthcare",
   },
   {
     slug: "cloud-kitchen-pos",
     name: "Cloud Kitchen POS",
     image: "/case-studies/cloud-kitchen-pos.jpg",
-    context: "#04 · Enterprise · FoodTech",
+    context: "Enterprise · FoodTech",
   },
   {
     slug: "contractor-loyalty-app",
     name: "Contractor Loyalty App",
     image: "/case-studies/contractor-loyalty-app.jpg",
-    context: "#05 · Enterprise · ConstructionTech",
+    context: "Enterprise · ConstructionTech",
   },
   {
     slug: "trackway",
     name: "Trackway",
     image: "/case-studies/trackway.jpg",
-    context: "#06 · Logistics",
+    context: "Logistics",
   },
 ];
 

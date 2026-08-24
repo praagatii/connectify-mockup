@@ -93,10 +93,10 @@ export default function Hero() {
               opacity: 1 - cp,
             });
           }
+          const featherP = gsap.utils.clamp(0, 1, (self.progress - 0.75) / 0.2);
           gsap.set(video, {
-            "--feather": `${Math.round(
-              gsap.utils.clamp(0, 1, (self.progress - 0.8) / 0.2) * 240
-            )}px`,
+            "--feather": `${Math.round(featherP * 400)}px`,
+            opacity: 1 - gsap.utils.clamp(0, 1, (self.progress - 0.94) / 0.06),
           });
         },
       });

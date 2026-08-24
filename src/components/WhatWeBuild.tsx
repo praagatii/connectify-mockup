@@ -47,7 +47,7 @@ const capabilities = [
 
 export default function WhatWeBuild() {
   return (
-    <section id="services-suite" className="relative z-10 bg-white py-16 pb-40">
+    <section id="services-suite" className="relative py-16 pb-40">
       <div data-services-overlay>
         <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">
@@ -58,7 +58,7 @@ export default function WhatWeBuild() {
           <div className="lg:col-span-7">
             <h2
               data-services-heading
-              className="pb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black lg:sticky lg:-top-28 lg:z-10 sm:text-[80px] sm:leading-[0.92] lg:text-[88px]"
+              className="pb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]"
             >
               Our <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">Services</span>
             </h2>

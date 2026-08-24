@@ -100,6 +100,8 @@ export default function Hero() {
           }
         },
       });
+
+      ScrollTrigger.refresh();
     };
 
     if (video && video.readyState >= 2) {

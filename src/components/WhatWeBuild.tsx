@@ -71,6 +71,7 @@ export default function WhatWeBuild() {
             trigger: rootRef.current,
             start: "top 80%",
             once: true,
+            invalidateOnRefresh: true,
           },
         }
       );

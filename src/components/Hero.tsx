@@ -127,7 +127,7 @@ export default function Hero() {
         preload="auto"
         poster="/hero-poster.jpg"
         className="pointer-events-none fixed inset-0 -z-10 h-full w-full object-cover object-center"
-        src="/herosecvid.mp4"
+        src="/newhero.mp4"
       />
       <section
         ref={rootRef}

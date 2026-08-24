@@ -104,7 +104,7 @@ export default function WhatWeBuild() {
                 <li key={item.title} data-services-reveal>
                   <Link
                     href={item.href}
-                    className="group block rounded-xl border border-black/10 p-5 transition-colors hover:border-brand/40"
+                    className="group block rounded-xl border border-black/[0.06] p-5 transition-colors hover:border-brand/40"
                   >
                     <div className="flex items-center justify-between gap-6">
                       <span className="flex items-baseline gap-5">

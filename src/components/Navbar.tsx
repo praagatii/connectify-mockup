@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className="hidden rounded-full bg-gradient-to-l from-brand to-brand-deep px-6 py-2.5 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-6 py-2.5 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
           >
             Let&apos;s Talk
             <svg
@@ -90,7 +90,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-3 py-3 text-center font-inter text-sm font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-3 py-3 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Let&apos;s Talk
             </Link>

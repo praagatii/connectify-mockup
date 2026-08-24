@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 
@@ -49,14 +49,14 @@ const categories = [
     id: "fintech",
     name: "Fintech",
     description:
-      "Banking and payments infrastructure â€” BaaS, gateways, settlement and card processing.",
+      "Banking and payments infrastructure — BaaS, gateways, settlement and card processing.",
     count: "04 platforms",
     platforms: ["BaaS", "Payment Gateway", "Payment Settlement", "+1 more"],
   },
 ];
 
 export const metadata = {
-  title: "Products â€” Connectify",
+  title: "Products — Connectify",
   description:
     "Choose a category to explore our production-grade enterprise platforms across healthtech, accounting, SaaS, HRtech and fintech.",
 };
@@ -118,7 +118,7 @@ export default function ProductsPage() {
             </p>
             <Link
               href="/contact"
-              className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-8 py-3.5 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Talk to an engineer
               <svg

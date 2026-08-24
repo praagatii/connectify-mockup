@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <Hero />
       <WhatWeBuild />
-      <SelectedWork />
       <TrustedBy />
+      <SelectedWork />
       <Industries />
       <FinalCta />
     </>

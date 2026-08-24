@@ -85,9 +85,9 @@ export default function SelectedWork() {
               key={project.slug}
               href={`/case-studies/${project.slug}`}
               data-project-reveal
-              className="group block overflow-hidden rounded-2xl border border-black/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_12px_40px_rgba(82,40,185,0.16)]"
+              className="group relative block aspect-[16/9] overflow-hidden rounded-2xl border border-black/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_12px_40px_rgba(82,40,185,0.16)]"
             >
-              <div className="aspect-[4/3] overflow-hidden border-b border-black/10">
+              <div className="absolute inset-x-0 top-0 h-[20%] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={project.image}
@@ -95,8 +95,9 @@ export default function SelectedWork() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent to-surface" />
               </div>
-              <div className="p-5">
+              <div className="absolute inset-x-0 bottom-0 flex h-[80%] flex-col justify-center p-5">
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                   {project.context}
                 </p>

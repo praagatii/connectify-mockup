@@ -56,9 +56,6 @@ export default function Hero() {
       const contentH = window.innerHeight;
       const windowPx =
         (videoEnd - contentStart) * (totalPercent / 100) * contentH;
-      const overlayEl = document.querySelector(
-        "[data-services-overlay]"
-      ) as HTMLElement | null;
       let spacer = document.getElementById(
         "hero-scroll-spacer"
       ) as HTMLDivElement | null;
@@ -103,39 +100,6 @@ export default function Hero() {
           }
         },
       });
-
-      if (overlayEl) {
-        ScrollTrigger.create({
-          trigger: overlayEl,
-          start: "top bottom",
-          end: "bottom top",
-          onUpdate: () => {
-            const heading = document.querySelector(
-              "[data-services-heading]"
-            );
-            const list = document.querySelector("[data-services-list]");
-            const explore = document.querySelector(
-              "[data-services-explore]"
-            );
-            if (heading && list) {
-              const line = heading.getBoundingClientRect().bottom;
-              const items: Element[] = Array.from(
-                list.querySelectorAll("li")
-              );
-              if (explore) items.push(explore);
-              items.forEach((el) => {
-                const rect = el.getBoundingClientRect();
-                const p = gsap.utils.clamp(
-                  0,
-                  1,
-                  (line - rect.top) / (rect.height * 0.35)
-                );
-                gsap.set(el, { opacity: 1 - p });
-              });
-            }
-          },
-        });
-      }
     };
 
     if (video && video.readyState >= 2) {

@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const capabilities = [
   {
@@ -63,8 +66,12 @@ export default function WhatWeBuild() {
           duration: 1,
           ease: "power3.out",
           stagger: 0.08,
-          delay: 0.15,
           clearProps: "transform",
+          scrollTrigger: {
+            trigger: rootRef.current,
+            start: "top 80%",
+            once: true,
+          },
         }
       );
     }, rootRef);

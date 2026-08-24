@@ -62,7 +62,7 @@ export default function Hero() {
       }
       if (spacer) {
         spacer.style.height = `${Math.max(
-          Math.round(totalPercent * 0.35),
+          Math.round(totalPercent * 0.33),
           0
         )}vh`;
       }
@@ -77,8 +77,8 @@ export default function Hero() {
         onUpdate: (self) => {
           const vp = gsap.utils.clamp(0, 1, self.progress / videoEnd);
           const target = startOffset + vp * playDuration;
-          smoothTime += (target - smoothTime) * 0.12;
-          if (Math.abs(smoothTime - video.currentTime) > 0.05) {
+          smoothTime += (target - smoothTime) * 0.1;
+          if (!video.seeking && Math.abs(smoothTime - video.currentTime) > 0.02) {
             video.currentTime = smoothTime;
           }
           const cp = gsap.utils.clamp(

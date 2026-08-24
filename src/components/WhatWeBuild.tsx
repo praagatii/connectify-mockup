@@ -45,24 +45,43 @@ export default function WhatWeBuild() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        "[data-services-reveal]",
-        { opacity: 0, y: 48 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power3.out",
-          stagger: 0.08,
-          clearProps: "transform",
-          scrollTrigger: {
-            trigger: rootRef.current,
-            start: "top 80%",
-            once: true,
-            invalidateOnRefresh: true,
-          },
-        }
+      const items = gsap.utils.toArray<HTMLElement>(
+        "[data-services-reveal]"
       );
+      items.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 28 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 92%",
+              once: true,
+              invalidateOnRefresh: true,
+            },
+          }
+        );
+        gsap.fromTo(
+          el,
+          { opacity: 1, y: 0 },
+          {
+            opacity: 0,
+            y: -28,
+            ease: "none",
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: el,
+              start: "bottom 30%",
+              end: "bottom 2%",
+              scrub: true,
+            },
+          }
+        );
+      });
     }, rootRef);
     return () => ctx.revert();
   }, []);

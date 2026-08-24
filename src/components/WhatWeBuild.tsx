@@ -1,4 +1,8 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const capabilities = [
   {
@@ -46,8 +50,29 @@ const capabilities = [
 ];
 
 export default function WhatWeBuild() {
+  const rootRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        "[data-services-reveal]",
+        { opacity: 0, y: 28 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.08,
+          delay: 0.15,
+          clearProps: "transform",
+        }
+      );
+    }, rootRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="services-suite" className="relative py-16 pb-40">
+    <section id="services-suite" ref={rootRef} className="relative py-16 pb-40">
       <div data-services-overlay>
         <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">
@@ -58,6 +83,7 @@ export default function WhatWeBuild() {
           <div className="lg:col-span-7">
             <h2
               data-services-heading
+              data-services-reveal
               className="pb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]"
             >
               Our <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">Services</span>
@@ -67,7 +93,7 @@ export default function WhatWeBuild() {
               className="flex flex-col gap-4"
             >
               {capabilities.map((item) => (
-                <li key={item.title}>
+                <li key={item.title} data-services-reveal>
                   <Link
                     href={item.href}
                     className="group block rounded-xl border border-black/10 p-5 transition-colors hover:border-brand/40"
@@ -102,7 +128,7 @@ export default function WhatWeBuild() {
                 </li>
               ))}
             </ol>
-            <div className="mt-10">
+            <div className="mt-10" data-services-reveal>
               <Link
                 href="/services"
                 className="group inline-flex items-center gap-2 font-inter text-sm font-semibold transition-opacity hover:opacity-80"

@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:h-24 lg:px-12">
         <Link href="/" className="flex items-center" aria-label="ConnectifyTech">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/connectifylogo.png" alt="ConnectifyTech" className="h-14 w-auto sm:h-16" />
+          <img src="/connectifylogo.png" alt="ConnectifyTech" className="h-16 w-auto sm:h-20" />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

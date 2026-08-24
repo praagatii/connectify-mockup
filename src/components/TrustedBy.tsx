@@ -76,14 +76,14 @@ export default function TrustedBy() {
 
   return (
     <section ref={rootRef} className="relative z-10 bg-white pt-8 pb-16">
-      <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
+      <div data-trusted-content className="mx-auto w-full max-w-6xl px-6">
         <p className="text-left font-inter text-2xl font-semibold tracking-tight text-brand">
           Trusted by
         </p>
       </div>
 
       <div data-trusted-content className="mt-12">
-        <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-12">
+        <div className="relative mx-auto w-full max-w-6xl px-6">
           <div className="overflow-hidden">
             <div className="flex w-max animate-marquee items-center">
               {logos.map((client, i) => (

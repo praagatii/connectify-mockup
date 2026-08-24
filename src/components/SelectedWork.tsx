@@ -58,6 +58,7 @@ export default function SelectedWork() {
             y: 0,
             duration: 1,
             ease: "power3.out",
+            clearProps: "transform",
             scrollTrigger: {
               trigger: el,
               start: "top 92%",

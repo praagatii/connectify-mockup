@@ -173,7 +173,7 @@ export default function AboutPage() {
           <div className="flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-electric to-brand px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Work with us
               <svg

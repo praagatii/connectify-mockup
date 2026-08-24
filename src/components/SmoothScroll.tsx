@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.08,
+      lerp: 0.12,
       smoothWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 1.4,
@@ -21,7 +21,7 @@ export default function SmoothScroll() {
     const raf = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
-    gsap.ticker.fps(120);
+    gsap.ticker.fps(60);
 
     return () => {
       gsap.ticker.remove(raf);

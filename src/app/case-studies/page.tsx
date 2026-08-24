@@ -35,7 +35,7 @@ export default async function CaseStudiesPage({
               href="/case-studies"
               className={`rounded-full border px-4 py-2 text-sm transition-colors ${
                 !active
-                  ? "border-brand bg-brand text-white"
+                  ? "border-brand bg-gradient-to-l from-brand to-brand-deep text-white"
                   : "border-black/15 text-muted hover:border-black/40 hover:text-black"
               }`}
             >
@@ -50,7 +50,7 @@ export default async function CaseStudiesPage({
                   href={href}
                   className={`rounded-full border px-4 py-2 text-sm transition-colors ${
                     isActive
-                      ? "border-brand bg-brand text-white"
+                      ? "border-brand bg-gradient-to-l from-brand to-brand-deep text-white"
                       : "border-black/15 text-muted hover:border-black/40 hover:text-black"
                   }`}
                 >

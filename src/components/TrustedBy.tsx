@@ -1,3 +1,11 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const clients = [
   { src: "/clients/AU-Bank-new-logo-for-GBM_1024X1024_(cropped).png", alt: "AU Bank" },
   { src: "/clients/BankofAbyssinia-logo.jpg", alt: "Bank of Abyssinia" },
@@ -17,16 +25,39 @@ const clients = [
 ];
 
 export default function TrustedBy() {
+  const rootRef = useRef<HTMLElement>(null);
   const logos = [...clients, ...clients];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        "[data-trusted-content]",
+        { opacity: 0, y: 120 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: rootRef.current,
+            start: "top 75%",
+            end: "top 35%",
+            scrub: true,
+          },
+        }
+      );
+    }, rootRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative z-10 bg-white py-16">
-      <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
+    <section ref={rootRef} className="relative z-10 bg-white py-16">
+      <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
         <p className="text-center text-xs font-semibold uppercase tracking-[0.35em] text-brand">
           Trusted by innovative brands
         </p>
       </div>
 
-      <div className="marquee-paused mt-12 overflow-hidden">
+      <div data-trusted-content className="marquee-paused mt-12 overflow-hidden">
         <div className="flex w-max animate-marquee items-center">
           {logos.map((client, i) => (
             // eslint-disable-next-line @next/next/no-img-element

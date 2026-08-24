@@ -30,76 +30,84 @@ export default function Hero() {
 
     const video = videoRef.current;
     let scrub: ScrollTrigger | null = null;
-    let overlayAnim: gsap.core.Tween | null = null;
 
     const startScrub = () => {
       if (!video || !(video.duration > 0)) return;
       video.pause();
       video.playbackRate = 0;
-      video.currentTime = 0.01;
-      video.currentTime = 0;
       const duration =
         isFinite(video.duration) && video.duration > 0
           ? video.duration
           : video.seekable && video.seekable.length
             ? video.seekable.end(video.seekable.length - 1)
             : 6;
-      const scrollPercent = Math.round(Math.min(duration, 25) * 24);
-      const contentStart = 20 / scrollPercent;
-      const contentEnd = 0.6;
+      const startOffset = 0.4;
+      const playDuration = Math.max(duration - startOffset - 1, 0.05);
+      video.currentTime = startOffset;
+      const scrollPercent = Math.round(Math.min(playDuration, 25) * 30);
+      const vh = window.innerHeight;
+      const expEl = document.querySelector(
+        "[data-services-explore]"
+      ) as HTMLElement | null;
+      const exploreOff = expEl ? expEl.offsetTop : 0;
+      const totalPercent =
+        scrollPercent +
+        Math.max(0, Math.round((exploreOff / vh - 1) * 100));
+      const videoEnd = 1;
+      const contentStart = 60 / scrollPercent;
+      const contentH = window.innerHeight;
+      const windowPx =
+        (videoEnd - contentStart) * (totalPercent / 100) * contentH;
+      const overlayEl = document.querySelector(
+        "[data-services-overlay]"
+      ) as HTMLElement | null;
+      let spacer = document.getElementById(
+        "hero-scroll-spacer"
+      ) as HTMLDivElement | null;
+      if (!spacer && rootRef.current) {
+        spacer = document.createElement("div");
+        spacer.id = "hero-scroll-spacer";
+        rootRef.current.after(spacer);
+      }
+      if (spacer) {
+        spacer.style.height = `${Math.max(
+          totalPercent - (exploreOff / vh) * 100,
+          0
+        )}vh`;
+      }
       scrub = ScrollTrigger.create({
         trigger: rootRef.current,
         start: "top top",
-        end: () => `+=${scrollPercent}%`,
+        end: () => `+=${totalPercent}%`,
         scrub: true,
         pin: true,
         pinSpacing: false,
         anticipatePin: 1,
         onUpdate: (self) => {
-          const target =
-            self.progress * Math.max(duration - 0.05, 0.05);
+          gsap.set(video, { autoAlpha: self.progress >= 1 ? 0 : 1 });
+          const vp = gsap.utils.clamp(0, 1, self.progress / videoEnd);
+          const target = startOffset + vp * playDuration;
           if (Math.abs(target - video.currentTime) > 0.02) {
             video.currentTime = target;
           }
           const cp = gsap.utils.clamp(
             0,
             1,
-            (self.progress - contentStart) / (contentEnd - contentStart)
+            (self.progress - contentStart) / (videoEnd - contentStart)
           );
           const content = rootRef.current?.querySelector(
             "[data-hero-content]"
           );
           if (content) {
             gsap.set(content, {
-              yPercent: -140 * cp,
+              y: -windowPx * cp,
               opacity: 1 - cp,
             });
           }
         },
       });
 
-      const overlayEl = document.querySelector(
-        "[data-services-overlay]"
-      ) as HTMLElement | null;
       if (overlayEl) {
-        const heroH = rootRef.current?.offsetHeight ?? window.innerHeight;
-        const startVh = contentStart * scrollPercent;
-        const endVh = contentEnd * scrollPercent;
-        const fromY = (startVh * 0.01 * heroH) + 8;
-        overlayAnim = gsap.fromTo(
-          overlayEl,
-          { y: fromY },
-          {
-            y: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: rootRef.current,
-              start: () => `+=${startVh}%`,
-              end: () => `+=${endVh}%`,
-              scrub: true,
-            },
-          }
-        );
         ScrollTrigger.create({
           trigger: overlayEl,
           start: "top bottom",
@@ -109,9 +117,16 @@ export default function Hero() {
               "[data-services-heading]"
             );
             const list = document.querySelector("[data-services-list]");
+            const explore = document.querySelector(
+              "[data-services-explore]"
+            );
             if (heading && list) {
-              const line = heading.getBoundingClientRect().bottom + 8;
-              list.querySelectorAll("li").forEach((el) => {
+              const line = heading.getBoundingClientRect().bottom;
+              const items: Element[] = Array.from(
+                list.querySelectorAll("li")
+              );
+              if (explore) items.push(explore);
+              items.forEach((el) => {
                 const rect = el.getBoundingClientRect();
                 const p = gsap.utils.clamp(
                   0,
@@ -137,8 +152,6 @@ export default function Hero() {
       ctx.revert();
       if (video) video.removeEventListener("loadeddata", startScrub);
       scrub?.kill();
-      overlayAnim?.scrollTrigger?.kill();
-      overlayAnim?.kill();
     };
   }, []);
 
@@ -149,8 +162,9 @@ export default function Hero() {
         muted
         playsInline
         preload="auto"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full object-cover object-center brightness-110"
-        src="/hero-logo-scrub.mp4"
+        poster="/hero-poster.jpg"
+        className="pointer-events-none fixed inset-0 -z-10 h-full w-full object-cover object-center"
+        src="/herosecvid.mp4"
       />
       <section
         ref={rootRef}
@@ -168,7 +182,7 @@ export default function Hero() {
           >
             Build
             <br />
-            What&apos;s <span className="text-brand">Next.</span>
+            What&apos;s <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">Next.</span>
           </h1>
           <p
             data-hero-fade
@@ -183,7 +197,7 @@ export default function Hero() {
           >
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2 rounded-lg bg-brand px-8 py-4 font-inter text-sm font-semibold text-white transition-colors hover:bg-brand-deep"
+              className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               What We Build
               <svg

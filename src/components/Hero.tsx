@@ -124,20 +124,19 @@ export default function Hero() {
   }, []);
 
   return (
-    <>
+    <section
+      ref={rootRef}
+      className="relative flex min-h-svh items-center overflow-hidden"
+    >
       <video
         ref={videoRef}
         muted
         playsInline
         preload="auto"
         poster="/hero-poster.jpg"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full object-cover object-center"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/newhero.mp4"
       />
-      <section
-        ref={rootRef}
-        className="relative flex min-h-svh items-center"
-      >
 
       <div
         data-hero-content
@@ -203,8 +202,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -72,7 +72,7 @@ export default function SelectedWork() {
   }, []);
 
   return (
-    <section id="work" ref={rootRef} className="relative z-10 -mt-6 bg-white pt-0 pb-24">
+    <section id="work" ref={rootRef} className="relative z-10 -mt-6 bg-white pt-4 pb-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <h2 className="bg-gradient-to-r from-electric to-brand bg-clip-text font-inter text-sm font-semibold text-transparent">
           Projects

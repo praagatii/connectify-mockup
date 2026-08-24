@@ -24,7 +24,7 @@ export default function RevealOnScroll() {
         .forEach((section) => {
           if (SKIP_SELECTORS.some((s) => section.querySelector(s))) return;
           const items = section.querySelectorAll(
-            "h1, h2, h3, p, li > a, img"
+            "h1, h2, h3, p, li > a, a, button, img"
           );
           if (!items.length) return;
           gsap.fromTo(

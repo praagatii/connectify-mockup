@@ -1,3 +1,5 @@
+import BorderGlow from "./BorderGlow";
+
 const steps = [
   {
     title: "Consultation",
@@ -39,20 +41,28 @@ export default function Process() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <div
+            <BorderGlow
               key={step.title}
-              className="rounded-xl border border-black/[0.06] bg-white p-6 transition-colors hover:border-brand/40"
+              backgroundColor="#ffffff"
+              borderRadius={12}
+              glowColor="263 83 60"
+              glowRadius={20}
+              glowIntensity={0.85}
+              edgeSensitivity={35}
+              colors={["#8f00ff", "#5228b9", "#c084fc"]}
             >
-              <p className="bg-gradient-to-l from-electric to-brand bg-clip-text font-inter text-2xl font-extrabold text-transparent">
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-3 font-inter text-base font-bold text-black">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {step.body}
-              </p>
-            </div>
+              <div className="h-full rounded-xl bg-white p-6">
+                <p className="bg-gradient-to-l from-electric to-brand bg-clip-text font-inter text-2xl font-extrabold text-transparent">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-inter text-base font-bold text-black">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {step.body}
+                </p>
+              </div>
+            </BorderGlow>
           ))}
         </div>
       </div>

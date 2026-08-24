@@ -91,8 +91,10 @@ export default function SelectedWork() {
   return (
     <section id="work" ref={rootRef} className="relative z-10 bg-white pt-8 pb-24">
       <div className="mx-auto w-full max-w-6xl px-6">
-        <h2 className="font-inter text-xs font-medium uppercase tracking-[0.2em] text-muted">
-          Projects
+        <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+          <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
+            Projects
+          </span>
         </h2>
 
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

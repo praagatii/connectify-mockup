@@ -75,7 +75,7 @@ export default function TrustedBy() {
   const logos = [...clients, ...clients];
 
   return (
-    <section ref={rootRef} className="relative z-10 bg-white pt-0 pb-16">
+    <section ref={rootRef} className="relative z-10 -mt-10 bg-white pt-0 pb-16">
       <div data-trusted-content className="mx-auto w-full max-w-6xl px-6">
         <p className="bg-gradient-to-r from-electric to-brand bg-clip-text text-left font-inter text-sm font-semibold text-transparent">
           Trusted by

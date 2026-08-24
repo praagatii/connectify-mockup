@@ -1,3 +1,9 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const clients = [
   { src: "/clients/AU-Bank-new-logo-for-GBM_1024X1024_(cropped).png", alt: "AU Bank" },
   { src: "/clients/BankofAbyssinia-logo.jpg", alt: "Bank of Abyssinia" },
@@ -17,10 +23,59 @@ const clients = [
 ];
 
 export default function TrustedBy() {
+  const rootRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      const els = gsap.utils.toArray<HTMLElement>(
+        "[data-trusted-content]"
+      );
+
+      els.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 28 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 92%",
+              once: true,
+              invalidateOnRefresh: true,
+            },
+          }
+        );
+
+        gsap.fromTo(
+          el,
+          { opacity: 1, y: 0 },
+          {
+            opacity: 0,
+            y: -28,
+            ease: "none",
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: el,
+              start: "bottom 30%",
+              end: "bottom 2%",
+              scrub: true,
+            },
+          }
+        );
+      });
+    }, rootRef);
+
+    return () => ctx.revert();
+  }, []);
+
   const logos = [...clients, ...clients];
 
   return (
-    <section className="relative z-10 bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0px,#ffffff_160px)] pt-16 pb-16">
+    <section ref={rootRef} className="relative z-10 bg-white pt-8 pb-16">
       <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
         <p className="text-center font-inter text-2xl font-semibold tracking-tight text-brand">
           Trusted by innovative brands

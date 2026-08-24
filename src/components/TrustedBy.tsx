@@ -76,13 +76,7 @@ export default function TrustedBy() {
 
   return (
     <section ref={rootRef} className="relative z-10 -mt-10 bg-white pt-0 pb-16">
-      <div data-trusted-content className="mx-auto w-full max-w-6xl px-6">
-        <p className="bg-gradient-to-r from-electric to-brand bg-clip-text text-left font-inter text-sm font-semibold text-transparent">
-          Trusted by
-        </p>
-      </div>
-
-      <div data-trusted-content className="mt-8">
+      <div data-trusted-content className="pt-0">
         <div className="relative mx-auto w-full max-w-6xl px-6">
           <div className="overflow-hidden">
             <div className="flex w-max animate-marquee items-center">

@@ -72,13 +72,13 @@ export default function SelectedWork() {
   }, []);
 
   return (
-    <section id="work" ref={rootRef} className="relative z-10 bg-white pt-8 pb-24">
+    <section id="work" ref={rootRef} className="relative z-10 -mt-6 bg-white pt-0 pb-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <h2 className="bg-gradient-to-r from-electric to-brand bg-clip-text font-inter text-sm font-semibold text-transparent">
           Projects
         </h2>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => (
             <Link
               key={project.slug}

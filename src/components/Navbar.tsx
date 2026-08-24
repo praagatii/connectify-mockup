@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/85 shadow-sm backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50">
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:h-24 lg:px-12">
         <Link href="/" className="flex items-center" aria-label="ConnectifyTech">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="font-inter text-sm font-medium text-gray-500 transition-colors hover:text-black"
+              className="font-inter text-sm font-semibold text-black transition-colors hover:text-brand"
             >
               {link.label}
             </Link>

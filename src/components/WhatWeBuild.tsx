@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -11,44 +11,32 @@ const capabilities = [
   {
     number: "01",
     title: "Digital Solutions",
-    href: "/services#digital-solutions",
-    description:
-      "Web platforms, mobile apps, and digital products engineered to scale with your business.",
+    href: "/services#digital-solutions"
   },
   {
     number: "02",
     title: "Technology Services",
-    href: "/services#technology-services",
-    description:
-      "Cloud architecture, system integrations, and engineering support for modern stacks.",
+    href: "/services#technology-services"
   },
   {
     number: "03",
     title: "Business Advisory",
-    href: "/services#business-advisory",
-    description:
-      "Strategy, operations, and transformation guidance for ambitious organizations.",
+    href: "/services#business-advisory"
   },
   {
     number: "04",
     title: "Investment Consulting",
-    href: "/services#investment-consulting",
-    description:
-      "Capital strategy, due diligence, and portfolio insights backed by market research.",
+    href: "/services#investment-consulting"
   },
   {
     number: "05",
     title: "Brand Experience",
-    href: "/services#brand-experience",
-    description:
-      "Identity, design systems, and experiences that connect brands with their audiences.",
+    href: "/services#brand-experience"
   },
   {
     number: "06",
     title: "Data & AI",
-    href: "/services#data-ai",
-    description:
-      "Analytics, machine learning, and automation that turn raw data into decisions.",
+    href: "/services#data-ai"
   },
 ];
 
@@ -80,7 +68,7 @@ export default function WhatWeBuild() {
   }, []);
 
   return (
-    <section id="services-suite" ref={rootRef} className="relative pt-10 pb-32">
+    <section id="services-suite" ref={rootRef} className="relative pt-[180px] pb-32">
       <div data-services-overlay>
         <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">
@@ -129,9 +117,6 @@ export default function WhatWeBuild() {
                         />
                       </svg>
                     </div>
-                    <p className="mt-2 max-w-xl text-base leading-relaxed text-black/55">
-                      {item.description}
-                    </p>
                   </Link>
                 </li>
               ))}

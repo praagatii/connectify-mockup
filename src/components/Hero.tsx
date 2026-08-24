@@ -42,15 +42,10 @@ export default function Hero() {
             ? video.seekable.end(video.seekable.length - 1)
             : 6;
       const startOffset = 0.4;
-      const playDuration = Math.max(duration - startOffset - 1.25, 0.05);
+      const playDuration = Math.max(duration - startOffset - 0.2, 0.05);
       video.currentTime = startOffset;
       const scrollPercent = Math.round(Math.min(playDuration, 25) * 30);
-      const vh = window.innerHeight;
-      const suite = document.getElementById(
-        "services-suite"
-      ) as HTMLElement | null;
-      const suitePct = suite ? (suite.offsetHeight / vh) * 100 : 0;
-      const totalPercent = Math.round(scrollPercent + suitePct);
+      const totalPercent = Math.round(scrollPercent * 1.35);
       const videoEnd = 1;
       const contentStart = 60 / scrollPercent;
       const contentH = window.innerHeight;
@@ -66,7 +61,7 @@ export default function Hero() {
       }
       if (spacer) {
         spacer.style.height = `${Math.max(
-          totalPercent - suitePct - 70,
+          Math.round(totalPercent * 0.73),
           0
         )}vh`;
       }
@@ -81,7 +76,7 @@ export default function Hero() {
         onUpdate: (self) => {
           const vp = gsap.utils.clamp(0, 1, self.progress / videoEnd);
           const target = startOffset + vp * playDuration;
-          if (Math.abs(target - video.currentTime) > 0.02) {
+          if (Math.abs(target - video.currentTime) > 0.1) {
             video.currentTime = target;
           }
           const cp = gsap.utils.clamp(

@@ -83,7 +83,15 @@ body {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(120deg, #8f00ff, #5228b9 45%, #c084fc);
+  background: linear-gradient(
+    120deg,
+    #8f00ff,
+    #c084fc,
+    #5228b9,
+    #8f00ff
+  );
+  background-size: 300% 100%;
+  animation: btn-glow-drift 6s ease-in-out infinite alternate;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -93,6 +101,15 @@ body {
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
   pointer-events: none;
+}
+
+@keyframes btn-glow-drift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 .btn-glow:hover {

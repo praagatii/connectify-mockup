@@ -11,6 +11,7 @@ const SKIP_SELECTORS = [
   "[data-hero-fade]",
   "[data-services-reveal]",
   "[data-trusted-content]",
+  "[data-project-reveal]",
 ];
 
 export default function RevealOnScroll() {

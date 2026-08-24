@@ -3,6 +3,7 @@ import TrustedBy from "@/components/TrustedBy";
 import WhatWeBuild from "@/components/WhatWeBuild";
 import Industries from "@/components/Industries";
 import SelectedWork from "@/components/SelectedWork";
+import AboutProcess from "@/components/AboutProcess";
 import FinalCta from "@/components/FinalCta";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <WhatWeBuild />
       <TrustedBy />
       <SelectedWork />
+      <AboutProcess />
       <Industries />
       <FinalCta />
     </>

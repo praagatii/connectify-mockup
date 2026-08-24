@@ -88,7 +88,7 @@ export default function SelectedWork() {
               data-project-reveal
               className="group relative block aspect-[16/9] overflow-hidden rounded-2xl border border-black/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_12px_40px_rgba(82,40,185,0.16)]"
             >
-              <div className="absolute inset-x-0 top-0 h-[30%] overflow-hidden">
+              <div className="absolute inset-x-0 top-0 h-[55%] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={project.image}
@@ -98,7 +98,7 @@ export default function SelectedWork() {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent to-surface" />
               </div>
-              <div className="absolute inset-x-0 bottom-0 flex h-[70%] flex-col justify-center p-5">
+              <div className="absolute inset-x-0 bottom-0 flex h-[45%] flex-col justify-end p-5">
                 <h3 className="font-inter text-lg font-bold tracking-tight text-black">
                   {project.name}
                 </h3>

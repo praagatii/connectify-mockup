@@ -50,9 +50,9 @@ export default function TrustedBy() {
   }, []);
 
   return (
-    <section ref={rootRef} className="relative z-10 bg-white py-16">
+    <section ref={rootRef} className="relative z-10 bg-white pt-28 pb-16">
       <div data-trusted-content className="mx-auto w-full max-w-7xl px-6 lg:px-12">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.35em] text-brand">
+        <p className="text-center font-inter text-2xl font-semibold tracking-tight text-brand">
           Trusted by innovative brands
         </p>
       </div>

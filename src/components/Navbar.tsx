@@ -14,11 +14,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:h-20 lg:px-12">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/85 shadow-sm backdrop-blur-md">
+      <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:h-24 lg:px-12">
         <Link href="/" className="flex items-center" aria-label="ConnectifyTech">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/connectifylogo.png" alt="ConnectifyTech" className="h-10 w-auto sm:h-12" />
+          <img src="/connectifylogo.png" alt="ConnectifyTech" className="h-14 w-auto sm:h-16" />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

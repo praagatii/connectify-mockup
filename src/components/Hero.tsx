@@ -134,7 +134,7 @@ export default function Hero() {
         playsInline
         preload="auto"
         poster="/hero-poster.jpg"
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center [-webkit-mask-image:linear-gradient(to_bottom,black_calc(100%-180px),transparent)] [mask-image:linear-gradient(to_bottom,black_calc(100%-180px),transparent)]"
         src="/newhero.mp4"
       />
 

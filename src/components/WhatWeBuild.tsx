@@ -55,13 +55,12 @@ export default function WhatWeBuild() {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
-            ease: "power3.out",
+            ease: "none",
             scrollTrigger: {
               trigger: el,
-              start: "top 92%",
-              once: true,
-              invalidateOnRefresh: true,
+              start: "top 95%",
+              end: "top 65%",
+              scrub: true,
             },
           }
         );
@@ -87,7 +86,7 @@ export default function WhatWeBuild() {
   }, []);
 
   return (
-    <section id="services-suite" ref={rootRef} className="relative pt-[180px] pb-32">
+    <section id="services-suite" ref={rootRef} className="relative pt-[180px] pb-24">
       <div data-services-overlay>
         <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">

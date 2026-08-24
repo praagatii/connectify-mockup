@@ -152,7 +152,7 @@ export default function Hero() {
       <div
         data-video-fade
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-64 bg-gradient-to-b from-transparent to-white opacity-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-44 bg-gradient-to-b from-transparent to-white opacity-0"
       />
 
       <div

@@ -57,13 +57,29 @@ export default function SelectedWork() {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
-            ease: "power3.out",
-            clearProps: "transform",
+            ease: "none",
             scrollTrigger: {
               trigger: el,
-              start: "top 92%",
-              once: true,
+              start: "top 95%",
+              end: "top 65%",
+              scrub: true,
+            },
+          }
+        );
+
+        gsap.fromTo(
+          el,
+          { opacity: 1, y: 0 },
+          {
+            opacity: 0,
+            y: -28,
+            ease: "none",
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: el,
+              start: "bottom 40%",
+              end: "bottom 10%",
+              scrub: true,
             },
           }
         );

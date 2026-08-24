@@ -39,13 +39,12 @@ export default function TrustedBy() {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
-            ease: "power3.out",
+            ease: "none",
             scrollTrigger: {
               trigger: el,
-              start: "top 92%",
-              once: true,
-              invalidateOnRefresh: true,
+              start: "top 95%",
+              end: "top 65%",
+              scrub: true,
             },
           }
         );
@@ -75,7 +74,7 @@ export default function TrustedBy() {
   const logos = [...clients, ...clients];
 
   return (
-    <section ref={rootRef} className="relative z-10 -mt-10 bg-white pt-0 pb-20">
+    <section ref={rootRef} className="relative z-10 -mt-10 bg-white pt-0 pb-16">
       <div data-trusted-content className="pt-0">
         <div className="relative mx-auto w-full max-w-6xl px-6">
           <div className="overflow-hidden">

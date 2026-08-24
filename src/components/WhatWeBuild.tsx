@@ -59,11 +59,11 @@ export default function WhatWeBuild() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         "[data-services-reveal]",
-        { opacity: 0, y: 28 },
+        { opacity: 0, y: 48 },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 1.2,
           ease: "power3.out",
           stagger: 0.08,
           clearProps: "transform",
@@ -80,7 +80,7 @@ export default function WhatWeBuild() {
   }, []);
 
   return (
-    <section id="services-suite" ref={rootRef} className="relative py-16 pb-40">
+    <section id="services-suite" ref={rootRef} className="relative py-16 pb-32">
       <div data-services-overlay>
         <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 items-start grid-cols-1 lg:grid-cols-12 lg:gap-16">
@@ -111,7 +111,7 @@ export default function WhatWeBuild() {
                         <span data-fade className="font-mono text-xs text-black/60">
                           {item.number}
                         </span>
-                        <span data-fade className="font-inter text-xl font-semibold text-black transition-colors group-hover:text-brand">
+                        <span data-fade className="font-inter text-2xl font-semibold text-black transition-colors group-hover:text-brand">
                           {item.title}
                         </span>
                       </span>
@@ -129,7 +129,7 @@ export default function WhatWeBuild() {
                         />
                       </svg>
                     </div>
-                    <p className="mt-2 max-w-md text-sm leading-relaxed text-black/55">
+                    <p className="mt-2 max-w-xl text-base leading-relaxed text-black/55">
                       {item.description}
                     </p>
                   </Link>

@@ -1,85 +1,93 @@
-﻿import Link from "next/link";
+﻿"use client";
 
-const projects = [
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
+const featured = [
   {
-    initial: "K",
+    slug: "karnataka-statewide-survey-platform",
     name: "Karnataka Statewide Survey Platform",
     image: "/clients/The-Karnataka-Government-Kannada-Logo-Vector.svg-.png",
-    category: "GovTech Â· Karnataka Socio-Educational Survey",
-    description:
-      "Enterprise-grade digital platform powering the Government of Karnataka's statewide socio-educational survey covering millions of households.",
-    tech: ["Flutter", "Node.js", "PostgreSQL"],
-    href: "/case-studies/karnataka-statewide-survey-platform",
+    context: "#01 · GovTech",
   },
   {
-    initial: "T",
+    slug: "taurus-career-ai",
     name: "Taurus Career AI",
     image: "/case-studies/taurus-career-ai.jpg",
-    category: "AI Platform Â· Career",
-    description:
-      "AI-driven, mobile-first career platform combining job discovery, rÃ©sumÃ© optimization, and community collaboration.",
-    tech: ["React Native", "Node.js", "Python"],
-    href: "/case-studies/taurus-career-ai",
+    context: "#02 · AI Platform",
   },
   {
-    initial: "F",
+    slug: "flycure-health",
     name: "Flycure Health",
     image: "/case-studies/flycure-health.jpg",
-    category: "Healthcare Â· Medical Tourism",
-    description:
-      "Cross-platform medical tourism application connecting international patients with accredited hospitals in India.",
-    tech: ["Flutter", "Node.js", "Firebase"],
-    href: "/case-studies/flycure-health",
+    context: "#03 · Healthcare",
   },
   {
-    initial: "C",
+    slug: "cloud-kitchen-pos",
     name: "Cloud Kitchen POS",
     image: "/case-studies/cloud-kitchen-pos.jpg",
-    category: "Enterprise Â· FoodTech",
-    description:
-      "Scalable POS system for a top cloud kitchen brand, managing 5 sub-brands and close to 100 kitchens.",
-    tech: ["React", "Node.js", "MongoDB"],
-    href: "/case-studies/cloud-kitchen-pos",
+    context: "#04 · Enterprise · FoodTech",
   },
   {
-    initial: "C",
+    slug: "contractor-loyalty-app",
     name: "Contractor Loyalty App",
     image: "/case-studies/contractor-loyalty-app.jpg",
-    category: "Enterprise Â· ConstructionTech",
-    description:
-      "Digital loyalty application fostering stronger contractor relationships through a points-based rewards system.",
-    tech: ["React Native", "Node.js", "PostgreSQL"],
-    href: "/case-studies/contractor-loyalty-app",
+    context: "#05 · Enterprise · ConstructionTech",
+  },
+  {
+    slug: "trackway",
+    name: "Trackway",
+    image: "/case-studies/trackway.jpg",
+    context: "#06 · Logistics",
   },
 ];
 
 export default function SelectedWork() {
+  const rootRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const items = gsap.utils.toArray<HTMLElement>("[data-project-reveal]");
+      items.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 28 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 92%",
+              once: true,
+            },
+          }
+        );
+      });
+    }, rootRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="work" className="relative z-10 bg-white py-24">
+    <section id="work" ref={rootRef} className="relative z-10 bg-white py-24">
       <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.35em] text-muted">
-              03 / Portfolio
-            </p>
-            <h2 className="mt-6 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
-              Real impact. Proven results.
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Platforms we&apos;ve engineered across fintech, govtech, healthtech,
-            mobility and enterprise.
-          </p>
-        </div>
+        <h2 className="font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+          <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
+            Projects
+          </span>
+        </h2>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
+          {featured.map((project) => (
             <Link
-              key={project.name}
-              href={project.href}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 bg-surface transition-colors hover:border-white/25"
+              key={project.slug}
+              href={`/case-studies/${project.slug}`}
+              data-project-reveal
+              className="group block overflow-hidden rounded-2xl border border-black/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_12px_40px_rgba(82,40,185,0.16)]"
             >
-              <div className="relative aspect-[16/10] overflow-hidden border-b border-black/10">
+              <div className="aspect-[4/3] overflow-hidden border-b border-black/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={project.image}
@@ -87,48 +95,14 @@ export default function SelectedWork() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
               </div>
-
-              <div className="flex flex-1 flex-col justify-between p-6 pt-5">
-              <div className="relative flex items-center justify-between">
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                  {project.category}
-                </span>
-                <svg
-                  className="h-5 w-5 text-black/30 transition-all group-hover:translate-x-1 group-hover:text-black"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-
-              <div className="relative mt-6">
-                <h3 className="font-inter text-xl font-bold tracking-tight text-black">
+              <div className="p-5">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+                  {project.context}
+                </p>
+                <h3 className="mt-2 font-inter text-lg font-bold tracking-tight text-black">
                   {project.name}
                 </h3>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
-                  {project.description}
-                </p>
-              </div>
-
-              <div className="relative mt-8 flex flex-wrap gap-2">
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-full border border-black/10 px-3 py-1 text-xs text-muted"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
               </div>
             </Link>
           ))}

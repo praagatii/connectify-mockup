@@ -51,6 +51,7 @@ export default function Hero() {
       const contentH = window.innerHeight;
       const windowPx =
         (videoEnd - contentStart) * (totalPercent / 100) * contentH;
+      let smoothTime = startOffset;
       let spacer = document.getElementById(
         "hero-scroll-spacer"
       ) as HTMLDivElement | null;
@@ -61,7 +62,7 @@ export default function Hero() {
       }
       if (spacer) {
         spacer.style.height = `${Math.max(
-          Math.round(totalPercent * 0.73),
+          Math.round(totalPercent * 0.35),
           0
         )}vh`;
       }
@@ -76,8 +77,9 @@ export default function Hero() {
         onUpdate: (self) => {
           const vp = gsap.utils.clamp(0, 1, self.progress / videoEnd);
           const target = startOffset + vp * playDuration;
-          if (Math.abs(target - video.currentTime) > 0.1) {
-            video.currentTime = target;
+          smoothTime += (target - smoothTime) * 0.12;
+          if (Math.abs(smoothTime - video.currentTime) > 0.05) {
+            video.currentTime = smoothTime;
           }
           const cp = gsap.utils.clamp(
             0,

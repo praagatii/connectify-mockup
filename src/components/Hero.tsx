@@ -54,6 +54,9 @@ export default function Hero() {
         (videoEnd - contentStart) * (totalPercent / 100) * contentH;
       let smoothTime = startOffset;
       let latestTarget = startOffset;
+      const videoFadeEl = rootRef.current?.querySelector(
+        "[data-video-fade]"
+      );
       let spacer = document.getElementById(
         "hero-scroll-spacer"
       ) as HTMLDivElement | null;
@@ -93,9 +96,15 @@ export default function Hero() {
               opacity: 1 - cp,
             });
           }
-          gsap.set(video, {
-            opacity: 1 - gsap.utils.clamp(0, 1, (self.progress - 0.85) / 0.15),
-          });
+          if (videoFadeEl) {
+            gsap.set(videoFadeEl, {
+              opacity: gsap.utils.clamp(
+                0,
+                1,
+                (self.progress - 0.9) / 0.1
+              ),
+            });
+          }
         },
       });
 
@@ -139,6 +148,11 @@ export default function Hero() {
         poster="/hero-poster.jpg"
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/newhero.mp4"
+      />
+      <div
+        data-video-fade
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-b from-transparent to-white opacity-0"
       />
 
       <div

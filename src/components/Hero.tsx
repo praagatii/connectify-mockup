@@ -69,7 +69,7 @@ export default function Hero() {
       }
       if (spacer) {
         spacer.style.height = `${Math.max(
-          totalPercent - suitePct,
+          totalPercent - suitePct - 70,
           0
         )}vh`;
       }

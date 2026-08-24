@@ -137,6 +137,10 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/newhero.mp4"
       />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-b from-transparent to-white"
+      />
 
       <div
         data-hero-content

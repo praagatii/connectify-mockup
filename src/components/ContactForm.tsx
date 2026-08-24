@@ -121,7 +121,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand/60 to-brand-deep/60 backdrop-blur-md px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
+        className="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
       >
         {status === "sending" ? "Opening your emailâ€¦" : "Send Message"}
       </button>

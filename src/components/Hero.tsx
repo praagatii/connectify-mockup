@@ -157,7 +157,7 @@ export default function Hero() {
           >
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand/60 to-brand-deep/60 backdrop-blur-md px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               What We Build
               <svg

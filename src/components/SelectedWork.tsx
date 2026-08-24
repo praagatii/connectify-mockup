@@ -113,7 +113,7 @@ export default function SelectedWork() {
         <div className="mt-12 flex justify-center">
           <Link
             href="/case-studies"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand/60 to-brand-deep/60 backdrop-blur-md px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-brand to-brand-deep px-8 py-4 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
             See all case studies
             <svg

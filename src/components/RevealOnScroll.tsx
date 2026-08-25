@@ -12,6 +12,8 @@ const SKIP_SELECTORS = [
   "[data-services-reveal]",
   "[data-trusted-content]",
   "[data-project-reveal]",
+  "[data-about-reveal]",
+  "[data-process-reveal]",
 ];
 
 export default function RevealOnScroll() {

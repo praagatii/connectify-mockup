@@ -25,8 +25,8 @@ export default function Hero() {
         poster="/hero-poster.jpg"
         alt="Connectify"
         useWindowScroll
-        startWidth={50}
-        startHeight={28}
+        startWidth={55}
+        startHeight={32}
         startRadius={20}
         endRadius={20}
         mediaZoom={1.2}

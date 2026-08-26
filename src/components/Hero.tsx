@@ -31,7 +31,7 @@ export default function Hero() {
         endRadius={20}
         mediaZoom={1.2}
         maxExpand={0.95}
-        scrollDistance={1.5}
+        scrollDistance={1.2}
         holdDistance={0.35}
         overlayScrim={0.5}
       >

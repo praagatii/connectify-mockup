@@ -73,7 +73,7 @@ export default function Process() {
     <section
       ref={rootRef}
       id="process"
-      className="relative z-10 bg-surface pt-20 pb-28"
+      className="relative z-10 bg-white pt-20 pb-28"
     >
       <div
         aria-hidden

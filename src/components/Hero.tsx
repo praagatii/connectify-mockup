@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-svh">
+    <section className="relative min-h-svh bg-white">
       <ScrollExpand
         src="/newhero-1080.mp4"
         mediaType="video"
@@ -30,7 +30,7 @@ export default function Hero() {
         startRadius={20}
         endRadius={20}
         mediaZoom={1.2}
-        maxExpand={0.88}
+        maxExpand={0.78}
         scrollDistance={1.5}
         holdDistance={0.35}
         overlayScrim={0.5}

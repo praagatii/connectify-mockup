@@ -101,7 +101,7 @@ export default function Hero() {
           <div
             className="relative overflow-hidden"
             style={{
-              width: `${42 + (100 - 42) * videoProgress}%`,
+              width: `${60 + (100 - 60) * videoProgress}%`,
               aspectRatio: "16/9",
               borderRadius: `${Math.round(20 * (1 - videoProgress))}px`,
             }}

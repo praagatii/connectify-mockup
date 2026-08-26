@@ -67,10 +67,9 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">
-          <h1 className="whitespace-nowrap font-inter text-6xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[100px] sm:leading-[0.92] lg:text-[120px]">
-            Build What&apos;s{" "}
-            <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
-              Next.
+          <h1 className="whitespace-nowrap font-inter text-6xl font-extrabold leading-[0.95] tracking-tight sm:text-[100px] sm:leading-[0.92] lg:text-[120px]">
+            <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
+              Build What&apos;s Next.
             </span>
           </h1>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">

@@ -61,22 +61,22 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
       >
         <div className="max-w-3xl pt-20 pb-24 lg:pt-28">
-          <h1 className="mt-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+          <h1 className="mt-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
             Build
             <br />
             What&apos;s{" "}
-            <span className="bg-gradient-to-l from-white to-[#c084fc] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
               Next.
             </span>
           </h1>
-          <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-white/70">
+          <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-gray-600">
             We design and engineer digital products, platforms, and experiences
             that turn ambitious ideas into scalable technology.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-4 pointer-events-auto">
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-inter text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+              className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
             >
               What We Build
               <svg
@@ -95,7 +95,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/case-studies"
-              className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-white underline decoration-white/40 decoration-2 underline-offset-8 transition-colors hover:decoration-white"
+              className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-black underline decoration-brand/60 decoration-2 underline-offset-8 transition-colors hover:decoration-brand"
             >
               View Our Work
               <svg

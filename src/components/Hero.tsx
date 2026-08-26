@@ -34,13 +34,13 @@ export default function Hero() {
         holdDistance={0.35}
         overlayScrim={0.5}
       >
-        <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl">
+        <h2 className="font-inter text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-7xl">
           Our{" "}
-          <span className="bg-gradient-to-r from-[#c084fc] to-white bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white to-[#c084fc] bg-clip-text text-transparent">
             Services
           </span>
         </h2>
-        <ol className="mt-8 grid grid-cols-3 gap-3">
+        <ol className="mt-10 grid grid-cols-3 gap-4">
           {[
             { n: "01", title: "Digital Solutions", href: "/services#digital-solutions" },
             { n: "02", title: "Technology Services", href: "/services#technology-services" },
@@ -52,10 +52,10 @@ export default function Hero() {
             <li key={item.n}>
               <a
                 href={item.href}
-                className="group flex items-center gap-4 rounded-xl border border-white/15 bg-white/5 px-5 py-4 backdrop-blur-sm transition-colors hover:border-white/30 hover:bg-white/10"
+                className="group flex flex-col gap-2 rounded-xl border border-black/10 bg-white/90 px-6 py-5 backdrop-blur-sm transition-colors hover:border-black/25 hover:bg-white"
               >
-                <span className="font-mono text-xs text-white/50">{item.n}</span>
-                <span className="font-inter text-xl font-semibold text-white transition-colors group-hover:text-[#c084fc]">
+                <span className="font-mono text-xs text-black/40">{item.n}</span>
+                <span className="font-inter text-xl font-bold text-black transition-colors group-hover:text-brand">
                   {item.title}
                 </span>
               </a>

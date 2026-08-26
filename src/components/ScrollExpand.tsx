@@ -96,8 +96,8 @@ const ScrollExpand = ({
     const w = (c.startWidth as number) + (100 - (c.startWidth as number)) * e;
     const h = (c.startHeight as number) + (100 - (c.startHeight as number)) * e;
     const ix = Math.max(0, (100 - w) / 2);
-    const iyTop = Math.max(0, 100 - h);
-    const iyBottom = 0;
+    const iyTop = 0;
+    const iyBottom = Math.max(0, 100 - h);
     const r = (c.startRadius as number) + ((c.endRadius as number) - (c.startRadius as number)) * e;
     frame.style.clipPath = `inset(${iyTop}% ${ix}% ${iyBottom}% ${ix}% round ${r}px)`;
 

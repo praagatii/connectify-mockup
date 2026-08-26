@@ -53,6 +53,7 @@ const ScrollExpand = ({
   overlayScrim = 0.45,
   useWindowScroll = false,
   enabled = true,
+  maxExpand = 1,
   children,
   className = "",
   style,
@@ -79,9 +80,10 @@ const ScrollExpand = ({
     holdDistance,
     smoothing,
     overlayScrim,
-    useWindowScroll,
-    enabled,
-  };
+    useWindowScroll: useWindowScroll as boolean,
+    enabled: enabled as boolean,
+    maxExpand,
+  } as Record<string, number | boolean>;
 
   const applyProgress = useCallback((p: number) => {
     const frame = frameRef.current;
@@ -89,7 +91,7 @@ const ScrollExpand = ({
     if (!frame || !media) return;
     const c = propsRef.current;
 
-    const e = smoothstep(0, 1, p);
+    const e = Math.min(smoothstep(0, 1, p), c.maxExpand as number);
 
     const w = (c.startWidth as number) + (100 - (c.startWidth as number)) * e;
     const h = (c.startHeight as number) + (100 - (c.startHeight as number)) * e;

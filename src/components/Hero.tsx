@@ -28,8 +28,9 @@ export default function Hero() {
         startWidth={50}
         startHeight={28}
         startRadius={20}
-        endRadius={0}
+        endRadius={20}
         mediaZoom={1.2}
+        maxExpand={0.88}
         scrollDistance={1.5}
         holdDistance={0.35}
         overlayScrim={0.5}

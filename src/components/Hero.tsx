@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
         {/* Video — 16:9, anchored to bottom so only top ~60% visible */}
-        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none">
+        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none" style={{ transform: "translateY(20%)" }}>
           <div
             className="relative overflow-hidden"
             style={{

@@ -99,10 +99,11 @@ export default function Hero() {
         {/* Video — 16:9, anchored to bottom so only top ~60% visible */}
         <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none">
           <div
-            className="relative overflow-hidden rounded-t-[20px]"
+            className="relative overflow-hidden"
             style={{
-              width: `${42 + (100 - 42) * videoProgress * 0.95}%`,
+              width: `${42 + (100 - 42) * videoProgress}%`,
               aspectRatio: "16/9",
+              borderRadius: `${Math.round(20 * (1 - videoProgress))}px`,
             }}
           >
             <video

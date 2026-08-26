@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <section ref={sectionRef} className="relative bg-white" style={{ height: "180vh" }}>
       {/* Sticky content area */}
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-start overflow-hidden">
+      <div className="sticky top-0 flex h-screen flex-col items-center justify-start">
         {/* Heading + subtext + buttons */}
         <div
           className="relative z-50 flex flex-col items-center text-center px-6 pt-28"

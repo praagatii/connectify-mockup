@@ -30,7 +30,6 @@ export default function Hero() {
 
     const video = videoRef.current;
     let scrub: ScrollTrigger | null = null;
-    let tickFn: (() => void) | null = null;
 
     const startScrub = () => {
       if (!video || !(video.duration > 0)) return;
@@ -52,8 +51,6 @@ export default function Hero() {
       const contentH = window.innerHeight;
       const windowPx =
         (videoEnd - contentStart) * (totalPercent / 100) * contentH;
-      let smoothTime = startOffset;
-      let latestTarget = startOffset;
       let spacer = document.getElementById(
         "hero-scroll-spacer"
       ) as HTMLDivElement | null;
@@ -78,7 +75,10 @@ export default function Hero() {
         anticipatePin: 1,
         onUpdate: (self) => {
           const vp = gsap.utils.clamp(0, 1, self.progress / videoEnd);
-          latestTarget = startOffset + vp * playDuration;
+          const target = startOffset + vp * playDuration;
+          if (!video.seeking && Math.abs(target - video.currentTime) > 0.01) {
+            video.currentTime = target;
+          }
           const cp = gsap.utils.clamp(
             0,
             1,
@@ -96,15 +96,6 @@ export default function Hero() {
         },
       });
 
-      const tick = () => {
-        smoothTime += (latestTarget - smoothTime) * 0.12;
-        if (!video.seeking && Math.abs(smoothTime - video.currentTime) > 0.02) {
-          video.currentTime = smoothTime;
-        }
-      };
-      tickFn = tick;
-      gsap.ticker.add(tick);
-
       ScrollTrigger.refresh();
     };
 
@@ -119,7 +110,6 @@ export default function Hero() {
       ctx.revert();
       if (video) video.removeEventListener("loadeddata", startScrub);
       scrub?.kill();
-      if (tickFn) gsap.ticker.remove(tickFn);
     };
   }, []);
 
@@ -135,7 +125,7 @@ export default function Hero() {
         preload="auto"
         poster="/hero-poster.jpg"
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
-        src="/newhero.mp4"
+        src="/newhero-1080.mp4"
       />
 
       <div

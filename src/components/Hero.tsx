@@ -57,56 +57,62 @@ export default function Hero() {
       </ScrollExpand>
 
       <div
-        className="pointer-events-none absolute inset-0 z-30 flex flex-col items-center justify-end pb-24 sm:pb-32"
+        className="pointer-events-none absolute inset-0 z-30 mx-auto flex w-full max-w-7xl items-center px-6 lg:px-12"
         style={{ opacity: heroOpacity }}
       >
-        <h1 className="font-inter text-6xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-[80px] sm:leading-[0.92] lg:text-[100px]">
-          Build
-          <br />
-          What&apos;s{" "}
-          <span className="bg-gradient-to-r from-white via-[#c084fc] to-[#8f00ff] bg-clip-text text-transparent">
-            Next.
-          </span>
-        </h1>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
-          <Link
-            href="/services"
-            className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
-          >
-            What We Build
-            <svg
-              className="h-4 w-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+        <div className="max-w-3xl pt-20 pb-24 lg:pt-28">
+          <h1 className="mt-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+            Build
+            <br />
+            What&apos;s{" "}
+            <span className="bg-gradient-to-l from-white to-[#c084fc] bg-clip-text text-transparent">
+              Next.
+            </span>
+          </h1>
+          <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-white/70">
+            We design and engineer digital products, platforms, and experiences
+            that turn ambitious ideas into scalable technology.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-4 pointer-events-auto">
+            <Link
+              href="/services"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-inter text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
-          <Link
-            href="/case-studies"
-            className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-white underline decoration-white/40 decoration-2 underline-offset-8 transition-colors hover:decoration-white"
-          >
-            View Our Work
-            <svg
-              className="h-4 w-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+              What We Build
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-white underline decoration-white/40 decoration-2 underline-offset-8 transition-colors hover:decoration-white"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
+              View Our Work
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

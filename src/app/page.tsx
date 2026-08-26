@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
-import WhatWeBuild from "@/components/WhatWeBuild";
 import About from "@/components/About";
 import SelectedWork from "@/components/SelectedWork";
 import Process from "@/components/Process";
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhatWeBuild />
       <TrustedBy />
       <About />
       <SelectedWork />

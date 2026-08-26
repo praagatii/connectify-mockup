@@ -120,7 +120,7 @@ export default function Hero() {
               className="absolute inset-0 flex flex-col items-center justify-center px-6 transition-opacity duration-500"
               style={{ opacity: videoProgress > 0.5 ? (videoProgress - 0.5) * 2 : 0 }}
             >
-              <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-8xl">
+              <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-8xl">
                 Our Services
               </h2>
               <ol className="mt-12 grid grid-cols-3 gap-5">
@@ -135,9 +135,9 @@ export default function Hero() {
                   <li key={item.title}>
                     <a
                       href={item.href}
-                      className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
+                      className="group flex items-center justify-center rounded-2xl border border-black/10 bg-white px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-black/20 hover:bg-white/90"
                     >
-                      <span className="font-inter text-2xl font-bold text-white transition-colors group-hover:text-white/80">
+                      <span className="font-inter text-2xl font-bold text-black transition-colors group-hover:text-brand">
                         {item.title}
                       </span>
                     </a>

@@ -1,79 +1,60 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScrollExpand from "./ScrollExpand";
 
 export default function Hero() {
   const [heroOpacity, setHeroOpacity] = useState(1);
+  const [videoProgress, setVideoProgress] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
       const vh = window.innerHeight;
-      const p = Math.min(window.scrollY / (vh * 0.5), 1);
+      const p = Math.min(window.scrollY / (vh * 0.4), 1);
       setHeroOpacity(1 - p);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return (
-    <section className="relative min-h-svh bg-white">
-      <ScrollExpand
-        src="/newhero-1080.mp4"
-        mediaType="video"
-        poster="/hero-poster.jpg"
-        alt="Connectify"
-        useWindowScroll
-        startWidth={50}
-        startHeight={28}
-        startRadius={20}
-        endRadius={20}
-        mediaZoom={1.2}
-        maxExpand={0.95}
-        scrollDistance={1.2}
-        holdDistance={0.35}
-        overlayScrim={0.5}
-      >
-        <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight sm:text-8xl">
-          <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
-            Our Services
-          </span>
-        </h2>
-        <ol className="mt-12 grid grid-cols-3 gap-5">
-          {[
-            { title: "Digital Solutions", href: "/services#digital-solutions" },
-            { title: "Technology Services", href: "/services#technology-services" },
-            { title: "Business Advisory", href: "/services#business-advisory" },
-            { title: "Investment Consulting", href: "/services#investment-consulting" },
-            { title: "Brand Experience", href: "/services#brand-experience" },
-            { title: "Data & AI", href: "/services#data-ai" },
-          ].map((item) => (
-            <li key={item.title}>
-              <a
-                href={item.href}
-                className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
-              >
-                <span className="font-inter text-2xl font-bold text-black transition-colors group-hover:text-brand">
-                  {item.title}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </ScrollExpand>
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
 
-      <div
-        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen items-center justify-center px-6 pt-24"
-        style={{ opacity: heroOpacity }}
-      >
-        <div className="text-center">
+    const onScroll = () => {
+      const rect = section.getBoundingClientRect();
+      const sectionH = section.offsetHeight;
+      const scrolled = -rect.top;
+      const total = sectionH - window.innerHeight;
+      const p = Math.max(0, Math.min(scrolled / total, 1));
+      setVideoProgress(p);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <section ref={sectionRef} className="relative bg-white" style={{ height: "180vh" }}>
+      {/* Sticky content area */}
+      <div className="sticky top-0 flex h-screen flex-col items-center justify-start overflow-hidden">
+        {/* Heading + subtext + buttons */}
+        <div
+          className="relative z-50 flex flex-col items-center text-center px-6 pt-28"
+          style={{ opacity: heroOpacity }}
+        >
           <h1 className="whitespace-nowrap font-inter text-6xl font-extrabold leading-[0.95] tracking-tight sm:text-[100px] sm:leading-[0.92] lg:text-[120px]">
             <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
               Build What&apos;s Next.
             </span>
           </h1>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            We partner with ambitious organizations to design, build, and scale
+            digital platforms — backed by strategic business and capital advisory.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             <Link
               href="/services"
               className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
@@ -112,6 +93,63 @@ export default function Hero() {
                 />
               </svg>
             </Link>
+          </div>
+        </div>
+
+        {/* Video — starts at bottom, only top ~60% visible */}
+        <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
+          <div
+            className="relative overflow-hidden rounded-[20px] transition-none"
+            style={{
+              width: `${42 + (100 - 42) * videoProgress * 0.95}%`,
+              height: `${58 + (100 - 58) * videoProgress * 0.95}%`,
+              maxHeight: "100%",
+            }}
+          >
+            {/* Video */}
+            <video
+              src="/newhero-1080.mp4"
+              poster="/hero-poster.jpg"
+              muted
+              playsInline
+              preload="auto"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ transform: `scale(${1 + videoProgress * 0.15})` }}
+            />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/40" />
+            {/* Services overlay — fades in when video is mostly expanded */}
+            <div
+              className="absolute inset-0 flex flex-col items-center justify-center px-6 transition-opacity duration-500"
+              style={{ opacity: videoProgress > 0.5 ? (videoProgress - 0.5) * 2 : 0 }}
+            >
+              <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight sm:text-8xl">
+                <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
+                  Our Services
+                </span>
+              </h2>
+              <ol className="mt-12 grid grid-cols-3 gap-5">
+                {[
+                  { title: "Digital Solutions", href: "/services#digital-solutions" },
+                  { title: "Technology Services", href: "/services#technology-services" },
+                  { title: "Business Advisory", href: "/services#business-advisory" },
+                  { title: "Investment Consulting", href: "/services#investment-consulting" },
+                  { title: "Brand Experience", href: "/services#brand-experience" },
+                  { title: "Data & AI", href: "/services#data-ai" },
+                ].map((item) => (
+                  <li key={item.title}>
+                    <a
+                      href={item.href}
+                      className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
+                    >
+                      <span className="font-inter text-2xl font-bold text-black transition-colors group-hover:text-brand">
+                        {item.title}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </div>
       </div>

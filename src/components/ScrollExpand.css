@@ -32,10 +32,9 @@
 
 .scroll-expand__frame {
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  will-change: clip-path, width, height;
+  inset: 0;
+  clip-path: inset(21% 29% 21% 29% round 24px);
+  will-change: clip-path;
 }
 
 .scroll-expand__media {

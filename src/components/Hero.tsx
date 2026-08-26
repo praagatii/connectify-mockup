@@ -60,7 +60,7 @@ export default function Hero() {
         className="pointer-events-none absolute top-0 left-0 z-30 flex h-screen w-full max-w-7xl items-center px-6 lg:px-12"
         style={{ opacity: heroOpacity }}
       >
-        <div className="max-w-3xl pt-20 pb-24 lg:pt-28">
+        <div className="max-w-3xl">
           <h1 className="mt-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
             Build
             <br />
@@ -69,10 +69,6 @@ export default function Hero() {
               Next.
             </span>
           </h1>
-          <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-gray-600">
-            We design and engineer digital products, platforms, and experiences
-            that turn ambitious ideas into scalable technology.
-          </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-4 pointer-events-auto">
             <Link
               href="/services"

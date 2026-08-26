@@ -61,7 +61,7 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
       >
         <div className="max-w-3xl text-center">
-          <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+          <h1 className="whitespace-nowrap font-inter text-6xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[100px] sm:leading-[0.92] lg:text-[120px]">
             Build What&apos;s{" "}
             <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
               Next.

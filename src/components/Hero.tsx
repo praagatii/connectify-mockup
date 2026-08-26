@@ -74,7 +74,7 @@ export default function Hero() {
               Build What&apos;s Next.
             </span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+          <p className="mx-auto mt-6 max-w-xl text-center text-lg leading-relaxed text-muted">
             We partner with ambitious organizations to design, build, and scale
             digital platforms — backed by strategic business and capital advisory.
           </p>

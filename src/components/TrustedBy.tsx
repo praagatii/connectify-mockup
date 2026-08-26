@@ -22,7 +22,7 @@ export default function TrustedBy() {
   const logos = [...clients, ...clients];
 
   return (
-    <section className="relative z-10 bg-white pt-40 pb-20">
+    <section className="relative z-10 bg-white pt-8 pb-20">
       <div className="pt-0">
         <div className="relative mx-auto w-full max-w-6xl px-6">
           <div className="overflow-hidden">

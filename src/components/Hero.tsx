@@ -103,7 +103,7 @@ export default function Hero() {
             style={{
               width: `${35 + (100 - 35) * videoProgress}%`,
               aspectRatio: "16/9",
-              borderRadius: `${Math.round(20 * (1 - videoProgress))}px`,
+              borderRadius: "20px",
             }}
           >
             <video

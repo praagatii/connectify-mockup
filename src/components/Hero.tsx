@@ -26,7 +26,7 @@ export default function Hero() {
         alt="Connectify"
         useWindowScroll
         startWidth={50}
-        startHeight={70}
+        startHeight={130}
         startRadius={20}
         endRadius={20}
         mediaZoom={1.2}

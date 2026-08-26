@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-svh bg-white">
+    <section className="relative min-h-svh">
       <ScrollExpand
         src="/newhero-1080.mp4"
         mediaType="video"
@@ -75,8 +75,8 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-center text-lg leading-relaxed text-muted">
-            We partner with ambitious organizations to design, build, and scale<br />
-            digital platforms — backed by strategic business and capital advisory.
+            We design, build, and scale digital platforms<br />
+            backed by strategic business and capital advisory.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
             <Link

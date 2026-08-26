@@ -101,7 +101,9 @@ const ScrollExpand = ({
     const r = (c.startRadius as number) + ((c.endRadius as number) - (c.startRadius as number)) * e;
     frame.style.clipPath = `inset(${iyTop}% ${ix}% ${iyBottom}% ${ix}% round ${r}px)`;
 
-    (media as HTMLElement).style.transform = `scale(${(c.mediaZoom as number) + (1 - (c.mediaZoom as number)) * e})`;
+    const frameCY = iyTop + h / 2;
+    const mediaOffsetY = 50 - frameCY;
+    (media as HTMLElement).style.transform = `scale(${(c.mediaZoom as number) + (1 - (c.mediaZoom as number)) * e}) translateY(${mediaOffsetY}%)`;
 
     if (scrimRef.current) scrimRef.current.style.opacity = `${(c.overlayScrim as number) * e}`;
 

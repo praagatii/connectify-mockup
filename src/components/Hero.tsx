@@ -57,11 +57,11 @@ export default function Hero() {
       </ScrollExpand>
 
       <div
-        className="pointer-events-none absolute top-0 left-0 z-30 flex h-screen w-full max-w-7xl items-center px-6 lg:px-12"
+        className="pointer-events-none absolute top-0 left-0 z-30 flex h-screen w-full items-center justify-center px-6"
         style={{ opacity: heroOpacity }}
       >
-        <div className="max-w-3xl">
-          <h1 className="mt-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
+        <div className="max-w-3xl text-center">
+          <h1 className="font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
             Build
             <br />
             What&apos;s{" "}
@@ -69,7 +69,7 @@ export default function Hero() {
               Next.
             </span>
           </h1>
-          <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-4 pointer-events-auto">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
             <Link
               href="/services"
               className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"

@@ -60,7 +60,7 @@ export default function Hero() {
         className="pointer-events-none absolute top-0 left-0 right-0 z-30 flex h-screen items-center justify-center px-6 pt-24"
         style={{ opacity: heroOpacity }}
       >
-        <div className="max-w-3xl text-center">
+        <div className="text-center">
           <h1 className="whitespace-nowrap font-inter text-6xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[100px] sm:leading-[0.92] lg:text-[120px]">
             Build What&apos;s{" "}
             <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">

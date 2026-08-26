@@ -53,7 +53,7 @@ export default function Hero() {
                 href={item.href}
                 className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
               >
-                <span className="font-inter text-2xl font-bold text-white transition-colors group-hover:text-[#c084fc]">
+                <span className="font-inter text-2xl font-bold text-black transition-colors group-hover:text-brand">
                   {item.title}
                 </span>
               </a>

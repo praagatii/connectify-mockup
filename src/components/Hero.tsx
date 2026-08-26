@@ -40,7 +40,7 @@ export default function Hero() {
             Services
           </span>
         </h2>
-        <ol className="mt-8 flex flex-col gap-3">
+        <ol className="mt-8 grid grid-cols-3 gap-3">
           {[
             { n: "01", title: "Digital Solutions", href: "/services#digital-solutions" },
             { n: "02", title: "Technology Services", href: "/services#technology-services" },

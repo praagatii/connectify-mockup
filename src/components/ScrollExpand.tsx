@@ -96,9 +96,10 @@ const ScrollExpand = ({
     const w = (c.startWidth as number) + (100 - (c.startWidth as number)) * e;
     const h = (c.startHeight as number) + (100 - (c.startHeight as number)) * e;
     const ix = Math.max(0, (100 - w) / 2);
-    const iy = Math.max(0, (100 - h) / 2);
+    const iyTop = Math.max(0, (100 - h) * 0.7);
+    const iyBottom = Math.max(0, (100 - h) * 0.3);
     const r = (c.startRadius as number) + ((c.endRadius as number) - (c.startRadius as number)) * e;
-    frame.style.clipPath = `inset(${iy}% ${ix}% ${iy}% ${ix}% round ${r}px)`;
+    frame.style.clipPath = `inset(${iyTop}% ${ix}% ${iyBottom}% ${ix}% round ${r}px)`;
 
     (media as HTMLElement).style.transform = `scale(${(c.mediaZoom as number) + (1 - (c.mediaZoom as number)) * e})`;
 

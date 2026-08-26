@@ -24,7 +24,6 @@ export default function Hero() {
         mediaType="video"
         poster="/hero-poster.jpg"
         alt="Connectify"
-        scrollHint="Scroll"
         useWindowScroll
         startWidth={50}
         startHeight={28}
@@ -35,13 +34,6 @@ export default function Hero() {
         holdDistance={0.35}
         overlayScrim={0.5}
       >
-        <h2 className="font-inter text-3xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl">
-          What We Build
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-          Full-stack digital products, platforms, and technology consulting —
-          from web and mobile to cloud, AI and investment advisory.
-        </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           {["Digital Solutions", "Technology Services", "Business Advisory", "Investment Consulting"].map(
             (s) => (
@@ -57,7 +49,7 @@ export default function Hero() {
       </ScrollExpand>
 
       <div
-        className="pointer-events-none absolute top-0 left-0 right-0 z-30 flex h-screen items-center justify-center px-6 pt-24"
+        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen items-center justify-center px-6 pt-24"
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">

@@ -32,11 +32,13 @@ export default function Hero() {
         mediaZoom={1.2}
         maxExpand={0.95}
         scrollDistance={1.2}
-        holdDistance={0.35}
+        holdDistance={0}
         overlayScrim={0}
       >
-        <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-8xl">
-          Our Services
+        <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight sm:text-8xl">
+          <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
+            Our Services
+          </span>
         </h2>
         <ol className="mt-12 grid grid-cols-3 gap-5">
           {[
@@ -67,7 +69,7 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">
-          <h1 className="whitespace-nowrap font-inter text-6xl font-extrabold leading-[0.95] tracking-tight sm:text-[100px] sm:leading-[0.92] lg:text-[120px]">
+          <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl sm:leading-[0.92] lg:text-8xl">
             <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
               Build What&apos;s Next.
             </span>

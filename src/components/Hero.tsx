@@ -34,18 +34,34 @@ export default function Hero() {
         holdDistance={0.35}
         overlayScrim={0.5}
       >
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          {["Digital Solutions", "Technology Services", "Business Advisory", "Investment Consulting"].map(
-            (s) => (
-              <span
-                key={s}
-                className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-medium text-white/90 backdrop-blur-sm"
+        <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl">
+          Our{" "}
+          <span className="bg-gradient-to-r from-[#c084fc] to-white bg-clip-text text-transparent">
+            Services
+          </span>
+        </h2>
+        <ol className="mt-8 flex flex-col gap-3">
+          {[
+            { n: "01", title: "Digital Solutions", href: "/services#digital-solutions" },
+            { n: "02", title: "Technology Services", href: "/services#technology-services" },
+            { n: "03", title: "Business Advisory", href: "/services#business-advisory" },
+            { n: "04", title: "Investment Consulting", href: "/services#investment-consulting" },
+            { n: "05", title: "Brand Experience", href: "/services#brand-experience" },
+            { n: "06", title: "Data & AI", href: "/services#data-ai" },
+          ].map((item) => (
+            <li key={item.n}>
+              <a
+                href={item.href}
+                className="group flex items-center gap-4 rounded-xl border border-white/15 bg-white/5 px-5 py-4 backdrop-blur-sm transition-colors hover:border-white/30 hover:bg-white/10"
               >
-                {s}
-              </span>
-            )
-          )}
-        </div>
+                <span className="font-mono text-xs text-white/50">{item.n}</span>
+                <span className="font-inter text-xl font-semibold text-white transition-colors group-hover:text-[#c084fc]">
+                  {item.title}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
       </ScrollExpand>
 
       <div

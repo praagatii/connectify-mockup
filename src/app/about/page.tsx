@@ -71,10 +71,10 @@ export default function AboutPage() {
       <div className="px-6 py-16">
         <div className="mx-auto w-full max-w-6xl space-y-20">
           <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Who We Are
             </h2>
-            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               Your strategic partner
             </h3>
             <div className="mt-8 max-w-3xl space-y-6">
@@ -110,10 +110,10 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Our Approach
             </h2>
-            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               What sets us apart
             </h3>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   key={item.title}
                   className="rounded-2xl border border-black/10 bg-surface p-8"
                 >
-                  <h4 className="font-inter text-xl font-semibold text-black">
+                  <h4 className="font-inter text-base font-bold text-black">
                     {item.title}
                   </h4>
                   <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -134,10 +134,10 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Why Choose Us
             </h2>
-            <h3 className="mt-4 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               Why choose Connectify?
             </h3>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
@@ -158,7 +158,7 @@ export default function AboutPage() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h4 className="font-inter text-xl font-semibold text-black">
+                    <h4 className="font-inter text-base font-bold text-black">
                       {item.title}
                     </h4>
                     <p className="mt-1 text-sm leading-relaxed text-muted">

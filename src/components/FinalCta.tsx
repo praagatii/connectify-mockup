@@ -12,13 +12,13 @@ export default function FinalCta() {
         }}
       />
       <div className="relative mx-auto w-full max-w-4xl px-6 text-center">
-        <p className="text-xs font-medium uppercase tracking-[0.35em] text-muted">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
           Available for new engagements
         </p>
-        <h2 className="mt-6 font-inter text-4xl font-black uppercase leading-[0.95] tracking-tight text-black sm:text-6xl">
+        <h2 className="mt-6 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
           Let&apos;s build the
           <br />
-          <span className="bg-gradient-to-r from-electric to-brand bg-clip-text text-transparent">
+          <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
             future together.
           </span>
         </h2>

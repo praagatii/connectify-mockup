@@ -82,7 +82,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 font-inter text-sm font-medium text-gray-500 transition-colors hover:text-black"
+                className="rounded-lg px-3 py-3 font-inter text-sm font-semibold text-muted transition-colors hover:text-black"
               >
                 {link.label}
               </Link>

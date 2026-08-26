@@ -83,7 +83,7 @@ export default function ProductsPage() {
                   <p className="font-mono text-xs text-brand">
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-3 font-inter text-2xl font-bold uppercase tracking-tight text-black sm:text-3xl">
+                  <h2 className="mt-3 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
                     {category.name}
                   </h2>
                   <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
@@ -108,7 +108,7 @@ export default function ProductsPage() {
           ))}
 
           <section className="rounded-2xl border border-black/10 bg-surface p-8 sm:p-10">
-            <h2 className="font-inter text-2xl font-bold uppercase tracking-tight text-black sm:text-3xl">
+            <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               Need custom development?
             </h2>
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">

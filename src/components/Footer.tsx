@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           <div className="sm:col-span-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-black/40">
+            <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Company
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-muted">
@@ -84,7 +84,7 @@ export default function Footer() {
           </div>
 
           <div className="sm:col-span-5">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-black/40">
+            <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Reach us
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-muted">

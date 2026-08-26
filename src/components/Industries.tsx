@@ -42,12 +42,12 @@ export default function EnterprisePlatforms() {
             <p className="font-inter text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Industries
             </p>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold tracking-tight text-black sm:text-5xl">
+            <h2 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               Industries
-            </h3>
+            </h2>
           </div>
           <div className="flex flex-col items-start gap-6 sm:items-end">
-            <p className="max-w-sm text-sm leading-relaxed text-muted">
+            <p className="max-w-sm text-base leading-relaxed text-muted">
               Healthtech, accounting, SaaS, HRtech and fintech products
               engineered for production scale.
             </p>

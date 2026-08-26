@@ -29,7 +29,7 @@ export default function ContactPage() {
               href="tel:+919834843396"
               className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-white/25"
             >
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Phone
               </h2>
               <p className="mt-3 text-sm text-muted">Call us directly.</p>
@@ -40,7 +40,7 @@ export default function ContactPage() {
               href="mailto:business@connectify.global"
               className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-white/25"
             >
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Email
               </h2>
               <p className="mt-3 text-sm text-muted">Drop us a message.</p>
@@ -50,7 +50,7 @@ export default function ContactPage() {
             </a>
 
             <div className="rounded-2xl border border-black/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Address
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -60,7 +60,7 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-2xl border border-black/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Opening hours
               </h2>
               <ul className="mt-3 space-y-2 text-sm text-muted">
@@ -76,7 +76,7 @@ export default function ContactPage() {
 
           <div className="sm:col-span-3">
             <div className="rounded-2xl border border-black/10 bg-surface p-8 sm:p-10">
-              <h2 className="font-inter text-xl font-bold uppercase tracking-tight text-black sm:text-2xl">
+              <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
                 Send us a message
               </h2>
               <p className="mt-2 text-sm text-muted">

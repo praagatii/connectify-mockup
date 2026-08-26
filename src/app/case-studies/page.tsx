@@ -106,7 +106,7 @@ export default async function CaseStudiesPage({
                     </svg>
                   </div>
                   <div className="relative mt-6">
-                    <h2 className="font-inter text-xl font-bold tracking-tight text-black">
+                    <h2 className="font-inter text-base font-bold text-black">
                       {project.name}
                     </h2>
                     <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">

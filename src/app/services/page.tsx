@@ -153,10 +153,10 @@ export default function ServicesPage() {
 
           {serviceGroups.map((group) => (
             <section key={group.id} id={group.id} className="scroll-mt-28">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 {group.group}
               </p>
-              <h2 className="mt-3 font-inter text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+              <h2 className="mt-3 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
                 {group.group}
               </h2>
               <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
@@ -171,7 +171,7 @@ export default function ServicesPage() {
                     <span className="font-mono text-xs text-brand">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="mt-3 font-inter text-xl font-bold tracking-tight text-black">
+                    <h3 className="mt-3 font-inter text-base font-bold text-black">
                       {service.name}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted">

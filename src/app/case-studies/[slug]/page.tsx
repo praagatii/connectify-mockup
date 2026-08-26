@@ -39,13 +39,13 @@ export default async function CaseStudyPage({
           >
             â† All case studies
           </Link>
-          <p className="mt-10 text-xs font-medium uppercase tracking-[0.35em] text-muted">
+          <p className="mt-10 text-xs font-medium uppercase tracking-[0.2em] text-muted">
             {project.category}
           </p>
-          <h1 className="mt-6 font-inter text-4xl font-black uppercase leading-[0.95] tracking-tight text-black text-6xl">
+          <h1 className="mt-6 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
             {project.name}
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted">
             {project.summary}
           </p>
         </div>
@@ -62,17 +62,17 @@ export default async function CaseStudyPage({
             />
           </div>
           <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Overview
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted text-lg">
+            <p className="mt-4 text-base leading-relaxed text-muted">
               {project.overview}
             </p>
           </section>
 
           <section className="grid gap-8 sm:grid-cols-2">
             <div className="rounded-2xl border border-black/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 The Challenge
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -80,7 +80,7 @@ export default async function CaseStudyPage({
               </p>
             </div>
             <div className="rounded-2xl border border-black/10 bg-surface p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Our Solution
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -90,7 +90,7 @@ export default async function CaseStudyPage({
           </section>
 
           <section>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-black/40">
+            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Tech Stack
             </h2>
             <div className="mt-4 flex flex-wrap gap-2">

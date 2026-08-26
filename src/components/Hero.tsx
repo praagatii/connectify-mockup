@@ -62,14 +62,12 @@ export default function Hero() {
       >
         <div className="max-w-3xl text-center">
           <h1 className="font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]">
-            Build
-            <br />
-            What&apos;s{" "}
+            Build What&apos;s{" "}
             <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
               Next.
             </span>
           </h1>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
             <Link
               href="/services"
               className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"

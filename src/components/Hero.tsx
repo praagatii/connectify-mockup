@@ -96,57 +96,53 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Video — starts at bottom, only top 60% visible */}
-        <div className="absolute inset-x-0 bottom-0 h-[60%] overflow-hidden pointer-events-none">
+        {/* Video — 16:9, anchored to bottom so only top ~60% visible */}
+        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none">
           <div
-            className="absolute inset-x-0 bottom-0 flex justify-center"
+            className="relative overflow-hidden rounded-t-[20px]"
+            style={{
+              width: `${42 + (100 - 42) * videoProgress * 0.95}%`,
+              aspectRatio: "16/9",
+            }}
           >
+            <video
+              src="/newhero-1080.mp4"
+              poster="/hero-poster.jpg"
+              muted
+              playsInline
+              preload="auto"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ transform: `scale(${1 + videoProgress * 0.15})` }}
+            />
+            {/* Services overlay — fades in when video is mostly expanded */}
             <div
-              className="relative overflow-hidden rounded-t-[20px]"
-              style={{
-                width: `${42 + (100 - 42) * videoProgress * 0.95}%`,
-                aspectRatio: "16/9",
-              }}
+              className="absolute inset-0 flex flex-col items-center justify-center px-6 transition-opacity duration-500"
+              style={{ opacity: videoProgress > 0.5 ? (videoProgress - 0.5) * 2 : 0 }}
             >
-              <video
-                src="/newhero-1080.mp4"
-                poster="/hero-poster.jpg"
-                muted
-                playsInline
-                preload="auto"
-                className="absolute inset-0 h-full w-full object-cover"
-                style={{ transform: `scale(${1 + videoProgress * 0.15})` }}
-              />
-              {/* Services overlay — fades in when video is mostly expanded */}
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center px-6 transition-opacity duration-500"
-                style={{ opacity: videoProgress > 0.5 ? (videoProgress - 0.5) * 2 : 0 }}
-              >
-                <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-8xl">
-                  Our Services
-                </h2>
-                <ol className="mt-12 grid grid-cols-3 gap-5">
-                  {[
-                    { title: "Digital Solutions", href: "/services#digital-solutions" },
-                    { title: "Technology Services", href: "/services#technology-services" },
-                    { title: "Business Advisory", href: "/services#business-advisory" },
-                    { title: "Investment Consulting", href: "/services#investment-consulting" },
-                    { title: "Brand Experience", href: "/services#brand-experience" },
-                    { title: "Data & AI", href: "/services#data-ai" },
-                  ].map((item) => (
-                    <li key={item.title}>
-                      <a
-                        href={item.href}
-                        className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
-                      >
-                        <span className="font-inter text-2xl font-bold text-white transition-colors group-hover:text-white/80">
-                          {item.title}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </div>
+              <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-8xl">
+                Our Services
+              </h2>
+              <ol className="mt-12 grid grid-cols-3 gap-5">
+                {[
+                  { title: "Digital Solutions", href: "/services#digital-solutions" },
+                  { title: "Technology Services", href: "/services#technology-services" },
+                  { title: "Business Advisory", href: "/services#business-advisory" },
+                  { title: "Investment Consulting", href: "/services#investment-consulting" },
+                  { title: "Brand Experience", href: "/services#brand-experience" },
+                  { title: "Data & AI", href: "/services#data-ai" },
+                ].map((item) => (
+                  <li key={item.title}>
+                    <a
+                      href={item.href}
+                      className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
+                    >
+                      <span className="font-inter text-2xl font-bold text-white transition-colors group-hover:text-white/80">
+                        {item.title}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </div>

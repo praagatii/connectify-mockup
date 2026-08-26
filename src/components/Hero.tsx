@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
         {/* Video — 16:9, anchored to bottom so only top ~60% visible */}
-        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none" style={{ transform: "translateY(20%)" }}>
+        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none">
           <div
             className="relative overflow-hidden"
             style={{
@@ -113,7 +113,7 @@ export default function Hero() {
               playsInline
               preload="auto"
               className="absolute inset-0 h-full w-full object-cover"
-              style={{ transform: `scale(${1 + videoProgress * 0.15})` }}
+                style={{ transform: `scale(${1 + videoProgress * 0.15}) translateY(${45 * (1 - videoProgress)}%)` }}
             />
             {/* Services overlay — fades in when video is mostly expanded */}
             <div

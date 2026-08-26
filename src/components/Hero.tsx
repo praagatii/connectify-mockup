@@ -34,28 +34,26 @@ export default function Hero() {
         holdDistance={0.35}
         overlayScrim={0.5}
       >
-        <h2 className="font-inter text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-7xl">
-          Our{" "}
-          <span className="bg-gradient-to-r from-white to-[#c084fc] bg-clip-text text-transparent">
-            Services
+        <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight sm:text-8xl">
+          <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
+            Our Services
           </span>
         </h2>
-        <ol className="mt-10 grid grid-cols-3 gap-4">
+        <ol className="mt-12 grid grid-cols-3 gap-5">
           {[
-            { n: "01", title: "Digital Solutions", href: "/services#digital-solutions" },
-            { n: "02", title: "Technology Services", href: "/services#technology-services" },
-            { n: "03", title: "Business Advisory", href: "/services#business-advisory" },
-            { n: "04", title: "Investment Consulting", href: "/services#investment-consulting" },
-            { n: "05", title: "Brand Experience", href: "/services#brand-experience" },
-            { n: "06", title: "Data & AI", href: "/services#data-ai" },
+            { title: "Digital Solutions", href: "/services#digital-solutions" },
+            { title: "Technology Services", href: "/services#technology-services" },
+            { title: "Business Advisory", href: "/services#business-advisory" },
+            { title: "Investment Consulting", href: "/services#investment-consulting" },
+            { title: "Brand Experience", href: "/services#brand-experience" },
+            { title: "Data & AI", href: "/services#data-ai" },
           ].map((item) => (
-            <li key={item.n}>
+            <li key={item.title}>
               <a
                 href={item.href}
-                className="group flex flex-col gap-2 rounded-xl border border-black/10 bg-white/90 px-6 py-5 backdrop-blur-sm transition-colors hover:border-black/25 hover:bg-white"
+                className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
               >
-                <span className="font-mono text-xs text-black/40">{item.n}</span>
-                <span className="font-inter text-xl font-bold text-black transition-colors group-hover:text-brand">
+                <span className="font-inter text-2xl font-bold text-white transition-colors group-hover:text-[#c084fc]">
                   {item.title}
                 </span>
               </a>

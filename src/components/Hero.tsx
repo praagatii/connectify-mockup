@@ -101,7 +101,7 @@ export default function Hero() {
           <div
             className="relative overflow-hidden"
             style={{
-              width: `${60 + (100 - 60) * videoProgress}%`,
+              width: `${35 + (100 - 35) * videoProgress}%`,
               aspectRatio: "16/9",
               borderRadius: `${Math.round(20 * (1 - videoProgress))}px`,
             }}
@@ -113,7 +113,7 @@ export default function Hero() {
               playsInline
               preload="auto"
               className="absolute inset-0 h-full w-full object-cover"
-                style={{ transform: `scale(${1 + videoProgress * 0.15}) translateY(${45 * (1 - videoProgress)}%)` }}
+                style={{ transform: `scale(${1 + videoProgress * 0.15}) translateY(${75 * (1 - videoProgress)}%)` }}
             />
             {/* Services overlay — fades in when video is mostly expanded */}
             <div

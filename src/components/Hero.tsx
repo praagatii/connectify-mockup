@@ -57,7 +57,7 @@ export default function Hero() {
       </ScrollExpand>
 
       <div
-        className="pointer-events-none absolute inset-0 z-30 mx-auto flex w-full max-w-7xl items-center px-6 lg:px-12"
+        className="pointer-events-none absolute top-0 left-0 z-30 flex h-screen w-full max-w-7xl items-center px-6 lg:px-12"
         style={{ opacity: heroOpacity }}
       >
         <div className="max-w-3xl pt-20 pb-24 lg:pt-28">

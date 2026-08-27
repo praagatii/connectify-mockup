@@ -73,7 +73,7 @@ export default function Process() {
     <section
       ref={rootRef}
       id="process"
-      className="relative z-10 py-16"
+      className="relative z-10 py-12"
     >
       <div
         aria-hidden

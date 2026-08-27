@@ -4,7 +4,7 @@ import { Skiper16 } from "@/components/ui/skiper-ui/skiper16";
 
 export default function EnterprisePlatforms() {
   return (
-    <section id="platforms" className="relative z-10 py-16">
+    <section id="platforms" className="relative z-10 py-12">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>

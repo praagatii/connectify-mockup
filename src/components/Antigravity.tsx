@@ -1,8 +1,17 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
+
+const globalMouse = { x: 0, y: 0 };
+
+if (typeof window !== "undefined") {
+  window.addEventListener("mousemove", (e) => {
+    globalMouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+    globalMouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+  });
+}
 
 const AntigravityInner = ({
   count = 300,
@@ -76,7 +85,9 @@ const AntigravityInner = ({
     const mesh = meshRef.current;
     if (!mesh) return;
 
-    const { viewport: v, pointer: m } = state;
+    const { viewport: v } = state;
+
+    const m = { x: globalMouse.x, y: globalMouse.y };
 
     const mouseDist = Math.sqrt(
       Math.pow(m.x - lastMousePos.current.x, 2) +

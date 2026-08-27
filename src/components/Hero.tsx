@@ -66,7 +66,7 @@ export default function Hero() {
 
       {/* Fixed overlay: heading + subtext + buttons */}
       <div
-        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen flex-col items-center justify-center px-6"
+        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen flex-col items-center justify-center px-6 pt-24"
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">
@@ -75,10 +75,10 @@ export default function Hero() {
               Build What&apos;s Next
             </span>
           </h1>
-          <p className="mx-auto mt-10 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
+          <p className="mx-auto mt-14 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
             We design, build, and scale digital platforms backed by strategic business and capital advisory.
           </p>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
+          <div className="mt-20 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
             <MetalButton variant="outline" asChild className="px-8 py-4">
               <Link
                 href="/services"

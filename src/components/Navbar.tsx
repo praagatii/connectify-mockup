@@ -73,7 +73,7 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-center px-6 lg:px-12">
           <Popover open={isOpen} onOpenChange={setIsOpen}>
             <PopoverAnchor asChild>
-              <div className="flex h-16 w-full items-center justify-between gap-2 rounded-full border-0 bg-transparent pr-4 md:w-5xl lg:w-4xl">
+              <div className="flex h-16 w-full items-center justify-between gap-2 rounded-full border border-black/10 bg-transparent pr-4 md:w-5xl lg:w-4xl">
                 <div className="flex items-center gap-6 pl-4">
                   <Link href="/" className="flex items-center" aria-label="Connectify">
                     {/* eslint-disable-next-line @next/next/no-img-element */}

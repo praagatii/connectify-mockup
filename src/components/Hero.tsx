@@ -66,7 +66,7 @@ export default function Hero() {
 
       {/* Fixed overlay: heading + subtext + buttons */}
       <div
-        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen flex-col items-center justify-center px-6 pt-24"
+        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen flex-col items-center justify-center px-6"
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">

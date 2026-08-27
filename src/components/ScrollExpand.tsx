@@ -97,8 +97,9 @@ const ScrollExpand = ({
     const h = (c.startHeight as number) + (100 - (c.startHeight as number)) * e;
     const ix = Math.max(0, (100 - w) / 2);
     const iy = Math.max(0, (100 - h) / 2);
+    const offset = 15 * (1 - e);
     const r = (c.startRadius as number) + ((c.endRadius as number) - (c.startRadius as number)) * e;
-    frame.style.clipPath = `inset(${iy}% ${ix}% ${iy}% ${ix}% round ${r}px)`;
+    frame.style.clipPath = `inset(${iy + offset}% ${ix}% ${iy - offset}% ${ix}% round ${r}px)`;
 
     (media as HTMLElement).style.transform = `scale(${(c.mediaZoom as number) + (1 - (c.mediaZoom as number)) * e})`;
 

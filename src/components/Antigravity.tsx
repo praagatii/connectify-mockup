@@ -192,7 +192,7 @@ const AntigravityInner = ({
         <capsuleGeometry args={[0.1, 0.4, 4, 8]} />
       )}
       {particleShape === "sphere" && (
-        <sphereGeometry args={[0.2, 16, 16]} />
+        <sphereGeometry args={[0.1, 16, 16]} />
       )}
       {particleShape === "box" && (
         <boxGeometry args={[0.3, 0.3, 0.3]} />

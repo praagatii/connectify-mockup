@@ -36,7 +36,7 @@ export default function AntigravityBg() {
         ringRadius={10}
         waveSpeed={0.2}
         waveAmplitude={0.1}
-        particleSize={1.5}
+        particleSize={0.8}
         lerpSpeed={0.03}
         color="#8f00ff"
         autoAnimate={true}

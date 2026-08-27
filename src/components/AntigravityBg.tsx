@@ -6,7 +6,7 @@ const Antigravity = dynamic(() => import("./Antigravity"), { ssr: false });
 
 export default function AntigravityBg() {
   return (
-    <div className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 40 }}>
+    <div className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 40, background: "red" }}>
       <Antigravity
         count={150}
         magnetRadius={8}

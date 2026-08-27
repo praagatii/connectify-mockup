@@ -1,34 +1,6 @@
 ﻿"use client";
 
-import AccordionGallery from "./AccordionGallery";
-
-const industries = [
-  {
-    image: "https://picsum.photos/id/1048/900/1200",
-    label: "Healthtech",
-    link: "/products#healthtech",
-  },
-  {
-    image: "https://picsum.photos/id/1060/900/1200",
-    label: "Accounting",
-    link: "/products#accounting",
-  },
-  {
-    image: "https://picsum.photos/id/1045/900/1200",
-    label: "SaaS Platforms",
-    link: "/products#saas-platforms",
-  },
-  {
-    image: "https://picsum.photos/id/1027/900/1200",
-    label: "HRtech",
-    link: "/products#hrtech",
-  },
-  {
-    image: "https://picsum.photos/id/1047/900/1200",
-    label: "Fintech",
-    link: "/products#fintech",
-  },
-];
+import { Skiper16 } from "@/components/ui/skiper-ui/skiper16";
 
 export default function EnterprisePlatforms() {
   return (
@@ -46,20 +18,7 @@ export default function EnterprisePlatforms() {
         </div>
 
         <div className="mt-12">
-          <AccordionGallery
-            items={industries}
-            defaultIndex={0}
-            expandRatio={0.35}
-            trigger="hover"
-            height={360}
-            gap={10}
-            radius={16}
-            grayscale={true}
-            showLabels={true}
-            overlayColor="#060010"
-            textColor="#ffffff"
-            accentColor="#8f00ff"
-          />
+          <Skiper16 />
         </div>
       </div>
     </section>

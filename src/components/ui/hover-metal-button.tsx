@@ -18,13 +18,13 @@ export const HoverMetalButton = forwardRef<HTMLDivElement, HoverMetalButtonProps
         onMouseLeave={() => setHovered(false)}
         className={cn(
           "inline-flex w-fit rounded-full transition-colors",
-          hovered ? "" : "bg-black text-white"
+          hovered ? "" : "border border-black"
         )}
       >
         <MetalButton
           ref={ref}
           paused={!hovered}
-          className={cn(className, hovered ? "" : "text-white")}
+          className={cn(className, hovered ? "" : "border-0")}
           {...props}
         >
           {children}

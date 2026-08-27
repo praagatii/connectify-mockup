@@ -189,7 +189,7 @@ const AntigravityInner = ({
       {particleShape === "tetrahedron" && (
         <tetrahedronGeometry args={[0.3]} />
       )}
-      <meshBasicMaterial color={color} transparent opacity={0.25} />
+      <meshBasicMaterial color={color} transparent opacity={0.12} />
     </instancedMesh>
   );
 };
@@ -200,6 +200,7 @@ const Antigravity = (props: React.ComponentProps<typeof AntigravityInner>) => {
       camera={{ position: [0, 0, 50], fov: 35 }}
       style={{ width: "100%", height: "100%", background: "transparent" }}
       gl={{ alpha: true, antialias: true }}
+      scene={{ background: null }}
     >
       <AntigravityInner {...props} />
     </Canvas>

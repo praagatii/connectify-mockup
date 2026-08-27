@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -107,11 +107,11 @@ export default async function CaseStudyPage({
           </section>
 
           <div className="border-t border-black/10 pt-10">
-            <MetalButton variant="outline" asChild className="px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="px-8 py-4">
               <Link href="/contact">
                 Build something like this
               </Link>
-            </MetalButton>
+            </HoverMetalButton>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ScrollExpand from "./ScrollExpand";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 export default function Hero() {
   const [heroOpacity, setHeroOpacity] = useState(1);
@@ -79,7 +79,7 @@ export default function Hero() {
             We design, build, and scale digital platforms backed by strategic business and capital advisory.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
-            <MetalButton variant="outline" asChild className="px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="px-8 py-4">
               <Link
                 href="/services"
                 className="group inline-flex items-center gap-2"
@@ -89,7 +89,7 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-            </MetalButton>
+            </HoverMetalButton>
             <Link
               href="/case-studies"
               className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-black underline decoration-brand/60 decoration-2 underline-offset-8 transition-colors hover:decoration-brand"

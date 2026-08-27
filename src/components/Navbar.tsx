@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 const links = [
   { label: "Work", href: "/case-studies" },
@@ -35,7 +35,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <MetalButton variant="outline" asChild className="hidden px-6 py-2.5 md:inline-flex">
+          <HoverMetalButton variant="outline" asChild className="hidden px-6 py-2.5 md:inline-flex">
             <Link
               href="/contact"
               className="items-center gap-2"
@@ -55,7 +55,7 @@ export default function Navbar() {
                 />
               </svg>
             </Link>
-          </MetalButton>
+          </HoverMetalButton>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <MetalButton variant="outline" asChild className="mt-2 px-3 py-3">
+            <HoverMetalButton variant="outline" asChild className="mt-2 px-3 py-3">
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
@@ -98,7 +98,7 @@ export default function Navbar() {
               >
                 Let&apos;s Talk
               </Link>
-            </MetalButton>
+            </HoverMetalButton>
           </div>
         </div>
       )}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 
@@ -206,7 +206,7 @@ export default function ServicesPage() {
           ))}
 
           <div className="flex justify-center">
-            <MetalButton variant="outline" asChild className="px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="px-8 py-4">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2"
@@ -226,7 +226,7 @@ export default function ServicesPage() {
                 />
               </svg>
             </Link>
-            </MetalButton>
+            </HoverMetalButton>
           </div>
         </div>
       </div>

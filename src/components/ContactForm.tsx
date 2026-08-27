@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 const serviceOptions = [
   "Digital Solutions",
@@ -119,14 +119,14 @@ export default function ContactForm() {
         />
       </div>
 
-      <MetalButton
+      <HoverMetalButton
         variant="outline"
         type="submit"
         disabled={status === "sending"}
         className="px-8 py-4 disabled:opacity-60"
       >
         {status === "sending" ? "Opening your emailâ€¦" : "Send Message"}
-      </MetalButton>
+      </HoverMetalButton>
     </form>
   );
 }

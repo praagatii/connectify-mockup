@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 
@@ -117,7 +117,7 @@ export default function ProductsPage() {
               requirements, our consulting and engineering teams can design and
               build custom software tailored specifically to your needs.
             </p>
-            <MetalButton variant="outline" asChild className="mt-8 px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="mt-8 px-8 py-4">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2"
@@ -137,7 +137,7 @@ export default function ProductsPage() {
                 />
               </svg>
               </Link>
-            </MetalButton>
+            </HoverMetalButton>
           </section>
         </div>
       </div>

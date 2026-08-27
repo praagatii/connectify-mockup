@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MetalButton } from "@/components/ui/metal-button";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 export default function FinalCta() {
   return (
@@ -28,7 +28,7 @@ export default function FinalCta() {
           Connectify to launch your next platform and accelerate growth.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <MetalButton variant="outline" asChild className="px-8 py-4">
+          <HoverMetalButton variant="outline" asChild className="px-8 py-4">
             <Link
               href="/contact"
               className="group inline-flex items-center gap-2"
@@ -48,7 +48,7 @@ export default function FinalCta() {
                 />
               </svg>
             </Link>
-          </MetalButton>
+          </HoverMetalButton>
           <Link
             href="/case-studies"
             className="inline-flex items-center gap-2 rounded-lg border border-black/25 px-8 py-4 font-inter text-sm font-semibold text-black transition-colors hover:border-black/50 hover:bg-black/5"

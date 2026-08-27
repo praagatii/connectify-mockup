@@ -98,7 +98,7 @@ export default function WhatWeBuild() {
             <h2
               data-services-heading
               data-services-reveal
-              className="pb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-[80px] sm:leading-[0.92] lg:text-[88px]"
+              className="pb-8 font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-6xl sm:leading-[0.92] lg:text-7xl"
             >
               Our <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">Services</span>
             </h2>

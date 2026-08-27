@@ -44,7 +44,7 @@ export default function Hero() {
               Services
             </span>
           </h2>
-          <p className="mt-4 text-left font-inter text-base leading-relaxed text-gray-800 sm:text-lg">
+          <p className="mt-4 text-left font-inter text-base leading-relaxed text-gray-800">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function Hero() {
               className="group flex flex-col border-l border-black/10 pl-5"
             >
               <item.icon className="mb-3 h-8 w-8 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
-              <h3 className="font-inter text-lg font-bold text-black transition-colors group-hover:text-brand">
+              <h3 className="font-inter text-xl font-bold text-black transition-colors group-hover:text-brand">
                 {item.title}
               </h3>
               <p className="mt-1 text-sm leading-relaxed text-gray-700 transition-colors group-hover:text-black">
@@ -85,7 +85,7 @@ export default function Hero() {
               Build What&apos;s Next
             </span>
           </h1>
-          <p className="mx-auto mt-16 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
+          <p className="mx-auto mt-16 max-w-2xl text-center font-inter text-base leading-relaxed text-muted">
             We design, build, and scale digital platforms backed by strategic business and capital advisory.
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">

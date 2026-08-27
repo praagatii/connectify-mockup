@@ -79,7 +79,7 @@ export default function AboutPage() {
               Your strategic partner
             </h3>
             <div className="mt-8 max-w-3xl space-y-6">
-              <p className="text-base leading-relaxed text-muted sm:text-lg">
+              <p className="text-base leading-relaxed text-muted">
                 Connectify is a new-age boutique consultancy firm comprised of
                 strategy and investment consulting. Our team brings together
                 diverse backgrounds and expertise from various industries,

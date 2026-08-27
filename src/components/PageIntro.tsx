@@ -17,7 +17,7 @@
           {title}
         </h1>
         {description ? (
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted">
             {description}
           </p>
         ) : null}

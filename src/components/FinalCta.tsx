@@ -23,7 +23,7 @@ export default function FinalCta() {
             future together.
           </span>
         </h2>
-        <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-muted">
           Ready to unlock your organization&apos;s potential? Partner with
           Connectify to launch your next platform and accelerate growth.
         </p>

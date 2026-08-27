@@ -113,7 +113,7 @@ export default function About() {
                 <p className="font-inter text-3xl font-extrabold tracking-tight text-white">
                   {item.value}
                 </p>
-                <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.15em] text-white/70">
+                <p className="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-white/70">
                   {item.label}
                 </p>
               </div>

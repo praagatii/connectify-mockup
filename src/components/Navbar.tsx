@@ -16,7 +16,6 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric to-transparent blur-[1px]" />
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:h-24 lg:px-12">
         <Link href="/" className="flex items-center" aria-label="ConnectifyTech">
           {/* eslint-disable-next-line @next/next/no-img-element */}

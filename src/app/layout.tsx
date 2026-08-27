@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import AntigravityBg from "@/components/AntigravityBg";
+import { TopBlur } from "@/components/ui/edge-blur";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SmoothScroll />
         <AntigravityBg />
         <RevealOnScroll />
+        <TopBlur />
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -21,7 +21,7 @@ export default function AntigravityBg() {
   });
 
   return (
-    <div ref={containerRef} className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 5 }}>
+    <div ref={containerRef} className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 0 }}>
       <Antigravity
         count={200}
         magnetRadius={15}

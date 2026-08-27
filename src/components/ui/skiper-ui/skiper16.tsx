@@ -80,7 +80,7 @@ const Skiper16 = () => {
   });
 
   return (
-    <div ref={container} className="relative flex w-full flex-col items-center justify-center pb-[120vh] pt-[6vh]">
+    <div ref={container} className="relative flex w-full flex-col items-center justify-center pb-[120vh] pt-[0vh]">
       {industries.map((industry, i) => {
         const targetScale = Math.max(0.5, 1 - (industries.length - i - 1) * 0.1);
         return (

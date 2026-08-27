@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Monitor, Server, Compass, TrendingUp, Sparkles, Brain } from "lucide-react";
 import ScrollExpand from "./ScrollExpand";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
@@ -36,32 +37,41 @@ export default function Hero() {
         holdDistance={0}
         overlayScrim={0}
       >
-        <h2 className="font-inter text-6xl font-extrabold leading-[1.05] tracking-tight sm:text-8xl">
-          <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
-            Our Services
-          </span>
-        </h2>
-        <ol className="mt-12 grid grid-cols-3 gap-5">
+        <div className="w-full max-w-6xl">
+          <h2 className="text-left font-inter text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <span className="text-black">Our</span>{" "}
+            <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
+              Services
+            </span>
+          </h2>
+          <p className="mt-4 text-left font-inter text-base leading-relaxed text-muted sm:text-lg">
+            End-to-end solutions to build, scale, and strengthen your digital business.
+          </p>
+        </div>
+        <div className="grid w-full max-w-6xl grid-cols-2 gap-x-8 gap-y-10 pb-4 sm:grid-cols-3 lg:grid-cols-6">
           {[
-            { title: "Digital Solutions", href: "/services#digital-solutions" },
-            { title: "Technology Services", href: "/services#technology-services" },
-            { title: "Business Advisory", href: "/services#business-advisory" },
-            { title: "Investment Consulting", href: "/services#investment-consulting" },
-            { title: "Brand Experience", href: "/services#brand-experience" },
-            { title: "Data & AI", href: "/services#data-ai" },
+            { icon: Monitor, title: "Digital Solutions", desc: "Custom platforms and experiences that drive results.", href: "/services#digital-solutions" },
+            { icon: Server, title: "Technology Services", desc: "Scalable, secure, and future-ready technology.", href: "/services#technology-services" },
+            { icon: Compass, title: "Business Advisory", desc: "Strategic guidance to help you grow with clarity and confidence.", href: "/services#business-advisory" },
+            { icon: TrendingUp, title: "Investment Consulting", desc: "Data-driven insights to evaluate, plan, and unlock opportunities.", href: "/services#investment-consulting" },
+            { icon: Sparkles, title: "Brand Experience", desc: "Meaningful brand identities and experiences.", href: "/services#brand-experience" },
+            { icon: Brain, title: "Data & AI", desc: "Intelligent solutions that turn data into real impact.", href: "/services#data-ai" },
           ].map((item) => (
-            <li key={item.title}>
-              <a
-                href={item.href}
-                className="group flex items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-6 py-8 text-center backdrop-blur-md transition-colors hover:border-white/30 hover:bg-white/15"
-              >
-                <span className="font-inter text-2xl font-bold text-black transition-colors group-hover:text-brand">
-                  {item.title}
-                </span>
-              </a>
-            </li>
+            <a
+              key={item.title}
+              href={item.href}
+              className="group flex flex-col border-l border-black/10 pl-5"
+            >
+              <item.icon className="mb-3 h-6 w-6 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
+              <h3 className="font-inter text-sm font-bold text-black transition-colors group-hover:text-brand">
+                {item.title}
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted transition-colors group-hover:text-black/80">
+                {item.desc}
+              </p>
+            </a>
           ))}
-        </ol>
+        </div>
       </ScrollExpand>
 
       {/* Fixed overlay: heading + subtext + buttons */}

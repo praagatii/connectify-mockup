@@ -35,16 +35,16 @@ export default function Hero() {
         maxExpand={0.95}
         scrollDistance={1.2}
         holdDistance={0}
-        overlayScrim={0}
+        overlayScrim={0.25}
       >
-        <div className="w-full max-w-6xl">
+        <div className="mt-6 w-full max-w-6xl">
           <h2 className="text-left font-inter text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             <span className="text-black">Our</span>{" "}
             <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
               Services
             </span>
           </h2>
-          <p className="mt-4 text-left font-inter text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-4 text-left font-inter text-base leading-relaxed text-gray-700 sm:text-lg">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function Hero() {
               <h3 className="font-inter text-sm font-bold text-black transition-colors group-hover:text-brand">
                 {item.title}
               </h3>
-              <p className="mt-1 text-xs leading-relaxed text-muted transition-colors group-hover:text-black/80">
+              <p className="mt-1 text-xs leading-relaxed text-gray-700 transition-colors group-hover:text-black">
                 {item.desc}
               </p>
             </a>

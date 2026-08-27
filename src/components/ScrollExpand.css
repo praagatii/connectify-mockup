@@ -27,7 +27,7 @@
   width: 100%;
   overflow: hidden;
   --se-title-size: 4rem;
-  background: transparent;
+  background: #fff;
 }
 
 .scroll-expand__frame {

@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-svh">
+    <section className="relative min-h-svh bg-white">
       <ScrollExpand
         src="/newhero-1080.mp4"
         mediaType="video"

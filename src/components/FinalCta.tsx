@@ -3,7 +3,7 @@ import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 export default function FinalCta() {
   return (
-    <section id="start" className="relative z-10 overflow-hidden py-24">
+    <section id="start" className="relative z-10 overflow-hidden py-16">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"

@@ -54,7 +54,7 @@ export default function SelectedWork() {
       items.forEach((el) => {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 28 },
+          { opacity: 0, y: 12 },
           {
             opacity: 1,
             y: 0,
@@ -62,7 +62,7 @@ export default function SelectedWork() {
             scrollTrigger: {
               trigger: el,
               start: "top 95%",
-              end: "top 65%",
+              end: "top 70%",
               scrub: true,
             },
           }
@@ -72,14 +72,14 @@ export default function SelectedWork() {
           el,
           { opacity: 1, y: 0 },
           {
-            opacity: 0,
-            y: -28,
+            opacity: 0.15,
+            y: -12,
             ease: "none",
             immediateRender: false,
             scrollTrigger: {
               trigger: el,
               start: "bottom 40%",
-              end: "bottom 10%",
+              end: "bottom 12%",
               scrub: true,
             },
           }
@@ -90,7 +90,7 @@ export default function SelectedWork() {
   }, []);
 
   return (
-    <section id="work" ref={rootRef} className="relative z-10 py-24">
+    <section id="work" ref={rootRef} className="relative z-10 py-16">
       <div className="mx-auto w-full max-w-6xl px-6">
         <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
           <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">

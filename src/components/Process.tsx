@@ -33,7 +33,7 @@ export default function Process() {
       els.forEach((el) => {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 28 },
+          { opacity: 0, y: 12 },
           {
             opacity: 1,
             y: 0,
@@ -41,7 +41,7 @@ export default function Process() {
             scrollTrigger: {
               trigger: el,
               start: "top 95%",
-              end: "top 65%",
+              end: "top 70%",
               scrub: true,
             },
           }
@@ -51,14 +51,14 @@ export default function Process() {
           el,
           { opacity: 1, y: 0 },
           {
-            opacity: 0,
-            y: -28,
+            opacity: 0.15,
+            y: -12,
             ease: "none",
             immediateRender: false,
             scrollTrigger: {
               trigger: el,
               start: "bottom 30%",
-              end: "bottom 2%",
+              end: "bottom 5%",
               scrub: true,
             },
           }
@@ -73,7 +73,7 @@ export default function Process() {
     <section
       ref={rootRef}
       id="process"
-      className="relative z-10 py-24"
+      className="relative z-10 py-16"
     >
       <div
         aria-hidden

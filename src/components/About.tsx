@@ -19,7 +19,7 @@ export default function About() {
       els.forEach((el) => {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 28 },
+          { opacity: 0, y: 12 },
           {
             opacity: 1,
             y: 0,
@@ -27,7 +27,7 @@ export default function About() {
             scrollTrigger: {
               trigger: el,
               start: "top 95%",
-              end: "top 65%",
+              end: "top 70%",
               scrub: true,
             },
           }
@@ -37,14 +37,14 @@ export default function About() {
           el,
           { opacity: 1, y: 0 },
           {
-            opacity: 0,
-            y: -28,
+            opacity: 0.15,
+            y: -12,
             ease: "none",
             immediateRender: false,
             scrollTrigger: {
               trigger: el,
               start: "bottom 30%",
-              end: "bottom 2%",
+              end: "bottom 5%",
               scrub: true,
             },
           }
@@ -56,7 +56,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={rootRef} id="about" className="relative z-10 overflow-hidden pt-16 pb-24">
+    <section ref={rootRef} id="about" className="relative z-10 overflow-hidden pt-16 pb-16">
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-10 h-[400px] w-[500px] rounded-full bg-electric/[0.04] blur-3xl"

@@ -37,7 +37,7 @@ export default function Hero() {
         holdDistance={0}
         overlayScrim={0.25}
       >
-        <div className="w-full max-w-7xl">
+        <div className="w-full max-w-7xl px-6 lg:px-12">
           <h2 className="text-left font-inter text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="text-black">Our</span>{" "}
             <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
@@ -48,14 +48,14 @@ export default function Hero() {
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
         </div>
-        <div className="mt-40 grid w-full max-w-7xl grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-40 grid w-full max-w-7xl grid-cols-2 gap-x-12 gap-y-10 px-6 sm:grid-cols-3 lg:grid-cols-6 lg:px-12">
           {[
-            { icon: Monitor, title: "Digital Solutions", desc: "Platforms and experiences that drive results.", href: "/services#digital-solutions" },
-            { icon: Server, title: "Technology Services", desc: "Scalable, secure, and future-ready tech.", href: "/services#technology-services" },
-            { icon: Compass, title: "Business Advisory", desc: "Grow with clarity and confidence.", href: "/services#business-advisory" },
-            { icon: TrendingUp, title: "Investment Consulting", desc: "Unlock opportunities with data-driven insight.", href: "/services#investment-consulting" },
-            { icon: Sparkles, title: "Brand Experience", desc: "Meaningful identities and experiences.", href: "/services#brand-experience" },
-            { icon: Brain, title: "Data & AI", desc: "Turn data into real impact.", href: "/services#data-ai" },
+            { icon: Monitor, title: "Digital Solutions", href: "/services#digital-solutions" },
+            { icon: Server, title: "Technology Services", href: "/services#technology-services" },
+            { icon: Compass, title: "Business Advisory", href: "/services#business-advisory" },
+            { icon: TrendingUp, title: "Investment Consulting", href: "/services#investment-consulting" },
+            { icon: Sparkles, title: "Brand Experience", href: "/services#brand-experience" },
+            { icon: Brain, title: "Data & AI", href: "/services#data-ai" },
           ].map((item) => (
             <a
               key={item.title}
@@ -66,9 +66,6 @@ export default function Hero() {
               <h3 className="font-inter text-lg font-bold text-black transition-colors group-hover:text-brand">
                 {item.title}
               </h3>
-              <p className="mt-1 text-sm leading-relaxed text-gray-700 transition-colors group-hover:text-black">
-                {item.desc}
-              </p>
             </a>
           ))}
         </div>

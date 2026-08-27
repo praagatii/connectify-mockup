@@ -53,12 +53,12 @@ const StickyCard = ({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className="sticky top-24 flex items-center justify-center">
+    <div ref={container} className="sticky top-0 flex items-center justify-center">
       <motion.a
         href={link}
         style={{
           scale,
-          top: `calc(-5vh + ${i * 20 + 220}px)`,
+          top: `calc(-5vh + ${i * 20 + 120}px)`,
         }}
         className="relative -top-1/4 flex h-[280px] w-[440px] origin-top flex-col overflow-hidden rounded-3xl border border-black/10 shadow-xl"
       >

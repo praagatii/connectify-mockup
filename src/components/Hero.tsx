@@ -65,11 +65,11 @@ export default function Hero() {
 
       {/* Fixed overlay: heading + subtext + buttons */}
       <div
-        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen flex-col items-center justify-center px-6 pt-24"
+        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-screen flex-col items-center justify-center px-6 pt-16"
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">
-          <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl sm:leading-[0.92] lg:text-8xl">
+          <h1 className="whitespace-nowrap font-inter text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl sm:leading-[0.92] lg:text-7xl">
             <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
               Build What&apos;s Next.
             </span>

@@ -89,7 +89,7 @@ export default function SelectedWork() {
   }, []);
 
   return (
-    <section id="work" ref={rootRef} className="relative z-10 bg-white py-24">
+    <section id="work" ref={rootRef} className="relative z-10 py-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
           <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">

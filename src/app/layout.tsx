@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body
-        className="min-h-full bg-background font-sans"
+        className="min-h-full bg-white font-sans"
         suppressHydrationWarning
       >
         <SmoothScroll />

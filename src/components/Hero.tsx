@@ -44,7 +44,7 @@ export default function Hero() {
               Services
             </span>
           </h2>
-          <p className="mt-4 text-left font-inter text-base leading-relaxed text-gray-700 sm:text-lg">
+          <p className="mt-4 text-left font-inter text-base leading-relaxed text-gray-800 sm:text-lg">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
         </div>

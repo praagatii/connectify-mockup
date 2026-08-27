@@ -56,7 +56,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={rootRef} id="about" className="relative z-10 overflow-hidden py-24">
+    <section ref={rootRef} id="about" className="relative z-10 overflow-hidden pt-16 pb-24">
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-10 h-[400px] w-[500px] rounded-full bg-electric/[0.04] blur-3xl"

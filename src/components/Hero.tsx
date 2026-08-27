@@ -78,7 +78,7 @@ export default function Hero() {
           <p className="mx-auto mt-6 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
             We design, build, and scale digital platforms backed by strategic business and capital advisory.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
             <MetalButton variant="outline" asChild className="px-8 py-4">
               <Link
                 href="/services"

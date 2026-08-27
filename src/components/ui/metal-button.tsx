@@ -13,7 +13,7 @@ const metalSurfaceVariants = cva("transition-colors", {
     variant: {
       default: "bg-primary! text-primary-foreground! hover:bg-primary/80!",
       outline:
-        "bg-background! text-foreground! hover:bg-input/50! dark:bg-input/30!",
+        "bg-transparent! text-foreground!",
       secondary:
         "bg-secondary! text-secondary-foreground! hover:bg-secondary/80!",
       ghost: "bg-transparent! text-foreground! hover:bg-muted/50! dark:hover:bg-muted/50!",

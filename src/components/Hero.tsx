@@ -75,7 +75,7 @@ export default function Hero() {
               Build What&apos;s Next
             </span>
           </h1>
-          <p className="mx-auto mt-20 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
+          <p className="mx-auto mt-16 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
             We design, build, and scale digital platforms backed by strategic business and capital advisory.
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
@@ -84,21 +84,23 @@ export default function Hero() {
                 href="/services"
                 className="group inline-flex items-center gap-2"
               >
-                What We Build
+                View Projects
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </HoverMetalButton>
-            <Link
-              href="/case-studies"
-              className="group inline-flex items-center gap-2 font-inter text-sm font-semibold text-black underline decoration-brand/60 decoration-2 underline-offset-8 transition-colors hover:decoration-brand"
-            >
-              View Our Work
-              <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+              <Link
+                href="/case-studies"
+                className="group inline-flex items-center gap-2"
+              >
+                Case Studies
+                <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </HoverMetalButton>
           </div>
         </div>
       </div>

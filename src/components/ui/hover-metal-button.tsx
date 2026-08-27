@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, forwardRef, type ComponentProps, type ReactNode } from "react"
+import { cn } from "@/lib/utils"
 import { MetalButton } from "@/components/ui/metal-button"
 
 type HoverMetalButtonProps = ComponentProps<typeof MetalButton> & {
@@ -8,15 +9,24 @@ type HoverMetalButtonProps = ComponentProps<typeof MetalButton> & {
 }
 
 export const HoverMetalButton = forwardRef<HTMLDivElement, HoverMetalButtonProps>(
-  function HoverMetalButton({ children, ...props }, ref) {
+  function HoverMetalButton({ children, className, ...props }, ref) {
     const [hovered, setHovered] = useState(false)
 
     return (
       <span
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        className={cn(
+          "inline-flex w-fit rounded-full transition-colors",
+          hovered ? "" : "bg-black text-white"
+        )}
       >
-        <MetalButton ref={ref} paused={!hovered} {...props}>
+        <MetalButton
+          ref={ref}
+          paused={!hovered}
+          className={cn(className, hovered ? "" : "text-white")}
+          {...props}
+        >
           {children}
         </MetalButton>
       </span>

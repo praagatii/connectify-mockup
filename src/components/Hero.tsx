@@ -62,11 +62,11 @@ export default function Hero() {
               href={item.href}
               className="group flex flex-col border-l border-black/10 pl-5"
             >
-              <item.icon className="mb-3 h-6 w-6 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
-              <h3 className="font-inter text-sm font-bold text-black transition-colors group-hover:text-brand">
+              <item.icon className="mb-3 h-8 w-8 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
+              <h3 className="font-inter text-lg font-bold text-black transition-colors group-hover:text-brand">
                 {item.title}
               </h3>
-              <p className="mt-1 text-xs leading-relaxed text-gray-700 transition-colors group-hover:text-black">
+              <p className="mt-1 text-sm leading-relaxed text-gray-700 transition-colors group-hover:text-black">
                 {item.desc}
               </p>
             </a>

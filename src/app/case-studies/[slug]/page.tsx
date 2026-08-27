@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
+import { MetalButton } from "@/components/ui/metal-button";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -106,12 +107,11 @@ export default async function CaseStudyPage({
           </section>
 
           <div className="border-t border-black/10 pt-10">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
-            >
-              Build something like this
-            </Link>
+            <MetalButton variant="outline" asChild className="px-8 py-4">
+              <Link href="/contact">
+                Build something like this
+              </Link>
+            </MetalButton>
           </div>
         </div>
       </div>

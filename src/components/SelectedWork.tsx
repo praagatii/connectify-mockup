@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { MetalButton } from "@/components/ui/metal-button";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import BorderGlow from "./BorderGlow";
@@ -138,13 +139,14 @@ export default function SelectedWork() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link
-            href="/case-studies"
-            className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
-          >
-            See all case studies
-            <svg
-              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+          <MetalButton variant="outline" asChild className="px-8 py-4">
+            <Link
+              href="/case-studies"
+              className="group inline-flex items-center gap-2"
+            >
+              See all case studies
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -157,6 +159,7 @@ export default function SelectedWork() {
               />
             </svg>
           </Link>
+          </MetalButton>
         </div>
       </div>
     </section>

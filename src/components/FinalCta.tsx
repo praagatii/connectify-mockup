@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MetalButton } from "@/components/ui/metal-button";
 
 export default function FinalCta() {
   return (
@@ -27,25 +28,27 @@ export default function FinalCta() {
           Connectify to launch your next platform and accelerate growth.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
-          >
-            Start a conversation
-            <svg
-              className="h-4 w-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+          <MetalButton variant="outline" asChild className="px-8 py-4">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
+              Start a conversation
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </MetalButton>
           <Link
             href="/case-studies"
             className="inline-flex items-center gap-2 rounded-lg border border-black/25 px-8 py-4 font-inter text-sm font-semibold text-black transition-colors hover:border-black/50 hover:bg-black/5"

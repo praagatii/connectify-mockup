@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MetalButton } from "@/components/ui/metal-button";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 
@@ -205,11 +206,12 @@ export default function ServicesPage() {
           ))}
 
           <div className="flex justify-center">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
-            >
-              Scope your project
+            <MetalButton variant="outline" asChild className="px-8 py-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2"
+              >
+                Scope your project
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
                 fill="none"
@@ -224,6 +226,7 @@ export default function ServicesPage() {
                 />
               </svg>
             </Link>
+            </MetalButton>
           </div>
         </div>
       </div>

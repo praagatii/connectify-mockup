@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MetalButton } from "@/components/ui/metal-button";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
 
@@ -116,25 +117,27 @@ export default function ProductsPage() {
               requirements, our consulting and engineering teams can design and
               build custom software tailored specifically to your needs.
             </p>
-            <Link
-              href="/contact"
-              className="group mt-8 inline-flex items-center gap-2 rounded-full btn-glow px-8 py-4 font-inter text-sm font-semibold"
-            >
-              Talk to an engineer
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+            <MetalButton variant="outline" asChild className="mt-8 px-8 py-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                Talk to an engineer
+                <svg
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </Link>
+              </Link>
+            </MetalButton>
           </section>
         </div>
       </div>

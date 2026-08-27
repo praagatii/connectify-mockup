@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
 const Antigravity = dynamic(() => import("./Antigravity"), {
@@ -9,6 +9,7 @@ const Antigravity = dynamic(() => import("./Antigravity"), {
 
 export default function AntigravityBg() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -20,8 +21,28 @@ export default function AntigravityBg() {
     }
   });
 
+  useEffect(() => {
+    const onScroll = () => {
+      const vh = window.innerHeight;
+      const p = Math.min(window.scrollY / (vh * 0.5), 1);
+      setOpacity(1 - p);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div ref={containerRef} className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 0 }}>
+    <div
+      ref={containerRef}
+      className="pointer-events-none fixed inset-0"
+      style={{
+        width: "100vw",
+        height: "100vh",
+        zIndex: 0,
+        opacity,
+        transition: "opacity 0.1s linear",
+      }}
+    >
       <Antigravity
         count={200}
         magnetRadius={15}

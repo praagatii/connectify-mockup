@@ -1,15 +1,27 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
 const Antigravity = dynamic(() => import("./Antigravity"), {
   ssr: false,
-  loading: () => <div style={{ width: "100%", height: "100%", background: "rgba(143,0,255,0.1)" }} />,
 });
 
 export default function AntigravityBg() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const canvas = containerRef.current.querySelector("canvas");
+      if (canvas) {
+        canvas.style.background = "transparent";
+        canvas.style.mixBlendMode = "multiply";
+      }
+    }
+  });
+
   return (
-    <div className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 5 }}>
+    <div ref={containerRef} className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 5 }}>
       <Antigravity
         count={200}
         magnetRadius={15}

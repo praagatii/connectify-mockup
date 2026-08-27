@@ -81,7 +81,7 @@ export default function Hero() {
       >
         <div className="text-center">
           <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl sm:leading-[0.92] lg:text-9xl">
-            <span className="bg-gradient-to-r from-brand-deep via-brand to-black bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand to-black bg-clip-text text-transparent">
               Build What&apos;s Next
             </span>
           </h1>

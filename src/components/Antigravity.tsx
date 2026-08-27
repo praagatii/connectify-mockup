@@ -200,7 +200,9 @@ const Antigravity = (props: React.ComponentProps<typeof AntigravityInner>) => {
       camera={{ position: [0, 0, 50], fov: 35 }}
       style={{ width: "100%", height: "100%", background: "transparent" }}
       gl={{ alpha: true, antialias: true }}
-      scene={{ background: null }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0);
+      }}
     >
       <AntigravityInner {...props} />
     </Canvas>

@@ -38,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SmoothScroll />
         <AntigravityBg />
         <RevealOnScroll />
-        <TopBlur />
+        <TopBlur height={28} />
         <Navbar />
         <main>{children}</main>
         <Footer />

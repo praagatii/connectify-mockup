@@ -70,15 +70,15 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">
-          <h1 className="whitespace-nowrap font-inter text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl sm:leading-[0.92] lg:text-8xl">
+          <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl sm:leading-[0.92] lg:text-9xl">
             <span className="bg-gradient-to-r from-black via-brand to-brand-deep bg-clip-text text-transparent">
               Build What&apos;s Next.
             </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
+          <p className="mx-auto mt-8 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted">
             We design, build, and scale digital platforms backed by strategic business and capital advisory.
           </p>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pointer-events-auto">
             <MetalButton variant="outline" asChild className="px-8 py-4">
               <Link
                 href="/services"

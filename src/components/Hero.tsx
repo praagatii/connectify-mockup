@@ -50,12 +50,12 @@ export default function Hero() {
         </div>
         <div className="grid w-full max-w-6xl grid-cols-2 gap-x-8 gap-y-10 pb-4 sm:grid-cols-3 lg:grid-cols-6">
           {[
-            { icon: Monitor, title: "Digital Solutions", desc: "Custom platforms and experiences that drive results.", href: "/services#digital-solutions" },
-            { icon: Server, title: "Technology Services", desc: "Scalable, secure, and future-ready technology.", href: "/services#technology-services" },
-            { icon: Compass, title: "Business Advisory", desc: "Strategic guidance to help you grow with clarity and confidence.", href: "/services#business-advisory" },
-            { icon: TrendingUp, title: "Investment Consulting", desc: "Data-driven insights to evaluate, plan, and unlock opportunities.", href: "/services#investment-consulting" },
-            { icon: Sparkles, title: "Brand Experience", desc: "Meaningful brand identities and experiences.", href: "/services#brand-experience" },
-            { icon: Brain, title: "Data & AI", desc: "Intelligent solutions that turn data into real impact.", href: "/services#data-ai" },
+            { icon: Monitor, title: "Digital Solutions", desc: "Platforms and experiences that drive results.", href: "/services#digital-solutions" },
+            { icon: Server, title: "Technology Services", desc: "Scalable, secure, and future-ready tech.", href: "/services#technology-services" },
+            { icon: Compass, title: "Business Advisory", desc: "Grow with clarity and confidence.", href: "/services#business-advisory" },
+            { icon: TrendingUp, title: "Investment Consulting", desc: "Unlock opportunities with data-driven insight.", href: "/services#investment-consulting" },
+            { icon: Sparkles, title: "Brand Experience", desc: "Meaningful identities and experiences.", href: "/services#brand-experience" },
+            { icon: Brain, title: "Data & AI", desc: "Turn data into real impact.", href: "/services#data-ai" },
           ].map((item) => (
             <a
               key={item.title}

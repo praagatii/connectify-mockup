@@ -2,11 +2,14 @@
 
 import dynamic from "next/dynamic";
 
-const Antigravity = dynamic(() => import("./Antigravity"), { ssr: false });
+const Antigravity = dynamic(() => import("./Antigravity"), {
+  ssr: false,
+  loading: () => <div style={{ width: "100%", height: "100%", background: "rgba(143,0,255,0.1)" }} />,
+});
 
 export default function AntigravityBg() {
   return (
-    <div className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 40, background: "red" }}>
+    <div className="pointer-events-none fixed inset-0" style={{ width: "100vw", height: "100vh", zIndex: 40 }}>
       <Antigravity
         count={150}
         magnetRadius={8}

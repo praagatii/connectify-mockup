@@ -288,7 +288,9 @@ const AccordionGallery = ({
                     textRefs.current[i] = el;
                   }}
                 >
-                  {item.label}
+                  {isActive
+                    ? item.label
+                    : `${item.label?.slice(0, 3) || ""}...`}
                 </span>
               </span>
             )}

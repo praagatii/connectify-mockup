@@ -40,7 +40,7 @@ export default function EnterprisePlatforms() {
   const [height, setHeight] = useState(400);
 
   useEffect(() => {
-    const update = () => setHeight(Math.round(window.innerHeight * 0.55));
+    const update = () => setHeight(Math.round(window.innerHeight * 0.72));
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -51,8 +51,10 @@ export default function EnterprisePlatforms() {
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
-              Industries
+            <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl">
+              <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
+                Industries
+              </span>
             </h2>
           </div>
         </div>

@@ -37,7 +37,7 @@ export default function Hero() {
         holdDistance={0}
         overlayScrim={0.25}
       >
-        <div className="flex w-full flex-col items-center px-6 pt-24 text-center lg:px-12 lg:pt-32">
+        <div className="flex w-full flex-col items-center px-6 text-center lg:px-12">
           <h2 className="font-inter text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="text-black">Our</span>{" "}
             <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
@@ -47,7 +47,7 @@ export default function Hero() {
           <p className="mt-4 max-w-xl font-inter text-base leading-relaxed text-gray-700">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
-          <div className="mt-5 grid w-full grid-cols-3 gap-2 sm:grid-cols-6 lg:gap-3">
+          <div className="mt-3 grid w-full grid-cols-3 gap-2 sm:grid-cols-6 lg:gap-3">
             {[
               { icon: Monitor, title: "Digital Solutions", href: "/services#digital-solutions" },
               { icon: Server, title: "Technology", href: "/services#technology-services" },

@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { Skiper16 } from "@/components/ui/skiper-ui/skiper16";
+import { Skiper17 } from "@/components/ui/skiper-ui/skiper17";
 
 export default function EnterprisePlatforms() {
   return (
@@ -18,7 +18,7 @@ export default function EnterprisePlatforms() {
         </div>
 
         <div className="mt-12">
-          <Skiper16 />
+          <Skiper17 />
         </div>
       </div>
     </section>

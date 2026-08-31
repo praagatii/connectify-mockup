@@ -57,13 +57,16 @@ function MarqueeColumn({
       : "left-1/2 -translate-x-1/2";
   const imgWidth = position === "center" ? "w-44 lg:w-60" : "w-36 lg:w-52";
   const z = behind ? "z-0" : "z-30";
+  const offsets = [-22, 0, 26, -12, 18, -26, 8, 22, -16, 0, 24, -20];
+  const baseOffset =
+    position === "left" ? -40 : position === "right" ? 40 : 0;
   return (
     <div
       className={`hero-fade pointer-events-none absolute inset-y-0 ${posClass} hidden flex-col justify-center overflow-hidden ${z} md:flex`}
       style={{ opacity: 0 }}
     >
       <div
-        className="flex w-full flex-col"
+        className="flex w-full flex-col items-center"
         style={{
           animation: `marqueeUp ${duration}s linear infinite`,
         }}
@@ -74,8 +77,12 @@ function MarqueeColumn({
             src={src}
             alt=""
             draggable={false}
-            className={`${imgWidth} my-6 rounded-2xl object-cover`}
-            style={{ aspectRatio: "4 / 5" }}
+            className={`${imgWidth} my-8 rounded-2xl object-cover lg:my-10`}
+            style={{
+              aspectRatio: "4 / 5",
+              marginLeft: baseOffset + offsets[i % offsets.length],
+              marginRight: -(baseOffset + offsets[i % offsets.length]),
+            }}
           />
         ))}
       </div>

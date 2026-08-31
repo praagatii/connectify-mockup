@@ -67,7 +67,7 @@ export const MetalButton = forwardRef<HTMLDivElement, MetalButtonProps>(
       metalFxClassName,
       metalFxStyle,
       preset = "chromatic",
-      theme = "auto",
+      theme = "light",
       strength = 0.9,
       paused,
       borderRadius,

@@ -15,7 +15,6 @@ export default function AntigravityBg() {
       const canvas = containerRef.current.querySelector("canvas");
       if (canvas) {
         canvas.style.background = "transparent";
-        canvas.style.mixBlendMode = "multiply";
       }
     }
   });
@@ -31,20 +30,20 @@ export default function AntigravityBg() {
       }}
     >
       <Antigravity
-        count={200}
-        magnetRadius={15}
-        ringRadius={10}
-        waveSpeed={0.2}
-        waveAmplitude={0.1}
-        particleSize={0.8}
-        lerpSpeed={0.03}
+        count={400}
+        magnetRadius={18}
+        ringRadius={12}
+        waveSpeed={0.3}
+        waveAmplitude={0.4}
+        particleSize={1.8}
+        lerpSpeed={0.04}
         color="#8f00ff"
         autoAnimate={true}
-        particleVariance={0.5}
-        depthFactor={0.6}
-        pulseSpeed={1.1}
+        particleVariance={0.8}
+        depthFactor={0.8}
+        pulseSpeed={1.6}
         particleShape="sphere"
-        fieldStrength={5.8}
+        fieldStrength={6.5}
       />
     </div>
   );

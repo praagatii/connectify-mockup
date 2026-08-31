@@ -22,6 +22,7 @@ const AntigravityInner = ({
   particleSize = 2,
   lerpSpeed = 0.1,
   color = "#FF9FFC",
+  colorTo,
   autoAnimate = false,
   particleVariance = 1,
   rotationSpeed = 0,
@@ -38,6 +39,7 @@ const AntigravityInner = ({
   particleSize?: number;
   lerpSpeed?: number;
   color?: string;
+  colorTo?: string;
   autoAnimate?: boolean;
   particleVariance?: number;
   rotationSpeed?: number;
@@ -49,6 +51,12 @@ const AntigravityInner = ({
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const { viewport } = useThree();
   const dummy = useMemo(() => new THREE.Object3D(), []);
+
+  const colorFrom = useMemo(() => new THREE.Color(color), [color]);
+  const colorGradTo = useMemo(
+    () => new THREE.Color(colorTo || color),
+    [color, colorTo]
+  );
 
   const lastMousePos = useRef({ x: 0, y: 0 });
   const lastMouseMoveTime = useRef(0);
@@ -80,6 +88,17 @@ const AntigravityInner = ({
     }
     return temp;
   }, [count, viewport.width, viewport.height]);
+
+  useEffect(() => {
+    const mesh = meshRef.current;
+    if (!mesh) return;
+    const halfH = (viewport.height || 100) / 2;
+    particles.forEach((p, i) => {
+      const t = Math.min(1, Math.max(0, (p.my + halfH) / (2 * halfH)));
+      mesh.setColorAt(i, colorFrom.clone().lerp(colorGradTo, t));
+    });
+    if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+  }, [particles, colorFrom, colorGradTo, viewport.height]);
 
   useFrame((state) => {
     const mesh = meshRef.current;
@@ -200,7 +219,7 @@ const AntigravityInner = ({
       {particleShape === "tetrahedron" && (
         <tetrahedronGeometry args={[0.3]} />
       )}
-      <meshBasicMaterial color={color} transparent opacity={0.45} />
+      <meshBasicMaterial color="#ffffff" transparent opacity={0.45} />
     </instancedMesh>
   );
 };

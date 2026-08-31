@@ -38,6 +38,7 @@ export default function AntigravityBg() {
         particleSize={1.8}
         lerpSpeed={0.04}
         color="#5228b9"
+        colorTo="#c084fc"
         autoAnimate={true}
         particleVariance={0.8}
         depthFactor={0.8}

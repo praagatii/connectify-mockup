@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Connectify global styles */
 
 @theme inline {
@@ -27,6 +30,15 @@
   --navy: #f4f2fa;
   --slate: #475569;
   --muted: #6b7280;
+}
+
+.dark {
+  --background: #0b0b10;
+  --foreground: #f4f2fa;
+  --surface: #16161d;
+  --muted: #a1a1aa;
+  --navy: #1a1a22;
+  --slate: #cbd5e1;
 }
 
 ::-webkit-scrollbar {

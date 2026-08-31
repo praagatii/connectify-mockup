@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import ThemeProvider from "@/components/ThemeProvider";
 import { TopBlur } from "@/components/ui/edge-blur";
 
 const geistMono = Geist_Mono({
@@ -31,15 +32,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body
-        className="min-h-full bg-white font-sans"
+        className="min-h-full bg-background font-sans text-foreground transition-colors"
         suppressHydrationWarning
       >
-        <SmoothScroll />
-        <RevealOnScroll />
-        <TopBlur height={28} />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <SmoothScroll />
+          <RevealOnScroll />
+          <TopBlur height={28} />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

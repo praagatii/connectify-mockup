@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { label: "Work", href: "/case-studies" },
@@ -27,7 +28,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="font-inter text-sm font-semibold text-black transition-colors hover:text-brand"
+              className="font-inter text-sm font-semibold text-black transition-colors hover:text-brand dark:text-white"
             >
               {link.label}
             </Link>
@@ -35,6 +36,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <HoverMetalButton variant="outline" asChild className="hidden px-6 py-2.5 md:inline-flex">
             <Link
               href="/contact"
@@ -61,7 +63,7 @@ export default function Navbar() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 text-black md:hidden"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 text-black dark:text-white md:hidden"
           >
             <span
               className={`h-0.5 w-6 bg-current transition-transform ${
@@ -78,7 +80,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-black/10 bg-white/90 backdrop-blur-md md:hidden">
+        <div className="border-t border-black/10 bg-white/90 backdrop-blur-md dark:border-white/10 dark:bg-black/80 md:hidden">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
             {links.map((link) => (
               <Link

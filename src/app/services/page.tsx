@@ -163,16 +163,16 @@ export default function ServicesPage() {
               <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
                 {group.description}
               </p>
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                {group.services.map((service, i) => (
+              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {group.services.map((service) => (
                   <article
                     key={service.name}
-                    className="rounded-2xl border border-black/10 bg-surface p-8"
+                    className="flex flex-col rounded-2xl border border-black/10 bg-surface p-8"
                   >
                     <h3 className="font-inter text-2xl font-bold tracking-tight text-black">
                       {service.name}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted">
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                       {service.description}
                     </p>
                     <Link

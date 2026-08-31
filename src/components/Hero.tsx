@@ -37,40 +37,37 @@ export default function Hero() {
         holdDistance={0}
         overlayScrim={0.25}
       >
-        <div className="w-full max-w-7xl px-6 lg:px-12">
-          <h2 className="text-left font-inter text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+        <div className="flex h-full w-full max-w-7xl flex-col items-center justify-center px-6 text-center lg:px-12">
+          <h2 className="font-inter text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="text-black">Our</span>{" "}
             <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
               Services
             </span>
           </h2>
-          <p className="mt-4 text-left font-inter text-base leading-relaxed text-gray-800">
+          <p className="mt-4 max-w-xl font-inter text-base leading-relaxed text-gray-700">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
-        </div>
-        <div className="mt-40 grid w-full max-w-7xl grid-cols-2 gap-x-12 gap-y-10 px-6 sm:grid-cols-3 lg:grid-cols-6 lg:px-12">
-          {[
-            { icon: Monitor, title: "Digital Solutions", desc: "Platforms and experiences that drive results.", href: "/services#digital-solutions" },
-            { icon: Server, title: "Technology Services", desc: "Scalable, secure, and future-ready tech.", href: "/services#technology-services" },
-            { icon: Compass, title: "Business Advisory", desc: "Grow with clarity and confidence.", href: "/services#business-advisory" },
-            { icon: TrendingUp, title: "Investment Consulting", desc: "Unlock opportunities with data-driven insight.", href: "/services#investment-consulting" },
-            { icon: Sparkles, title: "Brand Experience", desc: "Meaningful identities and experiences.", href: "/services#brand-experience" },
-            { icon: Brain, title: "Data & AI", desc: "Turn data into real impact.", href: "/services#data-ai" },
-          ].map((item) => (
-            <a
-              key={item.title}
-              href={item.href}
-              className="group flex flex-col border-l border-black/10 pl-5"
-            >
-              <item.icon className="mb-3 h-8 w-8 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
-              <h3 className="font-inter text-xl font-bold text-black transition-colors group-hover:text-brand">
-                {item.title}
-              </h3>
-              <p className="mt-1 text-sm leading-relaxed text-gray-700 transition-colors group-hover:text-black">
-                {item.desc}
-              </p>
-            </a>
-          ))}
+          <div className="mt-14 grid w-full grid-cols-3 gap-3 sm:grid-cols-6 lg:gap-4">
+            {[
+              { icon: Monitor, title: "Digital Solutions", href: "/services#digital-solutions" },
+              { icon: Server, title: "Technology", href: "/services#technology-services" },
+              { icon: Compass, title: "Advisory", href: "/services#business-advisory" },
+              { icon: TrendingUp, title: "Investment", href: "/services#investment-consulting" },
+              { icon: Sparkles, title: "Brand", href: "/services#brand-experience" },
+              { icon: Brain, title: "Data & AI", href: "/services#data-ai" },
+            ].map((item) => (
+              <a
+                key={item.title}
+                href={item.href}
+                className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-black/10 bg-white/60 px-3 py-6 backdrop-blur transition-colors hover:border-brand/40 hover:bg-white"
+              >
+                <item.icon className="h-6 w-6 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
+                <span className="text-center text-sm font-semibold text-black transition-colors group-hover:text-brand">
+                  {item.title}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </ScrollExpand>
 

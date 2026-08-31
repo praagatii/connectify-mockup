@@ -102,7 +102,7 @@ const ScrollExpand = ({
     const r = (c.startRadius as number) + ((c.endRadius as number) - (c.startRadius as number)) * e;
     frame.style.clipPath = `inset(${Math.max(0, iy - shift)}% ${ix}% ${Math.max(0, iy + shift)}% ${ix}% round ${r}px)`;
 
-    if (mediaRef.current) mediaRef.current.style.opacity = `${0.1 + 0.05 * e}`;
+    if (mediaRef.current) mediaRef.current.style.opacity = `${0.16 + 0.06 * e}`;
 
     (media as HTMLElement).style.transform = `scale(${(c.mediaZoom as number) + (1 - (c.mediaZoom as number)) * e})`;
 

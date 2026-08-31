@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
 import FinalCta from "@/components/FinalCta";
+import ProjectCard from "@/components/ProjectCard";
 import { projects, industries } from "@/lib/projects";
 
 export const metadata = {
@@ -71,60 +72,13 @@ export default async function CaseStudiesPage({
           ) : (
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((project) => (
-                <Link
+                <ProjectCard
                   key={project.slug}
-                  href={`/case-studies/${project.slug}`}
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 bg-surface transition-colors hover:border-white/25"
-                >
-                  <div className="relative aspect-[16/9] overflow-hidden border-b border-black/10">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-between p-8 pt-6">
-                  <div className="relative flex items-center justify-between">
-                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                      {project.category}
-                    </span>
-                    <svg
-                      className="h-5 w-5 text-black/30 transition-all group-hover:translate-x-1 group-hover:text-black"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
-                  <div className="relative mt-6">
-                    <h2 className="font-inter text-2xl font-bold tracking-tight text-black">
-                      {project.name}
-                    </h2>
-                    <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
-                      {project.summary}
-                    </p>
-                  </div>
-                  <div className="relative mt-8 flex flex-wrap gap-2">
-                    {project.tech.slice(0, 4).map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full border border-black/10 px-3 py-1 text-xs text-muted"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  </div>
-                </Link>
+                  slug={project.slug}
+                  name={project.name}
+                  image={project.image}
+                  context={project.category.replace("#", "").trim()}
+                />
               ))}
             </div>
           )}

@@ -80,8 +80,10 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
       >
         <div className="text-center">
-          <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight text-black sm:text-7xl sm:leading-[0.92] lg:text-9xl">
-            Build What&apos;s Next
+          <h1 className="whitespace-nowrap font-inter text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl sm:leading-[0.92] lg:text-9xl">
+            <span className="bg-gradient-to-r from-brand via-black to-black bg-clip-text text-transparent">
+              Build What&apos;s Next
+            </span>
           </h1>
           <p className="mx-auto mt-16 max-w-2xl text-center font-inter text-base leading-relaxed text-muted">
             We design, build, and scale digital platforms backed by strategic business and capital advisory.

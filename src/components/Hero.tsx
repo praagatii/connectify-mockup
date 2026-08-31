@@ -17,6 +17,72 @@ const words = [
   { text: "Next", className: "hero-word text-black" },
 ];
 
+const leftImages = [
+  "/case-studies/cloud-kitchen-pos.jpg",
+  "/case-studies/bobo-ride-hailing.jpg",
+  "/case-studies/mascons.jpg",
+  "/case-studies/via-carte.jpg",
+];
+
+const rightImages = [
+  "/case-studies/stackintel.jpg",
+  "/case-studies/finfan.jpg",
+  "/case-studies/enqupay.jpg",
+  "/case-studies/road-scope.jpg",
+];
+
+const middleImages = [
+  "/case-studies/flycure-health.jpg",
+  "/case-studies/ticketing-app.png",
+  "/case-studies/blitz-meet.jpg",
+  "/case-studies/ai-video-networking.jpg",
+];
+
+function MarqueeColumn({
+  images,
+  position,
+  duration,
+  behind,
+}: {
+  images: string[];
+  position: "left" | "right" | "center";
+  duration: number;
+  behind: boolean;
+}) {
+  const posClass =
+    position === "left"
+      ? "left-[4%] lg:left-[6%]"
+      : position === "right"
+      ? "right-[4%] lg:right-[6%]"
+      : "left-1/2 -translate-x-1/2";
+  const imgWidth = position === "center" ? "w-44 lg:w-60" : "w-36 lg:w-52";
+  const z = behind ? "z-0" : "z-30";
+  return (
+    <div
+      className={`hero-fade pointer-events-none absolute inset-y-0 ${posClass} hidden flex-col justify-center overflow-hidden ${z} md:flex`}
+      style={{ opacity: 0 }}
+    >
+      <div
+        className="flex w-full flex-col"
+        style={{
+          animation: `marqueeUp ${duration}s linear infinite`,
+        }}
+      >
+        {[...images, ...images].map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt=""
+            draggable={false}
+            className={`${imgWidth} my-6 rounded-2xl object-cover`}
+            style={{ aspectRatio: "4 / 5" }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Hero() {
   const rootRef = useRef<HTMLElement>(null);
 
@@ -27,7 +93,7 @@ export default function Hero() {
       ).matches;
 
       if (reduceMotion) {
-        gsap.set(".hero-float, .hero-line, .hero-desc, .hero-cta", {
+        gsap.set(".hero-fade, .hero-line, .hero-desc, .hero-cta", {
           opacity: 1,
           y: 0,
           scale: 1,
@@ -37,9 +103,9 @@ export default function Hero() {
 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
       tl.fromTo(
-        ".hero-float",
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power2.out" },
+        ".hero-fade",
+        { opacity: 0 },
+        { opacity: 1, duration: 1, stagger: 0.15, ease: "power2.out" },
         0.15
       );
 
@@ -76,40 +142,8 @@ export default function Hero() {
         ease: "none",
         scrollTrigger: st,
       });
-      gsap.to(".hero-float-left", {
-        y: -60,
-        ease: "none",
-        scrollTrigger: st,
-      });
-      gsap.to(".hero-float-right", {
-        y: -40,
-        ease: "none",
-        scrollTrigger: st,
-      });
     }, rootRef);
     return () => ctx.revert();
-  }, []);
-
-  useEffect(() => {
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (reduceMotion) return;
-    const onMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      const floats = Array.from(
-        document.querySelectorAll<HTMLElement>(".hero-float")
-      );
-      floats.forEach((el, i) => {
-        const dir = i === 0 ? -1 : 1;
-        const tx = dir * x * 6;
-        const ty = y * 4;
-        el.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
-      });
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
   return (
@@ -117,33 +151,26 @@ export default function Hero() {
       ref={rootRef}
       className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-white pt-28"
     >
-      {/* Floating visuals */}
-      <div
-        className="hero-float hero-float-left pointer-events-none absolute left-[6%] top-[16%] z-0 hidden w-40 -rotate-6 rounded-2xl md:block lg:left-[8%] lg:w-52"
-        style={{ opacity: 0 }}
-      >
-        <img
-          src="/case-studies/cloud-kitchen-pos.jpg"
-          alt=""
-          className="h-full w-full object-cover"
-          draggable={false}
-        />
-      </div>
-      <div
-        className="hero-float hero-float-right pointer-events-none absolute right-[6%] top-[20%] z-0 hidden w-40 rotate-6 rounded-2xl md:block lg:right-[8%] lg:w-52"
-        style={{ opacity: 0 }}
-      >
-        <img
-          src="/case-studies/stackintel.jpg"
-          alt=""
-          className="h-full w-full object-cover"
-          draggable={false}
-        />
-      </div>
-
+      <MarqueeColumn
+        images={leftImages}
+        position="left"
+        duration={26}
+        behind={false}
+      />
+      <MarqueeColumn
+        images={rightImages}
+        position="right"
+        duration={30}
+        behind={false}
+      />
+      <MarqueeColumn
+        images={middleImages}
+        position="center"
+        duration={22}
+        behind
+      />
       {/* Central composition */}
       <div className="relative flex w-full items-center justify-center px-4">
-        {/* Headline */}
         <h1 className="hero-headline relative z-20 flex select-none flex-col items-center whitespace-nowrap text-[clamp(72px,10vw,190px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]">
           {words.map((w) => (
             <span key={w.text} className="block overflow-hidden py-[0.08em]">

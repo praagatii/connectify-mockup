@@ -136,3 +136,12 @@ body {
 .marquee-paused:hover .animate-marquee {
   animation-play-state: paused;
 }
+
+@keyframes marqueeUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}

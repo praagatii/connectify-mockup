@@ -102,7 +102,7 @@ const StickyCard002 = ({
   );
 
   return (
-    <div className={cn("relative h-full w-full", className)} ref={container}>
+    <div className={cn("relative w-full", className)} ref={container}>
       <div className="sticky-cards relative flex h-[100vh] w-full items-center justify-center overflow-hidden p-3 lg:p-8">
         <div
           className={cn(
@@ -156,7 +156,7 @@ const Skiper17 = () => {
   ];
 
   return (
-    <div className="h-[100vh] w-full">
+    <div className="w-full">
       <StickyCard002 cards={defaultCards} />
     </div>
   );

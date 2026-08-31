@@ -169,10 +169,7 @@ export default function ServicesPage() {
                     key={service.name}
                     className="rounded-2xl border border-black/10 bg-surface p-8"
                   >
-                    <span className="font-mono text-xs text-brand">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="mt-3 font-inter text-2xl font-bold tracking-tight text-black">
+                    <h3 className="font-inter text-2xl font-bold tracking-tight text-black">
                       {service.name}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted">

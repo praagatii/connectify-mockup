@@ -118,10 +118,7 @@ export default function Process() {
                 colors={["#8f00ff", "#5228b9", "#c084fc"]}
               >
                 <div className="flex h-full flex-col rounded-xl bg-white p-6">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand/[0.08] font-inter text-sm font-extrabold text-brand">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-5 font-inter text-base font-bold text-black">
+                  <h3 className="font-inter text-base font-bold text-black">
                     {step.title}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">

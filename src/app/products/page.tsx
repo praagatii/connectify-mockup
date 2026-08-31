@@ -81,9 +81,6 @@ export default function ProductsPage() {
             >
               <div className="flex flex-wrap items-start justify-between gap-6">
                 <div>
-                  <p className="font-mono text-xs text-brand">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
                   <h2 className="mt-3 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
                     {category.name}
                   </h2>

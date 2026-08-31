@@ -27,7 +27,7 @@ export default function Hero() {
       ).matches;
 
       if (reduceMotion) {
-        gsap.set(".hero-float, .hero-media, .hero-line, .hero-desc, .hero-cta", {
+        gsap.set(".hero-float, .hero-line, .hero-desc, .hero-cta", {
           opacity: 1,
           y: 0,
           scale: 1,
@@ -41,13 +41,6 @@ export default function Hero() {
         { opacity: 0, y: 24 },
         { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power2.out" },
         0.15
-      );
-
-      tl.fromTo(
-        ".hero-media",
-        { opacity: 0, scale: 0.94 },
-        { opacity: 1, scale: 1, duration: 0.9, ease: "power2.out" },
-        0.3
       );
 
       tl.fromTo(
@@ -78,11 +71,6 @@ export default function Hero() {
         scrub: true,
       };
       gsap.to(".hero-headline", { y: -40, ease: "none", scrollTrigger: st });
-      gsap.to(".hero-media", {
-        scale: 1.04,
-        ease: "none",
-        scrollTrigger: st,
-      });
       gsap.to(".hero-desc-wrap", {
         y: -60,
         ease: "none",
@@ -119,10 +107,6 @@ export default function Hero() {
         const ty = y * 4;
         el.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
       });
-      const media = document.querySelector<HTMLElement>(".hero-media");
-      if (media) {
-        media.style.marginLeft = `${x * 2}px`;
-      }
     };
     window.addEventListener("mousemove", onMove);
     return () => window.removeEventListener("mousemove", onMove);
@@ -159,7 +143,7 @@ export default function Hero() {
 
       {/* Central composition */}
       <div className="relative flex w-full items-center justify-center px-4">
-        {/* Headline (above media) */}
+        {/* Headline */}
         <h1 className="hero-headline relative z-20 flex select-none flex-col items-center whitespace-nowrap text-[clamp(72px,10vw,190px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]">
           {words.map((w) => (
             <span key={w.text} className="block overflow-hidden py-[0.08em]">
@@ -169,21 +153,6 @@ export default function Hero() {
             </span>
           ))}
         </h1>
-
-        {/* Media behind headline */}
-        <div className="hero-media-wrap pointer-events-none absolute left-1/2 top-1/2 z-0 w-[62vw] -translate-x-1/2 -translate-y-1/2 max-w-[900px]">
-          <div className="overflow-hidden rounded-2xl">
-            <video
-              className="hero-media h-[260px] w-full object-cover md:h-[300px]"
-              src="/newhero-1080.mp4"
-              poster="/hero-poster.jpg"
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
-          </div>
-        </div>
       </div>
 
       {/* Description + CTAs */}

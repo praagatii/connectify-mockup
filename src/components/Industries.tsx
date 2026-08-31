@@ -17,7 +17,7 @@ export default function EnterprisePlatforms() {
           </div>
         </div>
 
-        <div className="mt-12" data-skiper-reveal>
+        <div className="mt-12 h-[100vh] overflow-hidden" data-skiper-reveal>
           <Skiper17 />
         </div>
       </div>

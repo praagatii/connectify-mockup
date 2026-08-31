@@ -140,7 +140,7 @@ const AccordionGallery = ({
           } else {
             tl.to(
               [bar, text],
-              { opacity: 0, x: -14, duration: dur * 0.6, ease },
+              { opacity: 0.85, x: -14, duration: dur * 0.6, ease },
               0
             );
           }

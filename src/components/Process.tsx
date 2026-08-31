@@ -64,21 +64,21 @@ export default function Process() {
     <section
       ref={rootRef}
       id="process"
-      className="relative z-10 overflow-hidden bg-surface/50 px-6 py-24 lg:px-12 lg:py-32"
+      className="relative z-10 overflow-hidden bg-surface/50 py-12"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-brand/[0.05] blur-3xl"
       />
-      <div className="relative mx-auto w-full max-w-7xl">
+      <div className="relative mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
-            <p className="font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted">
+            <p className="font-inter text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Our Process
             </p>
-            <h2 className="mt-6 max-w-xl font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-6xl">
+            <h2 className="mt-4 max-w-xl font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               Transforming Ideas into{" "}
-              <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
+              <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
                 Digital Reality
               </span>
             </h2>
@@ -91,7 +91,7 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
             <div
               key={step.title}

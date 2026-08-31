@@ -37,7 +37,7 @@ export default function Hero() {
         holdDistance={0}
         overlayScrim={0.25}
       >
-        <div className="flex w-full flex-col items-center px-6 text-center lg:px-12">
+        <div className="flex w-full flex-col items-center px-6 pt-24 text-center lg:px-12 lg:pt-32">
           <h2 className="font-inter text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="text-black">Our</span>{" "}
             <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">

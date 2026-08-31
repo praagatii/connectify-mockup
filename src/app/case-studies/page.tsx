@@ -77,7 +77,7 @@ export default async function CaseStudiesPage({
                   slug={project.slug}
                   name={project.name}
                   image={project.image}
-                  context={project.category.replace("#", "").trim()}
+                  context={project.category.replace(/^#\d+\s*·\s*/, "")}
                 />
               ))}
             </div>

@@ -32,12 +32,12 @@ export default function AntigravityBg() {
       <Antigravity
         count={400}
         magnetRadius={18}
-        ringRadius={12}
+        ringRadius={6}
         waveSpeed={0.3}
         waveAmplitude={0.4}
         particleSize={1.8}
         lerpSpeed={0.04}
-        color="#8f00ff"
+        color="#5228b9"
         autoAnimate={true}
         particleVariance={0.8}
         depthFactor={0.8}

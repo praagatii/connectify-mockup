@@ -23,13 +23,9 @@ const StickyCard002 = ({
 }: StickyCard002Props) => {
   return (
     <div className={cn("relative w-full", className)}>
-      <div className={cn("flex w-full flex-col", containerClassName)}>
-        {cards.map((card, i) => (
-          <div
-            key={card.id}
-            className="sticky top-0"
-            style={{ zIndex: cards.length - i }}
-          >
+      <div className={cn("flex w-full flex-col gap-6", containerClassName)}>
+        {cards.map((card) => (
+          <div key={card.id} className="w-full overflow-hidden">
             <img
               src={card.image}
               alt={card.alt || ""}

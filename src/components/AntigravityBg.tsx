@@ -26,7 +26,7 @@ export default function AntigravityBg() {
       style={{
         width: "100vw",
         height: "100vh",
-        zIndex: 0,
+        zIndex: 30,
       }}
     >
       <Antigravity

@@ -71,7 +71,7 @@ const Skiper17 = () => {
   ];
 
   return (
-    <div className="h-[80vh] w-full">
+    <div className="w-full">
       <StickyCard002 cards={defaultCards} />
     </div>
   );

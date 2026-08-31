@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import AntigravityBg from "@/components/AntigravityBg";
 import { TopBlur } from "@/components/ui/edge-blur";
 
 const geistMono = Geist_Mono({
@@ -36,7 +35,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         suppressHydrationWarning
       >
         <SmoothScroll />
-        <AntigravityBg />
         <RevealOnScroll />
         <TopBlur height={28} />
         <Navbar />

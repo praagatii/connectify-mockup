@@ -5,10 +5,9 @@ import { useState } from "react";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 const links = [
-  { label: "Work", href: "/case-studies" },
   { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
   { label: "Insights", href: "/case-studies" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navbar() {

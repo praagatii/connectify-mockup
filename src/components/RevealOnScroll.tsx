@@ -14,6 +14,7 @@ const SKIP_SELECTORS = [
   "[data-project-reveal]",
   "[data-about-reveal]",
   "[data-process-reveal]",
+  "[data-skiper-reveal]",
 ];
 
 export default function RevealOnScroll() {

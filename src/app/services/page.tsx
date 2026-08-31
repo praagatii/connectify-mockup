@@ -172,7 +172,7 @@ export default function ServicesPage() {
                     <span className="font-mono text-xs text-brand">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="mt-3 font-inter text-base font-bold text-black">
+                    <h3 className="mt-3 font-inter text-2xl font-bold tracking-tight text-black">
                       {service.name}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted">

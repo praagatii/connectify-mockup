@@ -69,14 +69,14 @@ export default async function CaseStudiesPage({
               .
             </p>
           ) : (
-            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((project) => (
                 <Link
                   key={project.slug}
                   href={`/case-studies/${project.slug}`}
                   className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 bg-surface transition-colors hover:border-white/25"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden border-b border-black/10">
+                  <div className="relative aspect-[16/9] overflow-hidden border-b border-black/10">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={project.image}
@@ -106,7 +106,7 @@ export default async function CaseStudiesPage({
                     </svg>
                   </div>
                   <div className="relative mt-6">
-                    <h2 className="font-inter text-base font-bold text-black">
+                    <h2 className="font-inter text-2xl font-bold tracking-tight text-black">
                       {project.name}
                     </h2>
                     <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">

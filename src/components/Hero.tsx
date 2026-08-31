@@ -44,7 +44,7 @@ export default function Hero() {
               Services
             </span>
           </h2>
-          <p className="mt-4 max-w-xl font-inter text-base leading-relaxed text-gray-700">
+          <p className="mt-2 max-w-xl font-inter text-base leading-relaxed text-gray-700">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
           <div className="mt-3 grid w-full grid-cols-3 gap-2 sm:grid-cols-6 lg:gap-3">

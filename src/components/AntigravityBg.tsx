@@ -30,7 +30,7 @@ export default function AntigravityBg() {
       }}
     >
       <Antigravity
-        count={400}
+        count={220}
         magnetRadius={18}
         ringRadius={6}
         waveSpeed={0.3}

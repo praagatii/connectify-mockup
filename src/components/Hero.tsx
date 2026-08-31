@@ -47,7 +47,7 @@ export default function Hero() {
           <p className="mt-4 max-w-xl font-inter text-base leading-relaxed text-gray-700">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
-          <div className="mt-14 grid w-full grid-cols-3 gap-3 sm:grid-cols-6 lg:gap-4">
+          <div className="mt-8 grid w-full grid-cols-3 gap-3 sm:grid-cols-6 lg:gap-4">
             {[
               { icon: Monitor, title: "Digital Solutions", href: "/services#digital-solutions" },
               { icon: Server, title: "Technology", href: "/services#technology-services" },

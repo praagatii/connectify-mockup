@@ -37,7 +37,7 @@ export default function Hero() {
         holdDistance={0}
         overlayScrim={0.25}
       >
-        <div className="flex h-full w-full max-w-7xl flex-col items-center justify-center px-6 text-center lg:px-12">
+        <div className="flex w-full flex-col items-center px-6 text-center lg:px-12">
           <h2 className="font-inter text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="text-black">Our</span>{" "}
             <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
@@ -47,7 +47,7 @@ export default function Hero() {
           <p className="mt-4 max-w-xl font-inter text-base leading-relaxed text-gray-700">
             End-to-end solutions to build, scale, and strengthen your digital business.
           </p>
-          <div className="mt-8 grid w-full grid-cols-3 gap-3 sm:grid-cols-6 lg:gap-4">
+          <div className="mt-5 grid w-full grid-cols-3 gap-2 sm:grid-cols-6 lg:gap-3">
             {[
               { icon: Monitor, title: "Digital Solutions", href: "/services#digital-solutions" },
               { icon: Server, title: "Technology", href: "/services#technology-services" },
@@ -59,7 +59,7 @@ export default function Hero() {
               <a
                 key={item.title}
                 href={item.href}
-                className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-black/10 bg-white/60 px-3 py-6 backdrop-blur transition-colors hover:border-brand/40 hover:bg-white"
+                className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-black/10 bg-white/60 px-2 py-5 backdrop-blur transition-colors hover:border-brand/40 hover:bg-white"
               >
                 <item.icon className="h-6 w-6 text-brand transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105" />
                 <span className="text-center text-sm font-semibold text-black transition-colors group-hover:text-brand">

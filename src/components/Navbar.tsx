@@ -20,8 +20,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const over = !scrolled;
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
@@ -37,9 +35,7 @@ export default function Navbar() {
             <img
               src="/connectifylogo.png"
               alt="ConnectifyTech"
-              className={`h-12 w-auto transition-all sm:h-14 ${
-                over ? "invert" : ""
-              }`}
+              className="h-12 w-auto sm:h-14"
             />
           </Link>
 
@@ -48,9 +44,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`font-inter text-sm font-semibold transition-colors ${
-                  over ? "text-white/80 hover:text-white" : "text-black hover:text-brand"
-                }`}
+                className="font-inter text-sm font-semibold text-black transition-colors hover:text-brand"
               >
                 {link.label}
               </Link>
@@ -61,11 +55,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className={`hidden items-center gap-2 rounded-full px-5 py-2.5 font-inter text-sm font-semibold transition-all md:inline-flex ${
-              over
-                ? "bg-white text-black hover:bg-brand hover:text-white"
-                : "bg-black text-white hover:bg-brand hover:text-white"
-            }`}
+            className="hidden items-center gap-2 rounded-full bg-black px-5 py-2.5 font-inter text-sm font-semibold text-white transition-colors hover:bg-brand md:inline-flex"
           >
             Let&apos;s Talk
             <svg
@@ -87,9 +77,7 @@ export default function Navbar() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className={`flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden ${
-              over ? "text-white" : "text-black"
-            }`}
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 text-black md:hidden"
           >
             <span
               className={`h-0.5 w-6 bg-current transition-transform ${

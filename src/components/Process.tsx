@@ -104,16 +104,16 @@ export default function Process() {
               <article
                 key={step.title}
                 data-process-reveal
-                className="group flex flex-col gap-6 rounded-2xl bg-[#14141a] p-8 transition-colors duration-300 hover:border-brand/50 sm:flex-row sm:items-start sm:p-10"
+                className="group flex flex-col gap-6 rounded-2xl border border-black/10 bg-surface p-8 transition-colors duration-300 hover:border-brand/50 sm:flex-row sm:items-start sm:p-10"
               >
                 <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-deep text-white">
                   <step.icon className="h-6 w-6" strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h3 className="font-inter text-2xl font-bold tracking-tight text-white">
+                  <h3 className="font-inter text-2xl font-bold tracking-tight text-black">
                     {step.title}
                   </h3>
-                  <p className="mt-3 max-w-xl text-base leading-relaxed text-white/60">
+                  <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
                     {step.body}
                   </p>
                 </div>

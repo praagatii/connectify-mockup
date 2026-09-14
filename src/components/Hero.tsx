@@ -8,19 +8,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const words = [
-  { text: "Build", className: "hero-word text-electric" },
+  { text: "Build", className: "hero-word text-brand" },
   {
     text: "What's",
     className:
-      "hero-word bg-gradient-to-r from-electric via-brand to-white bg-clip-text text-transparent",
+      "hero-word bg-gradient-to-r from-brand via-brand-deep to-black bg-clip-text text-transparent",
   },
-  { text: "Next", className: "hero-word text-white" },
-];
-
-const rearWords = [
-  { text: "Build" },
-  { text: "What's" },
-  { text: "Next" },
+  { text: "Next", className: "hero-word text-black" },
 ];
 
 const leftImages = [
@@ -37,39 +31,22 @@ const rightImages = [
   "/case-studies/road-scope.jpg",
 ];
 
-const middleImages = [
-  "/case-studies/flycure-health.jpg",
-  "/case-studies/ticketing-app.png",
-  "/case-studies/blitz-meet.jpg",
-  "/case-studies/ai-video-networking.jpg",
-];
-
-function MarqueeColumn({
+function EdgeColumn({
   images,
-  position,
+  side,
   duration,
-  behind,
 }: {
   images: string[];
-  position: "left" | "right" | "center";
+  side: "left" | "right";
   duration: number;
-  behind: boolean;
 }) {
   const posClass =
-    position === "left"
-      ? "left-[4%] lg:left-[6%]"
-      : position === "right"
-      ? "right-[4%] lg:right-[6%]"
-      : "left-1/2 -translate-x-1/2";
-  const imgWidth =
-    position === "center" ? "w-36 lg:w-48" : "w-28 lg:w-40";
-  const z = behind ? "z-0" : "z-30";
-  const offsets = [-22, 0, 26, -12, 18, -26, 8, 22, -16, 0, 24, -20];
-  const baseOffset =
-    position === "left" ? -40 : position === "right" ? 40 : 0;
+    side === "left" ? "left-[2.5%] lg:left-[4%]" : "right-[2.5%] lg:right-[4%]";
+  const offsets = [-18, 0, 20, -10, 14, -20, 8, 18, -12, 0, 18, -16];
+  const baseOffset = side === "left" ? -28 : 28;
   return (
     <div
-      className={`hero-fade pointer-events-none absolute inset-y-0 ${posClass} hidden flex-col justify-center overflow-hidden ${z} md:flex`}
+      className={`hero-fade pointer-events-none absolute inset-y-0 ${posClass} hidden flex-col justify-center overflow-hidden z-0 w-28 lg:flex lg:w-36`}
       style={{ opacity: 0 }}
     >
       <div
@@ -84,7 +61,7 @@ function MarqueeColumn({
             src={src}
             alt=""
             draggable={false}
-            className={`${imgWidth} my-8 rounded-2xl object-cover lg:my-10`}
+            className="w-full rounded-2xl object-cover my-10"
             style={{
               aspectRatio: "4 / 5",
               marginLeft: baseOffset + offsets[i % offsets.length],
@@ -150,15 +127,9 @@ export default function Hero() {
         end: "bottom top",
         scrub: true,
       };
-      gsap.to(".hero-headline", { y: -40, ease: "none", scrollTrigger: st });
-      gsap.to(".hero-rear", {
-        y: 60,
-        opacity: 0.4,
-        ease: "none",
-        scrollTrigger: st,
-      });
+      gsap.to(".hero-headline", { y: -30, ease: "none", scrollTrigger: st });
       gsap.to(".hero-desc-wrap", {
-        y: -60,
+        y: -40,
         ease: "none",
         scrollTrigger: st,
       });
@@ -169,50 +140,15 @@ export default function Hero() {
   return (
     <section
       ref={rootRef}
-      className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-black pt-28"
+      className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-white pb-20 pt-32"
     >
-      {/* Rear giant words */}
-      <div
-        aria-hidden
-        className="hero-rear pointer-events-none absolute inset-x-0 top-1/2 z-0 flex -translate-y-1/2 select-none flex-col items-center whitespace-nowrap font-inter text-[16vw] font-extrabold leading-[0.85] tracking-tight text-white/[0.04]"
-      >
-        {rearWords.map((w) => (
-          <span key={w.text}>{w.text}</span>
-        ))}
-      </div>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(60rem 40rem at 20% 0%, rgba(82,40,185,0.28), transparent 60%)",
-        }}
-      />
+      <EdgeColumn images={leftImages} side="left" duration={26} />
+      <EdgeColumn images={rightImages} side="right" duration={30} />
 
-      <MarqueeColumn
-        images={leftImages}
-        position="left"
-        duration={26}
-        behind={false}
-      />
-      <MarqueeColumn
-        images={rightImages}
-        position="right"
-        duration={30}
-        behind={false}
-      />
-      <MarqueeColumn
-        images={middleImages}
-        position="center"
-        duration={22}
-        behind
-      />
-
-      {/* Split copy: left headline / right subhead + CTAs */}
       <div className="relative z-20 mx-auto w-full max-w-[1440px] px-6 lg:px-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <h1 className="hero-headline flex select-none flex-col whitespace-nowrap font-inter text-[clamp(40px,6vw,96px)] font-extrabold leading-[0.85] tracking-tight">
+            <h1 className="hero-headline flex select-none flex-col whitespace-nowrap font-inter text-[clamp(44px,6.5vw,104px)] font-extrabold leading-[0.9] tracking-tight">
               {words.map((w) => (
                 <span key={w.text} className="block overflow-hidden py-[0.06em]">
                   <span className={`hero-line block ${w.className}`}>
@@ -224,7 +160,7 @@ export default function Hero() {
           </div>
 
           <div className="lg:col-span-4 lg:col-start-9">
-            <p className="hero-desc max-w-md text-lg leading-relaxed text-white/60">
+            <p className="hero-desc max-w-md text-lg leading-relaxed text-muted">
               We design, build, and scale digital platforms backed by strategic
               business and capital advisory.
             </p>
@@ -250,7 +186,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="/case-studies"
-                className="hero-cta group inline-flex h-14 items-center gap-2 rounded-full border border-white/25 bg-white/5 px-8 font-inter text-base font-semibold text-white"
+                className="hero-cta group inline-flex h-14 items-center gap-2 rounded-full border border-black/15 bg-white px-8 font-inter text-base font-semibold text-black transition-colors hover:border-brand"
               >
                 Case Studies
                 <svg

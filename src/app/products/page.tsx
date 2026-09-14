@@ -76,22 +76,22 @@ export default function ProductsPage() {
             <section
               key={category.id}
               id={category.id}
-              className="scroll-mt-28 rounded-2xl bg-[#14141a] p-8 sm:p-10 lg:p-12"
+              className="scroll-mt-28 rounded-2xl border border-black/10 bg-surface p-8 sm:p-10 lg:p-12"
             >
               <div className="flex flex-wrap items-start justify-between gap-6">
                 <div>
-                  <p className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-white/40">
+                  <p className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
                     Products
                   </p>
-                  <h2 className="mt-5 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-5xl">
+                  <h2 className="mt-5 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl">
                     {category.name}
                   </h2>
-                  <p className="mt-4 max-w-xl text-base leading-relaxed text-white/60">
+                  <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
                     {category.description}
                   </p>
                 </div>
-                <span className="rounded-full border border-white/15 px-4 py-2 text-xs uppercase tracking-[0.15em] text-white/50">
+                <span className="rounded-full border border-black/15 px-4 py-2 text-xs uppercase tracking-[0.15em] text-muted">
                   {category.count}
                 </span>
               </div>
@@ -99,7 +99,7 @@ export default function ProductsPage() {
                 {category.platforms.map((platform) => (
                   <span
                     key={platform}
-                    className="rounded-full border border-white/10 px-4 py-2 text-sm text-white/70"
+                    className="rounded-full border border-black/10 px-4 py-2 text-sm text-muted"
                   >
                     {platform}
                   </span>
@@ -108,7 +108,7 @@ export default function ProductsPage() {
             </section>
           ))}
 
-          <section className="rounded-2xl bg-white p-8 sm:p-10 lg:p-12 lg:rounded-3xl">
+          <section className="rounded-2xl bg-white p-8 sm:p-10 lg:p-12">
             <h2 className="font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl">
               Need custom development?
             </h2>

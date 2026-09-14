@@ -29,8 +29,8 @@ export default async function CaseStudiesPage({
         description="A detailed look at platforms we've engineered and taken to market across fintech, healthtech, govtech, mobility, edtech, enterprise, and more."
       />
 
-      <div className="px-6 py-16 py-20">
-        <div className="mx-auto w-full max-w-6xl">
+      <div className="px-6 py-20">
+        <div className="mx-auto w-full max-w-[1440px]">
           <div className="flex flex-wrap items-center gap-2">
             <Link
               href="/case-studies"

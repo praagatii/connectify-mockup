@@ -69,13 +69,14 @@ export default function AboutPage() {
         description="Your strategic partner in the Banking & Fintech revolution â€” a boutique consultancy with strategy, investment, and technology expertise."
       />
 
-      <div className="px-6 py-16">
-        <div className="mx-auto w-full max-w-6xl space-y-20">
+      <div className="px-6 py-20">
+        <div className="mx-auto w-full max-w-[1440px] space-y-24">
           <section>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
               Who We Are
-            </h2>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+            </p>
+            <h3 className="mt-6 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl">
               Your strategic partner
             </h3>
             <div className="mt-8 max-w-3xl space-y-6">
@@ -111,10 +112,11 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
               Our Approach
-            </h2>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+            </p>
+            <h3 className="mt-6 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl">
               What sets us apart
             </h3>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -135,13 +137,14 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
               Why Choose Us
-            </h2>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+            </p>
+            <h3 className="mt-6 max-w-2xl font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl">
               Why choose Connectify?
             </h3>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted">
               In the rapidly evolving world of finance, staying ahead requires
               more than just keeping pace â€” it demands vision, agility, and
               strategic acumen. With a finger on the pulse of the Fintech
@@ -149,11 +152,11 @@ export default function AboutPage() {
               and actionable insights to help you navigate the complexities of
               today&apos;s digital-first economy.
             </p>
-            <div className="mt-8 space-y-0">
+            <div className="mt-12 grid gap-x-16 gap-y-0 lg:grid-cols-2">
               {reasons.map((item, i) => (
                 <div
                   key={item.title}
-                  className="flex gap-6 border-t border-black/10 py-6 last:border-b"
+                  className="flex gap-6 border-t border-black/10 py-7 last:border-b"
                 >
                   <span className="font-mono text-sm text-brand">
                     {String(i + 1).padStart(2, "0")}

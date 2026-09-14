@@ -22,8 +22,8 @@ export default function ContactPage() {
         description="Questions or a new engagement? Send a message or reach us directly."
       />
 
-      <div className="px-6 py-16">
-        <div className="mx-auto grid w-full max-w-6xl gap-12 sm:grid-cols-5">
+      <div className="px-6 py-20">
+        <div className="mx-auto grid w-full max-w-[1440px] gap-12 sm:grid-cols-5">
           <div className="space-y-6 sm:col-span-2">
             <a
               href="tel:+919834843396"

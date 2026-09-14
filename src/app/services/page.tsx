@@ -138,8 +138,8 @@ export default function ServicesPage() {
         description="Digital solutions and technology services at the core â€” business advisory and investment consulting when strategy and capital matter alongside delivery."
       />
 
-      <div className="px-6 py-16">
-        <div className="mx-auto w-full max-w-6xl space-y-20">
+      <div className="px-6 py-20">
+        <div className="mx-auto w-full max-w-[1440px] space-y-24">
           <nav className="flex flex-wrap gap-3">
             {serviceGroups.map((group) => (
               <a
@@ -154,13 +154,14 @@ export default function ServicesPage() {
 
           {serviceGroups.map((group) => (
             <section key={group.id} id={group.id} className="scroll-mt-28">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+              <p className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
                 {group.group}
               </p>
-              <h2 className="mt-3 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+              <h2 className="mt-6 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl">
                 {group.group}
               </h2>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
                 {group.description}
               </p>
               <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

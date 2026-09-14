@@ -56,43 +56,47 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={rootRef} id="about" className="relative z-10 overflow-hidden pt-12 pb-12">
+    <section ref={rootRef} id="about" className="relative z-10 overflow-hidden bg-white py-20 lg:py-28">
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-10 h-[400px] w-[500px] rounded-full bg-electric/[0.04] blur-3xl"
       />
-      <div className="relative mx-auto w-full max-w-6xl px-6">
-        <p
-          data-about-reveal
-          className="font-inter text-xs font-medium uppercase tracking-[0.2em] text-muted"
-        >
-          About Connectify
-        </p>
-        <h2
-          data-about-reveal
-          className="mt-4 max-w-3xl font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl"
-        >
-          We Strive To Offer{" "}
-          <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
-            Intelligent Business Solutions
-          </span>
-        </h2>
-        <p
-          data-about-reveal
-          className="mt-6 max-w-3xl leading-relaxed text-muted"
-        >
-          We are a team of passionate engineers, designers, and strategists
-          committed to transforming your visionary ideas into robust digital
-          platforms. Every solution we craft is strictly aligned with your
-          business objectives.
-        </p>
+      <div className="relative mx-auto w-full max-w-[1440px] px-6 lg:px-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <p
+              data-about-reveal
+              className="flex items-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted"
+            >
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
+              About Connectify
+            </p>
+            <h2
+              data-about-reveal
+              className="mt-6 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl"
+            >
+              We Strive To Offer{" "}
+              <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
+                Intelligent Business Solutions
+              </span>
+            </h2>
+          </div>
+          <div className="lg:col-span-4">
+            <p data-about-reveal className="max-w-md leading-relaxed text-muted">
+              We are a team of passionate engineers, designers, and strategists
+              committed to transforming your visionary ideas into robust digital
+              platforms. Every solution we craft is strictly aligned with your
+              business objectives.
+            </p>
+          </div>
+        </div>
 
         <div
           data-about-reveal
-          className="mt-10 overflow-hidden rounded-2xl bg-gradient-to-l from-electric via-brand to-brand-deep p-8 sm:p-10"
+          className="mt-14 overflow-hidden rounded-2xl bg-gradient-to-r from-electric via-brand to-brand-deep p-8 sm:p-12"
         >
-          <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-8">
-            <div className="max-w-56">
+          <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-10">
+            <div className="max-w-60">
               <h3 className="font-inter text-sm font-bold text-white">
                 Best Services
               </h3>
@@ -100,7 +104,7 @@ export default function About() {
                 Top-tier quality and seamless performance across all platforms.
               </p>
             </div>
-            <div className="max-w-56">
+            <div className="max-w-60">
               <h3 className="font-inter text-sm font-bold text-white">
                 24/7 Support
               </h3>
@@ -110,7 +114,7 @@ export default function About() {
             </div>
             {highlights.map((item) => (
               <div key={item.label}>
-                <p className="font-inter text-3xl font-extrabold tracking-tight text-white">
+                <p className="font-inter text-4xl font-extrabold tracking-tight text-white">
                   {item.value}
                 </p>
                 <p className="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-white/70">

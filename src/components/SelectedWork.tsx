@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ProjectCard from "./ProjectCard";
@@ -90,15 +89,31 @@ export default function SelectedWork() {
   }, []);
 
   return (
-    <section id="work" ref={rootRef} className="relative z-10 py-12">
-      <div className="mx-auto w-full max-w-6xl px-6">
-        <h2 className="font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
-          <span className="bg-gradient-to-l from-brand to-brand-deep bg-clip-text text-transparent">
-            Projects
-          </span>
-        </h2>
+    <section id="work" ref={rootRef} className="relative z-10 bg-white py-20 lg:py-28">
+      <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <p
+            data-project-reveal
+            className="flex items-center justify-center gap-2.5 font-inter text-xs font-medium uppercase tracking-[0.25em] text-muted"
+          >
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
+            Built with Connectify
+          </p>
+          <h2
+            data-project-reveal
+            className="mt-6 font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-black sm:text-5xl"
+          >
+            <span className="bg-gradient-to-r from-brand to-brand-deep bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h2>
+          <p data-project-reveal className="mt-5 text-base leading-relaxed text-muted">
+            Platforms we&apos;ve engineered and taken to market across fintech,
+            govtech, healthcare, enterprise and logistics.
+          </p>
+        </div>
 
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => (
             <div key={project.slug} data-project-reveal>
               <ProjectCard
@@ -111,15 +126,14 @@ export default function SelectedWork() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <HoverMetalButton variant="outline" asChild className="px-8 py-4">
-            <Link
-              href="/case-studies"
-              className="group inline-flex items-center gap-2"
-            >
-              See all case studies
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+        <div className="mt-14 flex justify-center">
+          <Link
+            href="/case-studies"
+            className="group inline-flex h-14 items-center gap-2 rounded-full border border-black/15 bg-white px-8 font-inter text-base font-semibold text-black transition-colors hover:border-brand hover:bg-brand hover:text-white"
+          >
+            See all case studies
+            <svg
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -132,7 +146,6 @@ export default function SelectedWork() {
               />
             </svg>
           </Link>
-          </HoverMetalButton>
         </div>
       </div>
     </section>

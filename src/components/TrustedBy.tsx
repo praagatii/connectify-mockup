@@ -22,32 +22,30 @@ export default function TrustedBy() {
   const logos = [...clients, ...clients];
 
   return (
-    <section className="relative z-10 pt-12 pb-12">
-      <div className="pt-0">
-        <div className="relative mx-auto w-full max-w-6xl px-6">
-          <div className="overflow-hidden">
-            <div className="flex w-max animate-marquee items-center">
-              {logos.map((client, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={`${client.alt}-${i}`}
-                  src={client.src}
-                  alt={client.alt}
-                  loading="lazy"
-                  className="mx-10 h-9 w-auto max-w-40 object-contain opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0"
-                />
-              ))}
-            </div>
+    <section className="relative z-10 overflow-hidden bg-black pb-16 pt-4">
+      <div className="relative mx-auto w-full max-w-[1440px] px-6 lg:px-16">
+        <div className="overflow-hidden">
+          <div className="flex w-max animate-marquee items-center">
+            {logos.map((client, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={`${client.alt}-${i}`}
+                src={client.src}
+                alt={client.alt}
+                loading="lazy"
+                className="mx-10 h-9 w-auto max-w-40 object-contain opacity-70 invert transition duration-500 hover:opacity-100"
+              />
+            ))}
           </div>
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent lg:w-32"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent lg:w-32"
-          />
         </div>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent lg:w-32"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent lg:w-32"
+        />
       </div>
     </section>
   );

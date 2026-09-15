@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
-import About from "@/components/About";
 import SelectedWork from "@/components/SelectedWork";
-import Process from "@/components/Process";
-import Industries from "@/components/Industries";
+import About from "@/components/About";
+import SolutionsShowcase from "@/components/SolutionsShowcase";
+import BrandsThatTrustUs from "@/components/BrandsThatTrustUs";
 import FinalCta from "@/components/FinalCta";
 
 export default function Home() {
@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <Hero />
       <TrustedBy />
-      <About />
       <SelectedWork />
-      <Process />
-      <Industries />
+      <About />
+      <SolutionsShowcase />
+      <BrandsThatTrustUs />
       <FinalCta />
     </>
   );

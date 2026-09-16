@@ -15,6 +15,7 @@ const SKIP_SELECTORS = [
   "[data-about-reveal]",
   "[data-process-reveal]",
   "[data-skiper-reveal]",
+  "[data-hero]",
 ];
 
 export default function RevealOnScroll() {
@@ -25,7 +26,12 @@ export default function RevealOnScroll() {
       document
         .querySelectorAll("main > * section, main section")
         .forEach((section) => {
-          if (SKIP_SELECTORS.some((s) => section.querySelector(s))) return;
+          if (
+            section.hasAttribute("data-hero") ||
+            SKIP_SELECTORS.some((s) => section.querySelector(s))
+          ) {
+            return;
+          }
           const items = section.querySelectorAll(
             "h1, h2, h3, p, li > a, a, button, img"
           );

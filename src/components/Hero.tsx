@@ -124,6 +124,7 @@ export default function Hero() {
   return (
     <section
       ref={rootRef}
+      data-hero
       className="relative h-[300vh] bg-transparent"
       aria-label="Hero"
     >
@@ -194,7 +195,7 @@ export default function Hero() {
               business and capital advisory.
             </p>
 
-            <div className="hero-ctas mt-6 flex flex-wrap items-center justify-center gap-4" style={{ opacity: 0 }}>
+            <div className="hero-ctas mt-6 flex flex-wrap items-center justify-center gap-4">
               <span className="hero-cta pointer-events-auto" style={{ opacity: 0 }}>
                 <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
                   <Link

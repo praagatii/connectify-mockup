@@ -23,23 +23,6 @@ export default function Hero() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      if (reduceMotion) {
-        gsap.set(
-          ".hero-float, .hero-media-box, .hero-line, .hero-desc, .hero-cta, .hero-headline",
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            borderRadius: 28,
-          }
-        );
-        return;
-      }
-
       const scope = rootRef.current!;
 
       // Browsers restore the scroll position on refresh. If that lands inside

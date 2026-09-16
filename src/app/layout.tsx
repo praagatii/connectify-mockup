@@ -28,18 +28,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      style={{ background: "#ffffff", colorScheme: "light only" }}
+      style={{ background: "#ffffff", colorScheme: "light" }}
       className={`${geistMono.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var d=document.documentElement;if(d){d.style.backgroundColor='#ffffff';d.style.colorScheme='light only';var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';d.style.scrollBehavior='auto';}})();`,
+            __html: `(function(){var d=document.documentElement;if(d){d.style.backgroundColor='#ffffff';d.style.colorScheme='light';var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';d.style.scrollBehavior='auto';}})();`,
           }}
         />
         <meta name="theme-color" content="#ffffff" />
-        <meta name="color-scheme" content="light only" />
+        <meta name="color-scheme" content="light" />
       </head>
       <body className="relative isolate min-h-full bg-background text-foreground font-sans">
         <div

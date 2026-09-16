@@ -45,12 +45,12 @@ export default function Hero() {
       const coverScale = Math.max(targetWidth / box.offsetWidth, 1);
 
       const tl = gsap.timeline({
-        defaults: { ease: "power1.inOut" },
+        defaults: { ease: "none" },
         scrollTrigger: {
           trigger: scope,
           start: "top top",
           end: "bottom bottom",
-          scrub: 0.6,
+          scrub: 0.8,
         },
       });
 
@@ -62,21 +62,21 @@ export default function Hero() {
           borderRadius: 0,
           opacity: 1,
           ease: "power1.in",
-          duration: 0.5,
+          duration: 0.4,
         },
         0
       );
 
       tl.to(
         ".hero-media-box",
-        { opacity: 0.1, ease: "power1.inOut", duration: 0.15 },
-        0.48
+        { opacity: 0.08, ease: "none", duration: 0.4 },
+        0.42
       );
 
       tl.fromTo(
         ".hero-headline",
         { opacity: 0 },
-        { opacity: 1, duration: 0.15, ease: "none" },
+        { opacity: 1, ease: "none", duration: 0.25 },
         0.5
       );
 
@@ -87,17 +87,17 @@ export default function Hero() {
           yPercent: 0,
           opacity: 1,
           duration: 0.3,
-          stagger: 0.06,
-          ease: "expo.inOut",
+          stagger: 0.08,
+          ease: "power2.out",
         },
-        0.52
+        0.55
       );
 
       tl.fromTo(
         ".hero-float",
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08 },
-        0.58
+        { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "power1.out" },
+        0.62
       );
     }, rootRef);
     return () => ctx.revert();

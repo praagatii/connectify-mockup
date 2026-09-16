@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -59,7 +59,7 @@ export default function Hero() {
         { scale: 1, borderRadius: 28, opacity: 1 },
         {
           scale: coverScale,
-          borderRadius: 0,
+          borderRadius: 28,
           opacity: 1,
           ease: "power1.in",
           duration: 0.4,
@@ -91,6 +91,20 @@ export default function Hero() {
           ease: "power2.out",
         },
         0.55
+      );
+
+      tl.fromTo(
+        ".hero-desc",
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
+        0.72
+      );
+
+      tl.fromTo(
+        ".hero-cta",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
+        0.8
       );
 
       tl.fromTo(
@@ -150,7 +164,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-6">
+        <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center px-6">
           <h1
             className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(56px,9vw,170px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
             style={{ opacity: 0 }}
@@ -166,6 +180,57 @@ export default function Hero() {
               </span>
             ))}
           </h1>
+
+          <p
+            className="hero-desc mx-auto -mt-[0.2em] max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
+            style={{ opacity: 0 }}
+          >
+            We design, build, and scale digital platforms backed by strategic
+            business and capital advisory.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-10">
+            <a
+              href="/services"
+              className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-deep px-8 font-inter text-base font-semibold text-white"
+              style={{ opacity: 0 }}
+            >
+              View Projects
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="/case-studies"
+              className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full border border-brand/40 bg-white px-8 font-inter text-base font-semibold text-black transition-colors hover:border-brand"
+              style={{ opacity: 0 }}
+            >
+              Case Studies
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -74,7 +74,7 @@ export default function Process() {
             </p>
             <h2 className="mt-6 max-w-xl font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-[#ffffff] sm:text-5xl">
               Transforming Ideas into{" "}
-              <span className="bg-gradient-to-r from-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand via-brand-deep to-electric bg-clip-text text-transparent">
                 Digital Reality
               </span>
             </h2>

@@ -46,11 +46,11 @@ export default function Hero() {
       const coverScale = Math.max(targetWidth / box.offsetWidth, 1);
 
       gsap.set(
-        ".hero-headline, .hero-line, .hero-cta, .hero-float",
+        ".hero-headline, .hero-line, .hero-desc, .hero-cta, .hero-float",
         { opacity: 0 }
       );
       gsap.set(".hero-line", { yPercent: 115 });
-      gsap.set([".hero-cta", ".hero-float"], { y: 24 });
+      gsap.set([".hero-desc", ".hero-cta", ".hero-float"], { y: 24 });
 
       const tl = gsap.timeline({
         defaults: { ease: "none" },
@@ -105,9 +105,10 @@ export default function Hero() {
         0.68
       );
 
-      // 5. CTAs + floats, all together, strictly AFTER expansion (0.7+)
+      // 5. Subtext + CTAs + floats, all together, strictly AFTER the headline
+      // is fully in (0.7+) — nothing here appears anywhere else.
       tl.fromTo(
-        [".hero-cta", ".hero-float"],
+        [".hero-desc", ".hero-cta", ".hero-float"],
         { opacity: 0, y: 24 },
         { opacity: 1, y: 0, duration: 0.3, stagger: 0.08, ease: "power1.out" },
         0.7
@@ -184,6 +185,14 @@ export default function Hero() {
                 </span>
               ))}
             </h1>
+
+            <p
+              className="hero-desc mt-4 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
+              style={{ opacity: 0 }}
+            >
+              We design, build, and scale digital platforms backed by strategic
+              business and capital advisory.
+            </p>
 
             <div className="hero-ctas mt-6 flex flex-wrap items-center justify-center gap-4" style={{ opacity: 0 }}>
               <span className="hero-cta pointer-events-auto" style={{ opacity: 0 }}>

@@ -36,6 +36,18 @@
   --color-white: #ffffff;
 }
 
+/* Override the system/browser color scheme to light for EVERY element so no
+   UA stylesheet, form control, or browser chrome can render in dark mode. */
+@media (prefers-color-scheme: dark) {
+  *, *::before, *::after {
+    color-scheme: light !important;
+  }
+}
+
+*, *::before, *::after {
+  color-scheme: light;
+}
+
 /* Hero copy is hidden until the scrub timeline reveals it after expansion */
 .hero-headline,
 .hero-line,

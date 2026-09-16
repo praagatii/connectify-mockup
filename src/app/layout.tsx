@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var d=document.documentElement;if(d){d.style.backgroundColor='#ffffff';d.style.colorScheme='light';var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';d.style.scrollBehavior='auto';}})();`,
+            __html: `(function(){var d=document.documentElement;if(d){d.style.backgroundColor='#ffffff';d.style.colorScheme='light';d.className=d.className.replace(/\bdark\b/g,'');d.removeAttribute('data-theme');d.removeAttribute('data-color-scheme');var b=document.body;if(b){b.style.backgroundColor='#ffffff';b.style.colorScheme='light';}var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';d.style.scrollBehavior='auto';}})();`,
           }}
         />
         <meta name="theme-color" content="#ffffff" />

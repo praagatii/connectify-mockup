@@ -69,15 +69,15 @@ export default function Hero() {
 
       tl.to(
         ".hero-media-box",
-        { opacity: 0.08, ease: "none", duration: 0.4 },
+        { opacity: 0.08, ease: "none", duration: 0.25 },
         0.42
       );
 
       tl.fromTo(
         ".hero-headline",
         { opacity: 0 },
-        { opacity: 1, ease: "none", duration: 0.25 },
-        0.5
+        { opacity: 1, ease: "none", duration: 0.05 },
+        0.7
       );
 
       tl.fromTo(
@@ -86,32 +86,32 @@ export default function Hero() {
         {
           yPercent: 0,
           opacity: 1,
-          duration: 0.3,
-          stagger: 0.08,
+          duration: 0.25,
+          stagger: 0.06,
           ease: "power2.out",
         },
-        0.55
+        0.7
       );
 
       tl.fromTo(
         ".hero-desc",
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
-        0.62
+        { opacity: 1, y: 0, duration: 0.2, ease: "power1.out" },
+        0.78
       );
 
       tl.fromTo(
         ".hero-cta",
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
-        0.7
+        { opacity: 1, y: 0, duration: 0.2, stagger: 0.06, ease: "power1.out" },
+        0.8
       );
 
       tl.fromTo(
         ".hero-float",
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "power1.out" },
-        0.62
+        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
+        0.7
       );
     }, rootRef);
     return () => ctx.revert();

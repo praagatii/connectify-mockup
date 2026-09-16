@@ -114,7 +114,7 @@ export default function ProductsPage() {
               requirements, our consulting and engineering teams can design and
               build custom software tailored specifically to your needs.
             </p>
-            <HoverMetalButton variant="outline" asChild className="mt-8 px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="mt-8 px-6 py-2.5">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2"

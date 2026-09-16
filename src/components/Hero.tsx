@@ -194,7 +194,7 @@ export default function Hero() {
 
             <div className="hero-ctas mt-6 flex flex-wrap items-center justify-center gap-4">
               <span className="hero-cta pointer-events-auto" style={{ opacity: 0 }}>
-                <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+                <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
                   <Link
                     href="/services"
                     className="group inline-flex items-center gap-2"
@@ -217,7 +217,7 @@ export default function Hero() {
                 </HoverMetalButton>
               </span>
               <span className="hero-cta pointer-events-auto" style={{ opacity: 0 }}>
-                <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+                <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
                   <Link
                     href="/case-studies"
                     className="group inline-flex items-center gap-2"

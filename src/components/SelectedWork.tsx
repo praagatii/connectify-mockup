@@ -112,7 +112,7 @@ export default function SelectedWork() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+          <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
             <Link
               href="/case-studies"
               className="group inline-flex items-center gap-2"

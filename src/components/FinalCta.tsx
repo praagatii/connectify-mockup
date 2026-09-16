@@ -28,7 +28,7 @@ export default function FinalCta() {
           Connectify to launch your next platform and accelerate growth.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+          <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
             <Link
               href="/contact"
               className="group inline-flex items-center gap-2"
@@ -49,7 +49,7 @@ export default function FinalCta() {
               </svg>
             </Link>
           </HoverMetalButton>
-          <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+          <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
             <Link
               href="/case-studies"
               className="group inline-flex items-center gap-2"

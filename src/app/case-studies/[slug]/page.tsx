@@ -107,7 +107,7 @@ export default async function CaseStudyPage({
           </section>
 
           <div className="border-t border-black/10 pt-10">
-            <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
               <Link href="/contact">
                 Build something like this
               </Link>

@@ -172,7 +172,7 @@ export default function AboutPage() {
           </section>
 
           <div className="flex justify-center">
-            <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+            <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2"

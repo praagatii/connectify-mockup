@@ -123,7 +123,7 @@ export default function ContactForm() {
         variant="outline"
         type="submit"
         disabled={status === "sending"}
-        className="px-8 py-4 disabled:opacity-60"
+        className="px-6 py-2.5 disabled:opacity-60"
       >
         {status === "sending" ? "Opening your emailâ€¦" : "Send Message"}
       </HoverMetalButton>

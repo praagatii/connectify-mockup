@@ -64,7 +64,7 @@ export default function Process() {
     <section
       ref={rootRef}
       id="process"
-      className="relative z-10 overflow-hidden bg-black px-6 py-16"
+      className="relative z-10 overflow-hidden bg-gradient-to-l from-electric via-black to-brand-deep px-6 py-16"
     >
       <div className="relative mx-auto w-full max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">

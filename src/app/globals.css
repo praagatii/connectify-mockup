@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Force the dark: variant to require a .dark class that never exists,
+   so no utility reacts to the device's prefers-color-scheme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Connectify global styles */
 
 @theme inline {
@@ -46,6 +50,8 @@
 }
 
 html {
+  background: #ffffff;
+  color-scheme: light only;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

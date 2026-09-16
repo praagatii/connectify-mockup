@@ -28,13 +28,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      style={{ background: "#ffffff", colorScheme: "light only" }}
       className={`${geistMono.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';document.documentElement.style.scrollBehavior='auto';})();`,
+            __html: `(function(){var d=document.documentElement;if(d){d.style.backgroundColor='#ffffff';d.style.colorScheme='light only';var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';d.style.scrollBehavior='auto';}})();`,
           }}
         />
         <meta name="theme-color" content="#ffffff" />

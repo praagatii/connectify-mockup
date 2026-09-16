@@ -81,6 +81,15 @@ export default function Footer() {
           <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-brand/40 blur-3xl sm:h-96 sm:w-96" />
           <div className="absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-brand-deep/20 blur-3xl" />
         </div>
+
+        <div className="relative z-10 flex w-full items-center justify-center sm:justify-start">
+          <span
+            className="font-inter text-3xl font-bold tracking-tight text-white/20 lg:text-5xl"
+            style={{ fontFamily: "var(--font-inter, Inter)" }}
+          >
+            Connectify
+          </span>
+        </div>
       </div>
     </footer>
   );

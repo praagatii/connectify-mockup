@@ -69,6 +69,12 @@ export default function Hero() {
         0
       );
 
+      tl.to(
+        ".hero-media-box",
+        { opacity: 0.35, ease: "none", duration: 0.3 },
+        0.62
+      );
+
       tl.fromTo(
         ".hero-headline",
         { opacity: 0 },

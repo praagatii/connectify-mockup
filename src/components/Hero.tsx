@@ -112,7 +112,7 @@ export default function Hero() {
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* Video: small rounded card at load, expands + fades on scroll */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="hero-media-box relative aspect-video w-[44vw] max-w-[520px] overflow-hidden rounded-3xl shadow-2xl">
+          <div className="hero-media-box relative aspect-[21/9] w-[46vw] max-w-[560px] overflow-hidden rounded-3xl shadow-2xl">
             <video
               src="/newhero-1080.mp4"
               poster="/hero-poster.jpg"

@@ -97,14 +97,14 @@ export default function Hero() {
         ".hero-desc",
         { opacity: 0, y: 24 },
         { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
-        0.72
+        0.62
       );
 
       tl.fromTo(
         ".hero-cta",
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
-        0.8
+        0.7
       );
 
       tl.fromTo(

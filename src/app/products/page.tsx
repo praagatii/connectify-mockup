@@ -77,7 +77,7 @@ export default function ProductsPage() {
             <section
               key={category.id}
               id={category.id}
-              className="scroll-mt-28 rounded-2xl border border-black/10 bg-surface p-8 sm:p-10"
+              className="scroll-mt-28 rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-brand/25 sm:p-10"
             >
               <div className="flex flex-wrap items-start justify-between gap-6">
                 <div>
@@ -88,7 +88,7 @@ export default function ProductsPage() {
                     {category.description}
                   </p>
                 </div>
-                <span className="rounded-full border border-black/15 px-4 py-2 text-xs uppercase tracking-[0.15em] text-muted">
+                <span className="rounded-full border border-brand/20 px-4 py-2 text-xs uppercase tracking-[0.15em] text-brand">
                   {category.count}
                 </span>
               </div>

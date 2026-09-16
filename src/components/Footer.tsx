@@ -1,131 +1,115 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-black/10">
-      <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="grid gap-12 py-16 sm:grid-cols-12">
-          <div className="sm:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/connectifylogo.png"
-                alt="Connectify"
-                className="h-12 w-auto"
-              />
-            </Link>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted">
-              Tech consulting company with business advisory and investment
-              consulting as add-on expertise &mdash; building platforms and
-              guiding growth across industries.
-            </p>
-            <div className="mt-6 flex gap-3">
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 text-muted transition-colors hover:border-black/40 hover:text-black"
-              >
-                in
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X (Twitter)"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 text-muted transition-colors hover:border-black/40 hover:text-black"
-              >
-                X
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 text-muted transition-colors hover:border-black/40 hover:text-black"
-              >
-                ig
-              </a>
-            </div>
+    <footer className="relative w-full overflow-hidden">
+      {/* Upper section */}
+      <div className="relative bg-zinc-950 px-6 pt-8 pb-10 sm:px-10 md:px-16 lg:px-20">
+        <div className="flex items-center justify-between">
+          <div className="inline-flex items-center gap-2">
+            <span className="inline-block h-2 w-2 rounded-full bg-brand" />
+            <span className="text-md font-light text-zinc-50">
+              Trusted Tech Partner
+            </span>
           </div>
-
-          <div className="sm:col-span-2">
-            <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Company
-            </h3>
-            <ul className="mt-5 space-y-3 text-sm text-muted">
-              <li>
-                <Link href="/services" className="transition-colors hover:text-black">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="transition-colors hover:text-black">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-studies" className="transition-colors hover:text-black">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="transition-colors hover:text-black">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="transition-colors hover:text-black">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="sm:col-span-5">
-            <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Reach us
-            </h3>
-            <ul className="mt-5 space-y-3 text-sm text-muted">
-              <li>
-                <a
-                  href="mailto:business@connectify.global"
-                  className="transition-colors hover:text-black"
-                >
-                  business@connectify.global
-                </a>
-              </li>
-              <li>
-                <a href="tel:+919834843396" className="transition-colors hover:text-black">
-                  +91 98348 43396
-                </a>
-              </li>
-              <li className="leading-relaxed">
-                8, Avalahalli Main Road, JP Nagar 9th Phase 3rd Block,
-                Bengaluru &mdash; 560076
-              </li>
-              <li>
-                <Link href="/contact" className="transition-colors hover:text-black">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="group text-md inline-flex items-center gap-1.5 font-light tracking-wide text-zinc-200 transition-colors duration-200 hover:text-white"
+          >
+            <span>Scroll to Top</span>
+            <svg
+              className="size-4 fill-zinc-200 transition-all duration-200 group-hover:fill-white"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 4l-8 8h5v8h6v-8h5z" />
+            </svg>
+          </button>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-black/10 py-8 sm:flex-row">
-          <p className="text-xs text-black/40">
-            &copy; 2026 Connectify. All rights reserved.
-          </p>
-          <div className="flex gap-6 text-xs text-black/40">
-            <Link href="/contact" className="transition-colors hover:text-black">
-              Privacy Policy
-            </Link>
-            <Link href="/contact" className="transition-colors hover:text-black">
-              Terms of Service
-            </Link>
+        <div className="mt-8 max-w-lg sm:mt-10 md:mt-12">
+          <h2 className="text-2xl font-light leading-snug tracking-tight text-zinc-100 sm:text-3xl md:text-4xl">
+            Want to collaborate with us, explore our platforms, or just curious
+            to know more?
+          </h2>
+        </div>
+
+        <div className="mt-20 flex flex-col gap-8 sm:mt-24 md:mt-28 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col gap-1.5">
+            <span className="text-lg font-light tracking-wide text-zinc-400">
+              Reach out at:
+            </span>
+            <a
+              href="mailto:business@connectify.global"
+              className="group inline-flex items-center gap-2 text-2xl font-medium text-zinc-200 transition-colors duration-200 hover:text-white"
+            >
+              <span>business@connectify.global</span>
+              <svg
+                className="size-6 fill-zinc-200 transition-all duration-200 group-hover:fill-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14m-7-7l7 7-7 7" />
+              </svg>
+            </a>
           </div>
+
+          <nav className="flex flex-wrap items-center gap-6 sm:gap-8 lg:gap-10">
+            {[
+              { label: "Services", href: "/services" },
+              { label: "Products", href: "/products" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: "About", href: "/about" },
+              { label: "Contact", href: "/contact" },
+            ].map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-md font-medium text-zinc-200 transition-colors duration-200 hover:text-zinc-100"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      {/* Lower section — brand + gradient */}
+      <div className="relative bg-zinc-950 px-6 pt-10 pb-12 sm:px-10 md:px-16 lg:px-20 lg:pt-14 lg:pb-16">
+        <div className="pointer-events-none absolute right-0 bottom-0 h-full w-3/4 blur-lg sm:w-2/3">
+          <div className="absolute right-0 bottom-0 h-full w-full bg-gradient-to-tl from-brand/80 via-brand-deep/30 to-transparent" />
+          <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-brand/40 blur-3xl sm:h-96 sm:w-96" />
+          <div className="absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-brand-deep/20 blur-3xl" />
+        </div>
+
+        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden sm:flex-row sm:gap-8">
+          <div className="hidden shrink-0 sm:block">
+            <img
+              src="/connectifylogo.png"
+              alt="Connectify"
+              className="h-20 w-auto opacity-20 lg:h-32"
+            />
+          </div>
+
+          <svg
+            className="h-auto w-full flex-1 select-none"
+            viewBox="0 0 900 100"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Connectify"
+          >
+            <text
+              x="0%"
+              y="100%"
+              dominantBaseline="alphabetic"
+              textAnchor="start"
+              textLength="90%"
+              lengthAdjust="spacing"
+              className="fill-white/20 font-sans font-bold tracking-tight"
+              fontSize="140"
+            >
+              Connectify
+            </text>
+          </svg>
         </div>
       </div>
     </footer>

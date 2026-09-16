@@ -121,9 +121,9 @@ export default function AboutPage() {
               {differentiators.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-black/10 bg-surface p-8"
+                  className="rounded-2xl border border-black/10 bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_20px_60px_-30px_rgba(139,92,246,0.4)]"
                 >
-                  <h4 className="font-inter text-base font-bold text-black">
+                  <h4 className="font-inter text-xl font-bold text-black">
                     {item.title}
                   </h4>
                   <p className="mt-3 text-sm leading-relaxed text-muted">

@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       >
         <div
           aria-hidden
-          className="pointer-events-none fixed inset-0 z-0"
+          className="fixed inset-0 z-0"
           style={{ opacity: 0.5 }}
         >
           <ShapeGrid
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             borderColor="rgba(139,92,246,0.18)"
             hoverFillColor="rgba(139,92,246,0.3)"
             shape="hexagon"
-            hoverTrailAmount={0}
+            hoverTrailAmount={12}
             className="h-full w-full"
           />
         </div>

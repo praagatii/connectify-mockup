@@ -49,7 +49,7 @@ export default function ContactPage() {
               </p>
             </a>
 
-            <div className="rounded-2xl border border-black/10 bg-surface p-8">
+            <div className="rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-brand/30">
               <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Address
               </h2>
@@ -59,7 +59,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-surface p-8">
+            <div className="rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-brand/30">
               <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Opening hours
               </h2>

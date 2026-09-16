@@ -167,23 +167,24 @@ export default function ServicesPage() {
                 {group.services.map((service) => (
                   <article
                     key={service.name}
-                    className="flex flex-col rounded-2xl border border-black/10 bg-surface p-8"
+                    className="group flex flex-col rounded-2xl border border-black/10 bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_20px_60px_-30px_rgba(139,92,246,0.4)]"
                   >
-                    <h3 className="font-inter text-2xl font-bold tracking-tight text-black">
+                    <h3 className="font-inter text-xl font-bold tracking-tight text-black">
                       {service.name}
                     </h3>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                       {service.description}
                     </p>
+                    <div className="mt-6 h-px w-full bg-gradient-to-r from-brand/50 to-transparent" />
                     <Link
                       href="/contact"
-                      className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold transition-opacity hover:opacity-80"
+                      className="group/link mt-6 inline-flex items-center gap-2 text-sm font-semibold transition-opacity hover:opacity-80"
                     >
                       <span className="bg-gradient-to-r from-electric to-brand bg-clip-text text-transparent">
                         Explore capability
                       </span>
                       <svg
-                        className="h-4 w-4 text-brand transition-transform group-hover:translate-x-1"
+                        className="h-4 w-4 text-brand transition-transform group-hover/link:translate-x-1"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

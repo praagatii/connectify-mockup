@@ -122,7 +122,7 @@ export default function Hero() {
   return (
     <section
       ref={rootRef}
-      className="relative h-[300vh] bg-white"
+      className="relative h-[300vh] bg-transparent"
       aria-label="Hero"
     >
       <div className="sticky top-0 h-screen overflow-hidden">

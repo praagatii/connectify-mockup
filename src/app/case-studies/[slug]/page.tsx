@@ -52,7 +52,7 @@ export default async function CaseStudyPage({
         </div>
       </header>
 
-      <div className="px-6 py-16 py-20">
+      <div className="px-6 py-16">
         <div className="mx-auto w-full max-w-4xl space-y-16">
           <div className="overflow-hidden rounded-2xl border border-black/10">
             {/* eslint-disable-next-line @next/next/no-img-element */}

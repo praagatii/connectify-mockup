@@ -71,7 +71,7 @@ export default function Hero() {
 
       tl.to(
         ".hero-media-box",
-        { opacity: 0.08, ease: "none", duration: 0.3 },
+        { opacity: 0.2, ease: "none", duration: 0.3 },
         0.62
       );
 
@@ -93,13 +93,6 @@ export default function Hero() {
           ease: "power2.out",
         },
         0.6
-      );
-
-      tl.fromTo(
-        ".hero-desc",
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
-        0.68
       );
 
       tl.fromTo(
@@ -167,7 +160,7 @@ export default function Hero() {
 
         {/* Headline + subtext + CTAs */}
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-6">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center pt-16 sm:pt-24 lg:pt-28">
             <h1
               className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(64px,10.5vw,190px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
               style={{ opacity: 0 }}
@@ -186,7 +179,6 @@ export default function Hero() {
 
             <p
               className="hero-desc mt-4 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
-              style={{ opacity: 0 }}
             >
               We design, build, and scale digital platforms backed by strategic
               business and capital advisory.

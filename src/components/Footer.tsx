@@ -82,19 +82,19 @@ export default function Footer() {
           <div className="absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-brand-deep/20 blur-3xl" />
         </div>
 
-        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden sm:flex-row sm:gap-8">
+        <div className="relative z-10 flex w-full flex-col sm:flex-row sm:items-center sm:justify-end">
           <svg
-            className="h-auto w-full select-none"
-            viewBox="0 0 900 100"
+            className="h-auto w-full select-none sm:max-w-none"
+            viewBox="0 0 900 140"
             preserveAspectRatio="xMidYMid meet"
             aria-label="Connectify"
           >
             <text
-              x="0%"
-              y="100%"
+              x="100%"
+              y="110"
               dominantBaseline="alphabetic"
-              textAnchor="start"
-              textLength="90%"
+              textAnchor="end"
+              textLength="88%"
               lengthAdjust="spacing"
               className="fill-white/20 font-bold tracking-tight"
               style={{ fontFamily: "var(--font-inter, Inter)" }}

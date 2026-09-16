@@ -44,6 +44,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="relative isolate min-h-full bg-background text-foreground font-sans">
         <div
           aria-hidden
+          className="fixed inset-0 -z-10 bg-[#ffffff]"
+          style={{ backgroundColor: "#ffffff" }}
+        />
+        <div
+          aria-hidden
           className="fixed inset-0 z-0"
           style={{ opacity: 0.7 }}
         >

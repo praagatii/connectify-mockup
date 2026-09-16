@@ -40,8 +40,10 @@ export default function Hero() {
 
       const scope = rootRef.current!;
       const box = scope.querySelector<HTMLElement>(".hero-media-box")!;
-      const startWidth = box.offsetWidth;
-      const startHeight = box.offsetHeight;
+      const coverScale = Math.max(
+        scope.clientWidth / box.offsetWidth,
+        scope.clientHeight / box.offsetHeight
+      );
 
       const tl = gsap.timeline({
         defaults: { ease: "power1.inOut" },
@@ -55,15 +57,9 @@ export default function Hero() {
 
       tl.fromTo(
         ".hero-media-box",
+        { scale: 1, borderRadius: 28, opacity: 1 },
         {
-          width: startWidth,
-          height: startHeight,
-          borderRadius: 28,
-          opacity: 1,
-        },
-        {
-          width: scope.clientWidth,
-          height: scope.clientHeight,
+          scale: coverScale,
           borderRadius: 0,
           opacity: 1,
           ease: "power1.in",
@@ -117,7 +113,7 @@ export default function Hero() {
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* Video: small rounded card at load, expands + fades on scroll */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="hero-media-box relative h-[36vh] w-[64vw] overflow-hidden rounded-3xl shadow-2xl">
+          <div className="hero-media-box relative aspect-video w-[64vw] max-w-[680px] overflow-hidden rounded-3xl shadow-2xl">
             <video
               src="/newhero-1080.mp4"
               poster="/hero-poster.jpg"

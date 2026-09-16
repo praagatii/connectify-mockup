@@ -125,7 +125,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="px-6 py-2.5 disabled:opacity-60"
       >
-        {status === "sending" ? "Opening your emailâ€¦" : "Send Message"}
+        {status === "sending" ? "Opening your email…" : "Send Message"}
       </HoverMetalButton>
     </form>
   );

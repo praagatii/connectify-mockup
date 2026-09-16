@@ -16,7 +16,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.name} â€” Connectify Case Study`,
+    title: `${project.name} — Connectify Case Study`,
     description: project.summary,
   };
 }
@@ -38,7 +38,7 @@ export default async function CaseStudyPage({
             href="/case-studies"
             className="text-xs font-medium uppercase tracking-[0.2em] text-muted transition-colors hover:text-black"
           >
-            â† All case studies
+            ←  All case studies
           </Link>
           <p className="mt-10 text-xs font-medium uppercase tracking-[0.2em] text-muted">
             {project.category}

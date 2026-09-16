@@ -7,7 +7,7 @@ const serviceGroups = [
     id: "digital-solutions",
     group: "Digital Solutions",
     description:
-      "Full-stack digital product engineering â€” from web and mobile to SaaS and commerce platforms.",
+      "Full-stack digital product engineering — from web and mobile to SaaS and commerce platforms.",
     services: [
       {
         name: "Web Development",
@@ -116,16 +116,16 @@ const serviceGroups = [
       {
         name: "Post Fundraising Support",
         description:
-          "Hands-on guidance after the raise â€” governance, reporting and execution.",
+          "Hands-on guidance after the raise — governance, reporting and execution.",
       },
     ],
   },
 ];
 
 export const metadata = {
-  title: "Services â€” Connectify",
+  title: "Services — Connectify",
   description:
-    "Digital solutions and technology services at the core â€” business advisory and investment consulting when strategy and capital matter alongside delivery.",
+    "Digital solutions and technology services at the core — business advisory and investment consulting when strategy and capital matter alongside delivery.",
 };
 
 export default function ServicesPage() {
@@ -134,7 +134,7 @@ export default function ServicesPage() {
       <PageIntro
         eyebrow="Our Services"
         title="Tech consulting with advisory add-ons."
-        description="Digital solutions and technology services at the core â€” business advisory and investment consulting when strategy and capital matter alongside delivery."
+        description="Digital solutions and technology services at the core — business advisory and investment consulting when strategy and capital matter alongside delivery."
       />
 
       <div className="px-6 py-16">
@@ -151,10 +151,10 @@ export default function ServicesPage() {
             ))}
           </nav>
 
-          {serviceGroups.map((group) => (
+          {serviceGroups.map((group, gi) => (
             <section key={group.id} id={group.id} className="scroll-mt-28">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                {group.group}
+              <p className="font-mono text-sm text-brand">
+                {String(gi + 1).padStart(2, "0")}
               </p>
               <h2 className="mt-3 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
                 {group.group}

@@ -4,7 +4,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects, industries } from "@/lib/projects";
 
 export const metadata = {
-  title: "Case Studies â€” Connectify",
+  title: "Case Studies — Connectify",
   description:
     "A detailed look at platforms we've engineered and taken to market across fintech, healthtech, govtech, mobility, edtech, enterprise, and more.",
 };
@@ -66,7 +66,6 @@ export default async function CaseStudiesPage({
               <Link href="/case-studies" className="text-black underline underline-offset-4">
                 View all projects
               </Link>
-              .
             </p>
           ) : (
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

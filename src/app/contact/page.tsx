@@ -2,9 +2,9 @@
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact â€” Connectify",
+  title: "Contact — Connectify",
   description:
-    "Questions or a new engagement? Send a message or reach us directly â€” business@connectify.global, +91 98348 43396.",
+    "Questions or a new engagement? Send a message or reach us directly — business@connectify.global, +91 98348 43396.",
 };
 
 const openingHours = [

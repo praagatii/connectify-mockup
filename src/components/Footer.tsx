@@ -10,13 +10,13 @@ export default function Footer() {
         <div className="flex items-center justify-between">
           <div className="inline-flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-brand" />
-            <span className="text-md font-light text-zinc-50">
+            <span className="text-sm font-light text-zinc-50">
               Trusted Tech Partner
             </span>
           </div>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group text-md inline-flex items-center gap-1.5 font-light tracking-wide text-zinc-200 transition-colors duration-200 hover:text-white"
+            className="group text-sm inline-flex items-center gap-1.5 font-light tracking-wide text-zinc-200 transition-colors duration-200 hover:text-white"
           >
             <span>Scroll to Top</span>
             <svg
@@ -65,7 +65,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-md font-medium text-zinc-200 transition-colors duration-200 hover:text-zinc-100"
+                className="text-sm font-medium text-zinc-200 transition-colors duration-200 hover:text-zinc-100"
               >
                 {link.label}
               </Link>

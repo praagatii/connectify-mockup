@@ -54,9 +54,9 @@ const reasons = [
 ];
 
 export const metadata = {
-  title: "About â€” Connectify",
+  title: "About — Connectify",
   description:
-    "Your strategic partner in the Banking & Fintech revolution â€” a boutique consultancy with strategy, investment, and technology expertise.",
+    "Your strategic partner in the Banking & Fintech revolution — a boutique consultancy with strategy, investment, and technology expertise.",
 };
 
 export default function AboutPage() {
@@ -64,19 +64,19 @@ export default function AboutPage() {
     <>
       <PageIntro
         eyebrow="About Connectify"
-        title="Who we are â€” and why clients choose us."
-        description="Your strategic partner in the Banking & Fintech revolution â€” a boutique consultancy with strategy, investment, and technology expertise."
+        title="Who we are — and why clients choose us."
+        description="Your strategic partner in the Banking & Fintech revolution — a boutique consultancy with strategy, investment, and technology expertise."
       />
 
       <div className="px-6 py-16">
         <div className="mx-auto w-full max-w-6xl space-y-20">
           <section>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Who We Are
-            </h2>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+            </p>
+            <h2 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               Your strategic partner
-            </h3>
+            </h2>
             <div className="mt-8 max-w-3xl space-y-6">
               <p className="text-base leading-relaxed text-muted">
                 Connectify is a new-age boutique consultancy firm comprised of
@@ -110,12 +110,12 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Our Approach
-            </h2>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+            </p>
+            <h2 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
               What sets us apart
-            </h3>
+            </h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               {differentiators.map((item) => (
                 <div
@@ -134,15 +134,15 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Why Choose Us
+            </p>
+            <h2 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
+              A partner built for what&apos;s next
             </h2>
-            <h3 className="mt-4 font-inter text-4xl font-extrabold leading-[1.05] tracking-tight text-black sm:text-5xl">
-              Why choose Connectify?
-            </h3>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
               In the rapidly evolving world of finance, staying ahead requires
-              more than just keeping pace â€” it demands vision, agility, and
+              more than just keeping pace — it demands vision, agility, and
               strategic acumen. With a finger on the pulse of the Fintech
               revolution, we offer cutting-edge solutions, tailored strategies,
               and actionable insights to help you navigate the complexities of

@@ -32,6 +32,15 @@
   --muted: #6b7280;
 }
 
+/* Hero copy is hidden until the scrub timeline reveals it after expansion */
+.hero-headline,
+.hero-line,
+.hero-desc,
+.hero-cta,
+.hero-float {
+  opacity: 0;
+}
+
 .dark {
   color-scheme: dark;
   --background: #09090b;

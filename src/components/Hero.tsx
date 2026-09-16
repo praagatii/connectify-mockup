@@ -105,25 +105,11 @@ export default function Hero() {
         0.68
       );
 
-      // 5. Subtext + CTAs + floats after the video has expanded (0.7+)
+      // 5. Subtext + CTAs + floats, all together, strictly AFTER expansion (0.7+)
       tl.fromTo(
-        ".hero-desc",
+        [".hero-desc", ".hero-cta", ".hero-float"],
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
-        0.7
-      );
-
-      tl.fromTo(
-        ".hero-cta",
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
-        0.74
-      );
-
-      tl.fromTo(
-        ".hero-float",
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "power1.out" },
+        { opacity: 1, y: 0, duration: 0.3, stagger: 0.08, ease: "power1.out" },
         0.7
       );
 

@@ -82,13 +82,27 @@ export default function Footer() {
           <div className="absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-brand-deep/20 blur-3xl" />
         </div>
 
-        <div className="relative z-10 flex w-full items-center justify-center sm:justify-start">
-          <span
-            className="font-inter text-3xl font-bold tracking-tight text-white/20 lg:text-5xl"
-            style={{ fontFamily: "var(--font-inter, Inter)" }}
+        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden sm:flex-row sm:gap-8">
+          <svg
+            className="h-auto w-full select-none"
+            viewBox="0 0 900 100"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Connectify"
           >
-            Connectify
-          </span>
+            <text
+              x="0%"
+              y="100%"
+              dominantBaseline="alphabetic"
+              textAnchor="start"
+              textLength="90%"
+              lengthAdjust="spacing"
+              className="fill-white/20 font-bold tracking-tight"
+              style={{ fontFamily: "var(--font-inter, Inter)" }}
+              fontSize="140"
+            >
+              Connectify
+            </text>
+          </svg>
         </div>
       </div>
     </footer>

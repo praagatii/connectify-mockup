@@ -163,75 +163,75 @@ export default function Hero() {
           />
         </div>
 
-        {/* Headline */}
+        {/* Headline + subtext + CTAs */}
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-6">
-          <h1
-            className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(56px,9vw,170px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
-            style={{ opacity: 0 }}
-          >
-            {words.map((w) => (
-              <span key={w.text} className="block overflow-hidden py-[0.08em]">
-                <span
-                  className={`hero-line block ${w.className}`}
-                  style={{ opacity: 0 }}
-                >
-                  {w.text}
+          <div className="flex flex-col items-center">
+            <h1
+              className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(56px,9vw,170px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
+              style={{ opacity: 0 }}
+            >
+              {words.map((w) => (
+                <span key={w.text} className="block overflow-hidden py-[0.08em]">
+                  <span
+                    className={`hero-line block ${w.className}`}
+                    style={{ opacity: 0 }}
+                  >
+                    {w.text}
+                  </span>
                 </span>
-              </span>
-            ))}
-          </h1>
-        </div>
+              ))}
+            </h1>
 
-        {/* Subtext + CTAs */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-[5vh] z-20 flex flex-col items-center px-6">
-          <p
-            className="hero-desc max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
-            style={{ opacity: 0 }}
-          >
-            We design, build, and scale digital platforms backed by strategic
-            business and capital advisory.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="/services"
-              className="hero-cta btn-glow group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
+            <p
+              className="hero-desc mt-[1.5em] max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
               style={{ opacity: 0 }}
             >
-              View Projects
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+              We design, build, and scale digital platforms backed by strategic
+              business and capital advisory.
+            </p>
+
+            <div className="hero-ctas mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="/services"
+                className="hero-cta btn-glow group inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
+                style={{ opacity: 0 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-            <a
-              href="/case-studies"
-              className="hero-cta btn-glow group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
-              style={{ opacity: 0 }}
-            >
-              Case Studies
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+                View Projects
+                <svg
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+              <a
+                href="/case-studies"
+                className="hero-cta btn-glow group inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
+                style={{ opacity: 0 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
+                Case Studies
+                <svg
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

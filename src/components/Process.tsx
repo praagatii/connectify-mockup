@@ -70,14 +70,14 @@ export default function Process() {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
-        style={{ opacity: 0.35 }}
+        style={{ opacity: 0.6 }}
       >
         <ShapeGrid
           direction="diagonal"
           speed={0.32}
           squareSize={40}
-          borderColor="rgba(167,139,250,0.22)"
-          hoverFillColor="rgba(139,92,246,0.35)"
+          borderColor="rgba(196,181,253,0.35)"
+          hoverFillColor="rgba(167,139,250,0.5)"
           shape="hexagon"
           hoverTrailAmount={3}
           className="h-full w-full"
@@ -85,7 +85,7 @@ export default function Process() {
       </div>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"
       />
       <div
         aria-hidden

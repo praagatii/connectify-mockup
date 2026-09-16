@@ -54,7 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <ShapeGrid
             direction="diagonal"
             speed={0.32}
-            squareSize={40}
+            squareSize={64}
             borderColor="rgba(139,92,246,0.18)"
             hoverFillColor="rgba(139,92,246,0.3)"
             shape="hexagon"

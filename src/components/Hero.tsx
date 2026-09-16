@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,7 +21,7 @@ const words = [
 export default function Hero() {
   const rootRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -59,10 +59,11 @@ export default function Hero() {
           trigger: scope,
           start: "top top",
           end: "bottom bottom",
-          scrub: 0.8,
+          scrub: 0.6,
         },
       });
 
+      // 1. Video expands (0.0 - 0.5)
       tl.fromTo(
         ".hero-media-box",
         { scale: 1, borderRadius: 28, opacity: 1 },
@@ -71,24 +72,27 @@ export default function Hero() {
           borderRadius: 28,
           opacity: 1,
           ease: "power1.inOut",
-          duration: 0.45,
+          duration: 0.5,
         },
         0
       );
 
+      // 2. Video fades to background (0.5 - 0.85)
       tl.to(
         ".hero-media-box",
         { opacity: 0.15, ease: "none", duration: 0.3 },
-        0.62
+        0.5
       );
 
+      // 3. Headline fades in once the video has expanded (0.62)
       tl.fromTo(
         ".hero-headline",
         { opacity: 0 },
-        { opacity: 1, ease: "none", duration: 0.05 },
-        0.55
+        { opacity: 1, ease: "none", duration: 0.06 },
+        0.62
       );
 
+      // 4. Words slide up (0.68)
       tl.fromTo(
         ".hero-line",
         { yPercent: 115, opacity: 0 },
@@ -99,29 +103,34 @@ export default function Hero() {
           stagger: 0.08,
           ease: "power2.out",
         },
-        0.6
+        0.68
       );
 
+      // 5. Subtext + CTAs + floats after the video has expanded (0.7+)
       tl.fromTo(
         ".hero-desc",
         { opacity: 0, y: 24 },
         { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
-        0.68
+        0.7
       );
 
       tl.fromTo(
         ".hero-cta",
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
-        0.72
+        0.74
       );
 
       tl.fromTo(
         ".hero-float",
         { opacity: 0, y: 24 },
         { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "power1.out" },
-        0.6
+        0.7
       );
+
+      // Force the timeline to be at the start on load so nothing
+      // previews mid-animation before the scroll starts.
+      ScrollTrigger.refresh();
     }, rootRef);
     return () => ctx.revert();
   }, []);

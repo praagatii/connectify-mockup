@@ -113,25 +113,25 @@ export default function SelectedWork() {
 
         <div className="mt-12 flex justify-center">
           <HoverMetalButton variant="outline" asChild className="px-6 py-2.5">
-            <Link
+<Link
               href="/case-studies"
               className="group inline-flex items-center gap-2"
             >
               See all case studies
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </HoverMetalButton>
         </div>
       </div>

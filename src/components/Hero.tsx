@@ -71,7 +71,7 @@ export default function Hero() {
 
       tl.to(
         ".hero-media-box",
-        { opacity: 0.35, ease: "none", duration: 0.3 },
+        { opacity: 0.15, ease: "none", duration: 0.3 },
         0.62
       );
 

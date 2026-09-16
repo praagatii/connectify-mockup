@@ -46,10 +46,10 @@ export default function Hero() {
       // the hero's sticky zone, the scrub timeline renders mid-animation with
       // the subtext already visible. Snap back to top so the intro always
       // plays from its first frame (small video, everything hidden).
-      const restored = window.scrollY;
-      if (restored > 0 && restored < window.innerHeight * 3) {
-        window.scrollTo(0, 0);
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
       }
+      window.scrollTo(0, 0);
 
       const box = scope.querySelector<HTMLElement>(".hero-media-box")!;
       const pagePadding = window.innerWidth >= 1024 ? 96 : 48;

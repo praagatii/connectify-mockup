@@ -4,23 +4,23 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden">
+    <footer className="relative w-full overflow-hidden border-t border-black/10">
       {/* Upper section */}
-      <div className="relative bg-zinc-950 px-6 pt-8 pb-10 sm:px-10 md:px-16 lg:px-20">
+      <div className="bg-white px-6 pt-16 pb-10 sm:px-10 md:px-16 lg:px-20">
         <div className="flex items-center justify-between">
           <div className="inline-flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-brand" />
-            <span className="font-inter text-sm font-light text-zinc-50">
+            <span className="font-inter text-sm font-medium text-muted">
               Trusted Tech Partner
             </span>
           </div>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group font-inter inline-flex items-center gap-1.5 text-sm font-light tracking-wide text-zinc-200 transition-colors duration-200 hover:text-white"
+            className="group font-inter inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors duration-200 hover:text-black"
           >
             <span>Scroll to Top</span>
             <svg
-              className="size-4 fill-zinc-200 transition-all duration-200 group-hover:fill-white"
+              className="size-4 fill-muted transition-all duration-200 group-hover:fill-black"
               viewBox="0 0 24 24"
             >
               <path d="M12 4l-8 8h5v8h6v-8h5z" />
@@ -28,25 +28,25 @@ export default function Footer() {
           </button>
         </div>
 
-        <div className="mt-8 max-w-lg sm:mt-10 md:mt-12">
-          <h2 className="font-inter text-2xl font-light leading-snug tracking-tight text-zinc-100 sm:text-3xl md:text-4xl">
+        <div className="mt-10 max-w-lg">
+          <h2 className="font-inter text-3xl font-bold leading-[1.15] tracking-tight text-black sm:text-4xl">
             Want to collaborate with us, explore our platforms, or just curious
             to know more?
           </h2>
         </div>
 
-        <div className="mt-20 flex flex-col gap-8 sm:mt-24 md:mt-28 lg:flex-row lg:items-end lg:justify-between">
-          <div className="flex flex-col gap-1.5">
-            <span className="font-inter text-lg font-light tracking-wide text-zinc-400">
+        <div className="mt-16 flex flex-col gap-8 sm:mt-20 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col gap-2">
+            <span className="font-inter text-sm font-medium text-muted">
               Reach out at:
             </span>
             <a
               href="mailto:business@connectify.global"
-              className="group inline-flex items-center gap-2 font-inter text-2xl font-medium text-zinc-200 transition-colors duration-200 hover:text-white"
+              className="group inline-flex items-center gap-2 font-inter text-xl font-semibold text-black transition-colors duration-200 hover:text-brand sm:text-2xl"
             >
               <span>business@connectify.global</span>
               <svg
-                className="size-6 fill-zinc-200 transition-all duration-200 group-hover:fill-white"
+                className="size-5 fill-black transition-all duration-200 group-hover:fill-brand"
                 viewBox="0 0 24 24"
               >
                 <path d="M5 12h14m-7-7l7 7-7 7" />
@@ -65,7 +65,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-inter text-sm font-medium text-zinc-200 transition-colors duration-200 hover:text-zinc-100"
+                className="font-inter text-sm font-semibold text-black transition-colors duration-200 hover:text-brand"
               >
                 {link.label}
               </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
 
       {/* Lower section — brand + gradient */}
-      <div className="relative bg-zinc-950 px-6 pt-10 pb-12 sm:px-10 md:px-16 lg:px-20 lg:pt-14 lg:pb-16">
+      <div className="relative bg-black px-6 pt-10 pb-12 sm:px-10 md:px-16 lg:px-20 lg:pt-14 lg:pb-16">
         <div className="pointer-events-none absolute right-0 bottom-0 h-full w-3/4 blur-lg sm:w-2/3">
           <div className="absolute right-0 bottom-0 h-full w-full bg-gradient-to-tl from-brand/80 via-brand-deep/30 to-transparent" />
           <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-brand/40 blur-3xl sm:h-96 sm:w-96" />
@@ -87,7 +87,7 @@ export default function Footer() {
             <img
               src="/connectifylogo.png"
               alt="Connectify"
-              className="h-20 w-auto opacity-20 lg:h-32"
+              className="h-16 w-auto opacity-30 lg:h-24"
             />
           </div>
 
@@ -104,7 +104,7 @@ export default function Footer() {
               textAnchor="start"
               textLength="90%"
               lengthAdjust="spacing"
-              className="fill-white/20 font-sans font-bold tracking-tight"
+              className="fill-white/20 font-bold tracking-tight"
               style={{ fontFamily: "var(--font-inter, Inter)" }}
               fontSize="140"
             >

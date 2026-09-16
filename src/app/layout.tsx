@@ -31,7 +31,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistMono.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full bg-background text-foreground font-sans">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';document.documentElement.style.scrollBehavior='auto';})();`,
+          }}
+        />
+      </head>
+      <body className="relative isolate min-h-full bg-background text-foreground font-sans">
         <div
           aria-hidden
           className="fixed inset-0 z-0"

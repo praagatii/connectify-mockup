@@ -33,6 +33,12 @@ export default function Hero() {
         window.history.scrollRestoration = "manual";
       }
       window.scrollTo(0, 0);
+      const onLoadReset = () => {
+        if (window.scrollY > 0) window.scrollTo(0, 0);
+        ScrollTrigger.refresh();
+        window.removeEventListener("load", onLoadReset);
+      };
+      window.addEventListener("load", onLoadReset);
 
       const box = scope.querySelector<HTMLElement>(".hero-media-box")!;
       const pagePadding = window.innerWidth >= 1024 ? 96 : 48;

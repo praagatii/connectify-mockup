@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { TopBlur } from "@/components/ui/edge-blur";
+import ShapeGrid from "@/components/ui/ShapeGrid";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -42,6 +43,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="relative isolate min-h-full bg-background text-foreground font-sans">
         <div aria-hidden className="fixed inset-0 -z-10 bg-[#ffffff]" />
+        <div aria-hidden className="fixed inset-0 z-0">
+          <ShapeGrid
+            direction="diagonal"
+            speed={0.32}
+            squareSize={80}
+            borderColor="rgba(139,92,246,0.18)"
+            hoverFillColor="rgba(139,92,246,0.9)"
+            shape="hexagon"
+            hoverTrailAmount={1}
+            className="h-full w-full"
+          />
+        </div>
         <SmoothScroll />
         <RevealOnScroll />
         <TopBlur height={28} />

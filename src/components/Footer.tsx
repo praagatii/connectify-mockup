@@ -73,6 +73,15 @@ export default function Footer() {
           </nav>
         </div>
       </div>
+
+      {/* Lower section — brand gradient band (logo removed) */}
+      <div className="relative bg-black px-6 pt-10 pb-12 sm:px-10 md:px-16 lg:px-20 lg:pt-14 lg:pb-16">
+        <div className="pointer-events-none absolute right-0 bottom-0 h-full w-3/4 blur-lg sm:w-2/3">
+          <div className="absolute right-0 bottom-0 h-full w-full bg-gradient-to-tl from-brand/80 via-brand-deep/30 to-transparent" />
+          <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-brand/40 blur-3xl sm:h-96 sm:w-96" />
+          <div className="absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-brand-deep/20 blur-3xl" />
+        </div>
+      </div>
     </footer>
   );
 }

@@ -34,7 +34,7 @@ export default function TrustedBy() {
                   src={client.src}
                   alt={client.alt}
                   loading="lazy"
-                  className="mx-10 h-9 w-auto max-w-40 object-contain opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0"
+                  className="mx-10 h-9 w-auto max-w-40 object-contain opacity-80 transition duration-500 hover:opacity-100"
                 />
               ))}
             </div>

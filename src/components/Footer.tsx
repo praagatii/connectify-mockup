@@ -73,46 +73,6 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-
-      {/* Lower section — brand + gradient */}
-      <div className="relative bg-black px-6 pt-10 pb-12 sm:px-10 md:px-16 lg:px-20 lg:pt-14 lg:pb-16">
-        <div className="pointer-events-none absolute right-0 bottom-0 h-full w-3/4 blur-lg sm:w-2/3">
-          <div className="absolute right-0 bottom-0 h-full w-full bg-gradient-to-tl from-brand/80 via-brand-deep/30 to-transparent" />
-          <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-brand/40 blur-3xl sm:h-96 sm:w-96" />
-          <div className="absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-brand-deep/20 blur-3xl" />
-        </div>
-
-        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden sm:flex-row sm:gap-8">
-          <div className="hidden shrink-0 sm:block">
-            <img
-              src="/connectifylogo.png"
-              alt="Connectify"
-              className="h-16 w-auto opacity-30 lg:h-24"
-            />
-          </div>
-
-          <svg
-            className="h-auto w-full flex-1 select-none"
-            viewBox="0 0 900 100"
-            preserveAspectRatio="xMidYMid meet"
-            aria-label="Connectify"
-          >
-            <text
-              x="0%"
-              y="100%"
-              dominantBaseline="alphabetic"
-              textAnchor="start"
-              textLength="90%"
-              lengthAdjust="spacing"
-              className="fill-white/20 font-bold tracking-tight"
-              style={{ fontFamily: "var(--font-inter, Inter)" }}
-              fontSize="140"
-            >
-              Connectify
-            </text>
-          </svg>
-        </div>
-      </div>
     </footer>
   );
 }

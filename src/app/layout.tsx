@@ -37,6 +37,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: `(function(){var h=window.history;if(h&&'scrollRestoration'in h)h.scrollRestoration='manual';document.documentElement.style.scrollBehavior='auto';})();`,
           }}
         />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="color-scheme" content="light only" />
       </head>
       <body className="relative isolate min-h-full bg-background text-foreground font-sans">
         <div

@@ -16,9 +16,9 @@ const metalSurfaceVariants = cva("transition-colors", {
         "bg-transparent! text-foreground!",
       secondary:
         "bg-secondary! text-secondary-foreground! hover:bg-secondary/80!",
-      ghost: "bg-transparent! text-foreground! hover:bg-muted/50! dark:hover:bg-muted/50!",
+      ghost: "bg-transparent! text-foreground! hover:bg-muted/50!",
       destructive:
-        "bg-destructive/10! text-destructive! hover:bg-destructive/20! dark:bg-destructive/20! dark:hover:bg-destructive/30!",
+        "bg-destructive/10! text-destructive! hover:bg-destructive/20!",
       link: "bg-transparent! text-primary!",
     },
   },
@@ -31,7 +31,7 @@ const metalHostChromeReset =
   "border-0! bg-transparent! shadow-none! hover:bg-transparent! aria-expanded:bg-transparent!"
 
 const metalStableEdge =
-  "relative isolate before:pointer-events-none before:absolute before:inset-0 before:z-10 before:rounded-[inherit] before:ring-1 before:ring-border/70 before:ring-inset dark:before:ring-border/80"
+  "relative isolate before:pointer-events-none before:absolute before:inset-0 before:z-10 before:rounded-[inherit] before:ring-1 before:ring-border/70 before:ring-inset"
 
 type MetalSurfaceVariant = NonNullable<
   VariantProps<typeof metalSurfaceVariants>["variant"]

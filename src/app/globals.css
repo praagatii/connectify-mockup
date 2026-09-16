@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 /* Connectify global styles */
 
 @theme inline {
@@ -20,7 +18,7 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: light only;
   --background: #ffffff;
   --foreground: #0b0b10;
   --surface: #f6f6f9;
@@ -30,6 +28,8 @@
   --navy: #f4f2fa;
   --slate: #475569;
   --muted: #6b7280;
+  --color-black: #0b0b10;
+  --color-white: #ffffff;
 }
 
 /* Hero copy is hidden until the scrub timeline reveals it after expansion */
@@ -39,24 +39,6 @@
 .hero-cta,
 .hero-float {
   opacity: 0;
-}
-
-.dark {
-  color-scheme: dark;
-  --background: #09090b;
-  --foreground: #f4f4f6;
-  --surface: #16161a;
-  --brand: #7c4dff;
-  --brand-deep: #9b6bff;
-  --electric: #a855f7;
-  --navy: #1a1525;
-  --slate: #94a3b8;
-  --muted: #9ca3af;
-}
-
-.dark {
-  --color-black: #f4f4f6;
-  --color-white: #09090b;
 }
 
 ::-webkit-scrollbar {

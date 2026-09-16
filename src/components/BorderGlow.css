@@ -16,11 +16,6 @@
   background: var(--card-bg, #ffffff);
 }
 
-.dark .border-glow-card {
-  border-color: rgb(255 255 255 / 10%);
-  background: var(--card-bg, var(--surface));
-}
-
 .border-glow-card::before,
 .border-glow-card::after,
 .border-glow-card > .edge-light {

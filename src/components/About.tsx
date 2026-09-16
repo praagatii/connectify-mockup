@@ -89,7 +89,7 @@ export default function About() {
 
         <div
           data-about-reveal
-          className="mt-10 overflow-hidden rounded-2xl bg-gradient-to-l from-electric via-brand to-brand-deep px-8 py-16 sm:px-10 sm:py-20"
+          className="mt-10 overflow-hidden rounded-2xl bg-gradient-to-l from-electric via-black to-brand-deep px-8 py-16 sm:px-10 sm:py-20"
         >
           <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-8">
             <div className="max-w-56">

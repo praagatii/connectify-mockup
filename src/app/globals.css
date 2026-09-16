@@ -35,7 +35,6 @@
 /* Hero copy is hidden until the scrub timeline reveals it after expansion */
 .hero-headline,
 .hero-line,
-.hero-desc,
 .hero-cta,
 .hero-float {
   opacity: 0;

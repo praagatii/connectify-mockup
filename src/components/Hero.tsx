@@ -1,6 +1,5 @@
 ﻿"use client";
 
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -97,20 +96,6 @@ export default function Hero() {
       );
 
       tl.fromTo(
-        ".hero-desc",
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.18 },
-        0.66
-      );
-
-      tl.fromTo(
-        ".hero-cta",
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.18, stagger: 0.06 },
-        0.72
-      );
-
-      tl.fromTo(
         ".hero-float",
         { opacity: 0, y: 24 },
         { opacity: 1, y: 0, duration: 0.25, stagger: 0.08 },
@@ -183,59 +168,6 @@ export default function Hero() {
               </span>
             ))}
           </h1>
-        </div>
-
-        {/* Description + CTAs */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-[14vh] z-20 flex flex-col items-center px-6">
-          <p
-            className="hero-desc max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
-            style={{ opacity: 0 }}
-          >
-            We design, build, and scale digital platforms backed by strategic
-            business and capital advisory.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/services"
-              className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-deep px-8 font-inter text-base font-semibold text-white"
-              style={{ opacity: 0 }}
-            >
-              View Projects
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-            <Link
-              href="/case-studies"
-              className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full border border-brand/40 bg-white px-8 font-inter text-base font-semibold text-black transition-colors hover:border-brand"
-              style={{ opacity: 0 }}
-            >
-              Case Studies
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-          </div>
         </div>
       </div>
     </section>

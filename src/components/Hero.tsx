@@ -69,12 +69,6 @@ export default function Hero() {
         0
       );
 
-      tl.to(
-        ".hero-media-box",
-        { opacity: 0.2, ease: "none", duration: 0.3 },
-        0.62
-      );
-
       tl.fromTo(
         ".hero-headline",
         { opacity: 0 },
@@ -93,6 +87,13 @@ export default function Hero() {
           ease: "power2.out",
         },
         0.6
+      );
+
+      tl.fromTo(
+        ".hero-desc",
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
+        0.68
       );
 
       tl.fromTo(
@@ -179,6 +180,7 @@ export default function Hero() {
 
             <p
               className="hero-desc mt-4 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
+              style={{ opacity: 0 }}
             >
               We design, build, and scale digital platforms backed by strategic
               business and capital advisory.

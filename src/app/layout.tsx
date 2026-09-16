@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             borderColor="rgba(139,92,246,0.18)"
             hoverFillColor="rgba(139,92,246,0.9)"
             shape="hexagon"
-            hoverTrailAmount={12}
+            hoverTrailAmount={1}
             className="h-full w-full"
           />
         </div>

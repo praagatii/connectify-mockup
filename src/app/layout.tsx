@@ -30,8 +30,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistMono.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head
+        dangerouslySetInnerHTML={{
+          __html: `<script>
+            (function() {
+              var t = localStorage.getItem('theme');
+              var dark = t === 'dark' || (!t && matchMedia('(prefers-color-scheme:dark)').matches);
+              if (dark) document.documentElement.classList.add('dark');
+            })();
+          </script>`,
+        }}
+      />
       <body
-        className="min-h-full bg-white font-sans"
+        className="min-h-full bg-background text-foreground font-sans"
         suppressHydrationWarning
       >
         <SmoothScroll />

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { label: "Services", href: "/services" },
@@ -34,6 +35,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <HoverMetalButton variant="outline" asChild className="hidden px-6 py-2.5 md:inline-flex">
             <Link
               href="/contact"

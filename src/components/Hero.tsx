@@ -40,13 +40,9 @@ export default function Hero() {
 
       const scope = rootRef.current!;
       const box = scope.querySelector<HTMLElement>(".hero-media-box")!;
-      const coverScale = Math.min(
-        Math.max(
-          scope.clientWidth / box.offsetWidth,
-          scope.clientHeight / box.offsetHeight
-        ),
-        1.5
-      );
+      const pagePadding = window.innerWidth >= 1024 ? 96 : 48;
+      const targetWidth = Math.min(scope.clientWidth, 1280) - pagePadding;
+      const coverScale = Math.max(targetWidth / box.offsetWidth, 1);
 
       const tl = gsap.timeline({
         defaults: { ease: "power1.inOut" },

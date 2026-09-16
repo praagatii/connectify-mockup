@@ -46,6 +46,13 @@ export default function Hero() {
       const targetWidth = Math.min(scope.clientWidth, 1280) - pagePadding;
       const coverScale = Math.max(targetWidth / box.offsetWidth, 1);
 
+      gsap.set(
+        ".hero-headline, .hero-line, .hero-desc, .hero-cta, .hero-float",
+        { opacity: 0 }
+      );
+      gsap.set(".hero-line", { yPercent: 115 });
+      gsap.set([".hero-desc", ".hero-cta", ".hero-float"], { y: 24 });
+
       const tl = gsap.timeline({
         defaults: { ease: "none" },
         scrollTrigger: {

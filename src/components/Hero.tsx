@@ -164,7 +164,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center px-6">
+        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-6">
           <h1
             className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(56px,9vw,170px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
             style={{ opacity: 0 }}
@@ -180,16 +180,18 @@ export default function Hero() {
               </span>
             ))}
           </h1>
+        </div>
 
+        {/* Subtext + CTAs */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-[10vh] z-20 flex flex-col items-center px-6">
           <p
-            className="hero-desc mx-auto -mt-[0.2em] max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
+            className="hero-desc max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
             style={{ opacity: 0 }}
           >
             We design, build, and scale digital platforms backed by strategic
             business and capital advisory.
           </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-10">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="/services"
               className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-deep px-8 font-inter text-base font-semibold text-white"

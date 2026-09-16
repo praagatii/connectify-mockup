@@ -183,7 +183,7 @@ export default function Hero() {
         </div>
 
         {/* Subtext + CTAs */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-[10vh] z-20 flex flex-col items-center px-6">
+        <div className="pointer-events-none absolute inset-x-0 bottom-[5vh] z-20 flex flex-col items-center px-6">
           <p
             className="hero-desc max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
             style={{ opacity: 0 }}
@@ -194,7 +194,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="/services"
-              className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-deep px-8 font-inter text-base font-semibold text-white"
+              className="hero-cta btn-glow group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
               style={{ opacity: 0 }}
             >
               View Projects
@@ -214,7 +214,7 @@ export default function Hero() {
             </a>
             <a
               href="/case-studies"
-              className="hero-cta group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full border border-brand/40 bg-white px-8 font-inter text-base font-semibold text-black transition-colors hover:border-brand"
+              className="hero-cta btn-glow group pointer-events-auto inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
               style={{ opacity: 0 }}
             >
               Case Studies

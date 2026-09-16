@@ -51,9 +51,22 @@ export default function FinalCta() {
           </HoverMetalButton>
           <Link
             href="/case-studies"
-            className="inline-flex items-center gap-2 rounded-lg border border-black/25 px-8 py-4 font-inter text-sm font-semibold text-black transition-colors hover:border-black/50 hover:bg-black/5"
+            className="btn-glow inline-flex items-center gap-2 rounded-full px-8 py-4 font-inter text-sm font-semibold transition-colors"
           >
             Review our portfolio
+            <svg
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </Link>
         </div>
       </div>

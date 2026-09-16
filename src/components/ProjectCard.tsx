@@ -18,7 +18,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <BorderGlow
-      backgroundColor="#ffffff"
+      backgroundColor="var(--surface)"
       borderRadius={16}
       glowColor="263 83 60"
       glowRadius={24}

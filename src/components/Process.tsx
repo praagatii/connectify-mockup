@@ -65,7 +65,7 @@ export default function Process() {
     <section
       ref={rootRef}
       id="process"
-      className="relative z-10 overflow-hidden bg-gradient-to-br from-[#1a1025] via-[#241335] to-[#120B17] px-6 py-24 lg:px-12 lg:py-32"
+      className="relative z-10 overflow-hidden bg-[#2b1055] px-6 py-24 lg:px-12 lg:py-32"
     >
       <div
         aria-hidden
@@ -76,8 +76,8 @@ export default function Process() {
           direction="diagonal"
           speed={0.32}
           squareSize={40}
-          borderColor="rgba(196,181,253,0.35)"
-          hoverFillColor="rgba(167,139,250,0.5)"
+          borderColor="rgba(216,180,254,0.35)"
+          hoverFillColor="rgba(192,132,252,0.5)"
           shape="hexagon"
           hoverTrailAmount={3}
           className="h-full w-full"

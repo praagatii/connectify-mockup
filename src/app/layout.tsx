@@ -57,7 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             squareSize={40}
             borderColor="rgba(139,92,246,0.18)"
             hoverFillColor="rgba(139,92,246,0.3)"
-            shape="square"
+            shape="hexagon"
             hoverTrailAmount={0}
             className="h-full w-full"
           />

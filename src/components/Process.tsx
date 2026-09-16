@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import ShapeGrid from "@/components/ui/ShapeGrid";
 import {
   MessageSquareText,
   PenTool,
@@ -67,22 +66,6 @@ export default function Process() {
       id="process"
       className="relative z-10 overflow-hidden bg-[#2b1055] px-6 py-24 lg:px-12 lg:py-32"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{ opacity: 0.6 }}
-      >
-        <ShapeGrid
-          direction="diagonal"
-          speed={0.32}
-          squareSize={40}
-          borderColor="rgba(216,180,254,0.35)"
-          hoverFillColor="rgba(192,132,252,0.5)"
-          shape="hexagon"
-          hoverTrailAmount={3}
-          className="h-full w-full"
-        />
-      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#000] via-transparent to-[#000]"

@@ -105,7 +105,7 @@ const ShapeGrid = ({
             const alpha = cellOpacities.current.get(cellKey);
             if (alpha) {
               ctx.globalAlpha = alpha;
-              drawHex(cx, cy, squareSize);
+              drawHex(cx, cy, squareSize + 6);
               ctx.fillStyle = hoverFillColor;
               ctx.fill();
               ctx.globalAlpha = 1;

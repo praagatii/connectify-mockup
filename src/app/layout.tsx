@@ -49,14 +49,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div
           aria-hidden
           className="fixed inset-0 z-0"
-          style={{ opacity: 0.5 }}
+          style={{ opacity: 0.7 }}
         >
           <ShapeGrid
             direction="diagonal"
             speed={0.32}
-            squareSize={64}
+            squareSize={96}
             borderColor="rgba(139,92,246,0.18)"
-            hoverFillColor="rgba(139,92,246,0.3)"
+            hoverFillColor="rgba(139,92,246,0.9)"
             shape="hexagon"
             hoverTrailAmount={12}
             className="h-full w-full"

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 import PageIntro from "@/components/PageIntro";
-import FinalCta from "@/components/FinalCta";
 
 const differentiators = [
   {
@@ -196,8 +195,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
-      <FinalCta />
     </>
   );
 }

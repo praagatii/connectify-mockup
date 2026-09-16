@@ -1,6 +1,5 @@
 ﻿import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
-import FinalCta from "@/components/FinalCta";
 import ProjectCard from "@/components/ProjectCard";
 import { projects, industries } from "@/lib/projects";
 
@@ -84,8 +83,6 @@ export default async function CaseStudiesPage({
           )}
         </div>
       </div>
-
-      <FinalCta />
     </>
   );
 }

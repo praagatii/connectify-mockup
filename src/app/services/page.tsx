@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 import PageIntro from "@/components/PageIntro";
-import FinalCta from "@/components/FinalCta";
 
 const serviceGroups = [
   {
@@ -228,8 +227,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
-      <FinalCta />
     </>
   );
 }

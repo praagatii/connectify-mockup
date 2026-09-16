@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 import PageIntro from "@/components/PageIntro";
-import FinalCta from "@/components/FinalCta";
 
 const categories = [
   {
@@ -138,8 +137,6 @@ export default function ProductsPage() {
           </section>
         </div>
       </div>
-
-      <FinalCta />
     </>
   );
 }

@@ -27,7 +27,7 @@ export default function ContactPage() {
           <div className="space-y-6 sm:col-span-2">
             <a
               href="tel:+919834843396"
-              className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-white/25"
+              className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-brand/30"
             >
               <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Phone
@@ -38,7 +38,7 @@ export default function ContactPage() {
 
             <a
               href="mailto:business@connectify.global"
-              className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-white/25"
+              className="block rounded-2xl border border-black/10 bg-surface p-8 transition-colors hover:border-brand/30"
             >
               <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Email

@@ -93,27 +93,27 @@ export default function About() {
         >
           <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-8">
             <div className="max-w-56">
-              <h3 className="font-inter text-sm font-bold text-white">
+              <h3 className="font-inter text-sm font-bold text-[#ffffff]">
                 Best Services
               </h3>
-              <p className="mt-1 text-sm text-white/70">
+              <p className="mt-1 text-sm text-[#ffffff]/75">
                 Top-tier quality and seamless performance across all platforms.
               </p>
             </div>
             <div className="max-w-56">
-              <h3 className="font-inter text-sm font-bold text-white">
+              <h3 className="font-inter text-sm font-bold text-[#ffffff]">
                 24/7 Support
               </h3>
-              <p className="mt-1 text-sm text-white/70">
+              <p className="mt-1 text-sm text-[#ffffff]/75">
                 Dedicated technical assistance available anytime you need it.
               </p>
             </div>
             {highlights.map((item) => (
               <div key={item.label}>
-                <p className="font-inter text-3xl font-extrabold tracking-tight text-white">
+                <p className="font-inter text-3xl font-extrabold tracking-tight text-[#ffffff]">
                   {item.value}
                 </p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-white/70">
+                <p className="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-[#ffffff]/75">
                   {item.label}
                 </p>
               </div>
@@ -124,3 +124,4 @@ export default function About() {
     </section>
   );
 }
+

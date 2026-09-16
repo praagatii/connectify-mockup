@@ -85,7 +85,8 @@ export default function Process() {
       </div>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#000] via-transparent to-[#000]"
+        style={{ opacity: 0.35 }}
       />
       <div
         aria-hidden
@@ -94,17 +95,17 @@ export default function Process() {
       <div className="relative mx-auto w-full max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
-            <p className="font-inter text-xs font-medium uppercase tracking-[0.25em] text-white/60">
+            <p className="font-inter text-xs font-medium uppercase tracking-[0.25em] text-[#e9d5ff]/70">
               Our Process
             </p>
-            <h2 className="mt-6 max-w-xl font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl">
+            <h2 className="mt-6 max-w-xl font-inter text-4xl font-extrabold leading-[1.02] tracking-tight text-[#ffffff] sm:text-6xl">
               Transforming Ideas into{" "}
               <span className="bg-gradient-to-r from-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
                 Digital Reality
               </span>
             </h2>
           </div>
-          <p className="max-w-md text-base leading-relaxed text-white/70">
+          <p className="max-w-md text-base leading-relaxed text-[#e9d5ff]/80">
             At Connectify, we don&apos;t just write code — our approach combines
             in-depth industry knowledge, innovative thinking, and a client-centric
             methodology. We partner with you every step of the way to ensure your
@@ -117,15 +118,15 @@ export default function Process() {
             <div
               key={step.title}
               data-process-reveal
-              className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-brand/[0.08] hover:shadow-[0_20px_60px_-30px_rgba(139,92,246,0.6)]"
+              className="group flex flex-col rounded-2xl border border-[#ffffff]/15 bg-[#ffffff]/[0.05] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-brand/[0.12] hover:shadow-[0_20px_60px_-30px_rgba(139,92,246,0.6)]"
             >
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-deep text-white transition-transform duration-300 group-hover:scale-105">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-deep text-[#ffffff] transition-transform duration-300 group-hover:scale-105">
                 <step.icon className="h-5 w-5" strokeWidth={1.75} />
               </span>
-              <h3 className="mt-6 font-inter text-xl font-bold tracking-tight text-white">
+              <h3 className="mt-6 font-inter text-xl font-bold tracking-tight text-[#ffffff]">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/60">
+              <p className="mt-3 text-sm leading-relaxed text-[#e9d5ff]/70">
                 {step.body}
               </p>
               <div className="mt-6 h-px w-full bg-gradient-to-r from-brand/60 to-transparent" />

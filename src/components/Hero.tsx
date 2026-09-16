@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HoverMetalButton } from "@/components/ui/hover-metal-button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,23 +63,23 @@ export default function Hero() {
           scale: coverScale,
           borderRadius: 28,
           opacity: 1,
-          ease: "power1.in",
-          duration: 0.4,
+          ease: "power1.inOut",
+          duration: 0.45,
         },
         0
       );
 
       tl.to(
         ".hero-media-box",
-        { opacity: 0.08, ease: "none", duration: 0.25 },
-        0.42
+        { opacity: 0.08, ease: "none", duration: 0.3 },
+        0.62
       );
 
       tl.fromTo(
         ".hero-headline",
         { opacity: 0 },
         { opacity: 1, ease: "none", duration: 0.05 },
-        0.7
+        0.55
       );
 
       tl.fromTo(
@@ -86,32 +88,32 @@ export default function Hero() {
         {
           yPercent: 0,
           opacity: 1,
-          duration: 0.25,
-          stagger: 0.06,
+          duration: 0.3,
+          stagger: 0.08,
           ease: "power2.out",
         },
-        0.7
+        0.6
       );
 
       tl.fromTo(
         ".hero-desc",
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.2, ease: "power1.out" },
-        0.78
+        { opacity: 1, y: 0, duration: 0.25, ease: "power1.out" },
+        0.68
       );
 
       tl.fromTo(
         ".hero-cta",
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.2, stagger: 0.06, ease: "power1.out" },
-        0.8
+        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
+        0.72
       );
 
       tl.fromTo(
         ".hero-float",
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" },
-        0.7
+        { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: "power1.out" },
+        0.6
       );
     }, rootRef);
     return () => ctx.revert();
@@ -167,7 +169,7 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-6">
           <div className="flex flex-col items-center">
             <h1
-              className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(56px,9vw,170px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
+              className="hero-headline flex select-none flex-col items-center whitespace-nowrap text-[clamp(64px,10.5vw,190px)] font-extrabold leading-[0.82] tracking-tight md:flex-row md:gap-[0.12em]"
               style={{ opacity: 0 }}
             >
               {words.map((w) => (
@@ -183,54 +185,60 @@ export default function Hero() {
             </h1>
 
             <p
-              className="hero-desc mt-[1.5em] max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
+              className="hero-desc mt-4 max-w-2xl text-center font-inter text-lg leading-relaxed text-muted sm:text-xl"
               style={{ opacity: 0 }}
             >
               We design, build, and scale digital platforms backed by strategic
               business and capital advisory.
             </p>
 
-            <div className="hero-ctas mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="/services"
-                className="hero-cta btn-glow group inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
-                style={{ opacity: 0 }}
-              >
-                View Projects
-                <svg
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
-              <a
-                href="/case-studies"
-                className="hero-cta btn-glow group inline-flex h-[56px] items-center gap-2 rounded-full px-8 font-inter text-base font-semibold transition-colors"
-                style={{ opacity: 0 }}
-              >
-                Case Studies
-                <svg
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
+            <div className="hero-ctas mt-6 flex flex-wrap items-center justify-center gap-4">
+              <span className="hero-cta pointer-events-auto" style={{ opacity: 0 }}>
+                <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+                  <Link
+                    href="/services"
+                    className="group inline-flex items-center gap-2"
+                  >
+                    View Projects
+                    <svg
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
+                </HoverMetalButton>
+              </span>
+              <span className="hero-cta pointer-events-auto" style={{ opacity: 0 }}>
+                <HoverMetalButton variant="outline" asChild className="px-8 py-4">
+                  <Link
+                    href="/case-studies"
+                    className="group inline-flex items-center gap-2"
+                  >
+                    Case Studies
+                    <svg
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
+                </HoverMetalButton>
+              </span>
             </div>
           </div>
         </div>

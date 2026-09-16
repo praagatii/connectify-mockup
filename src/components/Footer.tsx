@@ -10,13 +10,13 @@ export default function Footer() {
         <div className="flex items-center justify-between">
           <div className="inline-flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-brand" />
-            <span className="text-sm font-light text-zinc-50">
+            <span className="font-inter text-sm font-light text-zinc-50">
               Trusted Tech Partner
             </span>
           </div>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group text-sm inline-flex items-center gap-1.5 font-light tracking-wide text-zinc-200 transition-colors duration-200 hover:text-white"
+            className="group font-inter inline-flex items-center gap-1.5 text-sm font-light tracking-wide text-zinc-200 transition-colors duration-200 hover:text-white"
           >
             <span>Scroll to Top</span>
             <svg
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 max-w-lg sm:mt-10 md:mt-12">
-          <h2 className="text-2xl font-light leading-snug tracking-tight text-zinc-100 sm:text-3xl md:text-4xl">
+          <h2 className="font-inter text-2xl font-light leading-snug tracking-tight text-zinc-100 sm:text-3xl md:text-4xl">
             Want to collaborate with us, explore our platforms, or just curious
             to know more?
           </h2>
@@ -37,12 +37,12 @@ export default function Footer() {
 
         <div className="mt-20 flex flex-col gap-8 sm:mt-24 md:mt-28 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-1.5">
-            <span className="text-lg font-light tracking-wide text-zinc-400">
+            <span className="font-inter text-lg font-light tracking-wide text-zinc-400">
               Reach out at:
             </span>
             <a
               href="mailto:business@connectify.global"
-              className="group inline-flex items-center gap-2 text-2xl font-medium text-zinc-200 transition-colors duration-200 hover:text-white"
+              className="group inline-flex items-center gap-2 font-inter text-2xl font-medium text-zinc-200 transition-colors duration-200 hover:text-white"
             >
               <span>business@connectify.global</span>
               <svg
@@ -65,7 +65,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-zinc-200 transition-colors duration-200 hover:text-zinc-100"
+                className="font-inter text-sm font-medium text-zinc-200 transition-colors duration-200 hover:text-zinc-100"
               >
                 {link.label}
               </Link>
@@ -105,6 +105,7 @@ export default function Footer() {
               textLength="90%"
               lengthAdjust="spacing"
               className="fill-white/20 font-sans font-bold tracking-tight"
+              style={{ fontFamily: "var(--font-inter, Inter)" }}
               fontSize="140"
             >
               Connectify
